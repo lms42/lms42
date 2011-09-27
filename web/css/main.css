@@ -1,0 +1,8 @@
+li.content p { margin: 0px; padding: 0px; color: #404040; }
+div.category { color: gray; font-size: 0.8em; margin: 0px; padding: 0px; }
+
+div.item { margin-bottom: 20px; }
+div.description { font-style: italic; margin: 10px 0;}
+img.thumb { border: 0px; float: left; margin-right: 15px; }
+
+footer { clear: both; }
