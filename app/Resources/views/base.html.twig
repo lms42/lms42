@@ -3,6 +3,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>{% block title %}Информатика 2.0{% endblock %}</title>
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
         <link href="{{ asset('css/main.css') }}" rel="stylesheet" type="text/css" />
         
         {% block stylesheets %}{% endblock %}
@@ -12,7 +13,6 @@
               <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
             <![endif]-->
             
-        <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
         <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
 
         <style type="text/css">
@@ -81,11 +81,12 @@
           {% block body %}
           {% endblock %}
 
-          <footer>
-            <p>&copy; 2010-{{ "now"|date("Y") }}</p>
-          </footer>
         </div>
       </div>
+
+      <footer>
+        <p>&copy; 2010-{{ "now"|date("Y") }}</p>
+      </footer>
       
         {% block javascripts %}{% endblock %}
     </body>

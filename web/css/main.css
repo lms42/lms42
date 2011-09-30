@@ -5,4 +5,16 @@ div.item { margin-bottom: 20px; }
 div.description { font-style: italic; margin: 10px 0;}
 img.thumb { border: 0px; float: left; margin-right: 15px; }
 
-footer { clear: both; }
+footer { clear: both; margin: auto; text-align: center; }
+
+body { background: url('../uploads/bg_tile.png') }
+
+div.content {
+  background-color: #f5f5f5;
+  margin-bottom: 30px;
+  padding: 20px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+
