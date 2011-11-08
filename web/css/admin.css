@@ -1,0 +1,144 @@
+button,
+div.sonata-ba-form input,
+div.sonata-ba-form select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+button, div.sonata-ba-form input {
+  line-height: normal;
+  *overflow: visible;
+}
+button::-moz-focus-inner, div.sonata-ba-form input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+button,
+div.sonata-ba-form input[type="button"],
+div.sonata-ba-form input[type="reset"],
+div.sonata-ba-form input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+div.sonata-ba-form input[type="search"] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+div.sonata-ba-form input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+div.sonata-ba-form input,
+div.sonata-ba-form select,
+textarea {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: normal;
+}
+form .div.sonata-ba-form input {
+  margin-left: 150px;
+}
+div.sonata-ba-form input[type=checkbox], div.sonata-ba-form input[type=radio] {
+  cursor: pointer;
+}
+div.sonata-ba-form input,
+textarea,
+div.sonata-ba-form select,
+.uneditable-div.sonata-ba-form input {
+  display: inline-block;
+  width: 410px;
+  height: 18px;
+  padding: 4px;
+  font-size: 13px;
+  line-height: 18px;
+  color: #808080;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+div.sonata-ba-form select{
+  width: 210px;
+}
+/* mini reset for non-html5 file types */
+div.sonata-ba-form input[type=checkbox], div.sonata-ba-form input[type=radio] {
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 3px 0;
+  *margin-top: 0;
+  /* IE6-7 */
+
+  line-height: normal;
+  border: none;
+}
+div.sonata-ba-form input[type=file] {
+  background-color: #ffffff;
+  padding: initial;
+  border: initial;
+  line-height: initial;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+div.sonata-ba-form input[type=button], div.sonata-ba-form input[type=reset], div.sonata-ba-form input[type=submit] {
+  width: auto;
+  height: auto;
+}
+div.sonata-ba-form select, div.sonata-ba-form input[type=file] {
+  height: 27px;
+  line-height: 27px;
+  *margin-top: 4px;
+  /* For IE7, add top margin to align div.sonata-ba-form select with labels */
+
+}
+div.sonata-ba-form select[multiple] {
+  height: inherit;
+}
+textarea {
+  height: auto;
+}
+.uneditable-div.sonata-ba-form input {
+  background-color: #ffffff;
+  display: block;
+  border-color: #eee;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
+  cursor: not-allowed;
+}
+:-moz-placeholder {
+  color: #bfbfbf;
+}
+::-webkit-div.sonata-ba-form input-placeholder {
+  color: #bfbfbf;
+}
+div.sonata-ba-form input, textarea {
+  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -ms-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+  transition: border linear 0.2s, box-shadow linear 0.2s;
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+div.sonata-ba-form input:focus, textarea:focus {
+  outline: 0;
+  border-color: rgba(82, 168, 236, 0.8);
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+  -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+}
+div.sonata-ba-form input[type=file]:focus, div.sonata-ba-form input[type=checkbox]:focus, div.sonata-ba-form select:focus {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  outline: 1px dotted #666;
+}

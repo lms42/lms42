@@ -18,3 +18,7 @@ div.content {
   border-radius: 6px;
 }
 
+form.basic textarea { width: 500px; height: 100px; }
+
+div#remainder { font-size: 2.0em; float: right; margin: 0 100px 0 0;}
+

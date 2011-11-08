@@ -5,6 +5,7 @@ imports:
 framework:
     #esi:             ~
     #translator:      { fallback: %locale% }
+    translator:      ~
     secret:          %secret%
     charset:         UTF-8
     router:          { resource: "%kernel.root_dir%/config/routing.yml" }
@@ -21,6 +22,9 @@ framework:
 twig:
     debug:            %kernel.debug%
     strict_variables: %kernel.debug%
+    form:
+      resources:
+        - 'SmirikQuizBundle:Form:fields.html.twig'
 
 # Assetic Configuration
 assetic:
@@ -63,3 +67,11 @@ stof_doctrine_extensions:
       default:
         timestampable: true
         sortable: true
+
+fos_user:
+    db_driver: orm # other valid values are 'mongodb', 'couchdb'
+    firewall_name: main
+    user_class: Smirik\UserBundle\Entity\User
+    group:
+        group_class: Smirik\UserBundle\Entity\Group
+    

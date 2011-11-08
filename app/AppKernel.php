@@ -26,6 +26,10 @@ class AppKernel extends Kernel
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new Symfony\Bundle\DoctrineFixturesBundle\DoctrineFixturesBundle(),
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
+            new Smirik\QuizBundle\SmirikQuizBundle(),
+            new Smirik\AdminBundle\SmirikAdminBundle(),
+            new FOS\UserBundle\FOSUserBundle(),
+            new Smirik\UserBundle\SmirikUserBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
