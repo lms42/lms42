@@ -23,13 +23,13 @@ class AppKernel extends Kernel
             new Sonata\jQueryBundle\SonatajQueryBundle(),
             new Sonata\BluePrintBundle\SonataBluePrintBundle(),
             new Sonata\AdminBundle\SonataAdminBundle(),
+            new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new Symfony\Bundle\DoctrineFixturesBundle\DoctrineFixturesBundle(),
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
             new Smirik\QuizBundle\SmirikQuizBundle(),
             new Smirik\AdminBundle\SmirikAdminBundle(),
             new FOS\UserBundle\FOSUserBundle(),
-            new Smirik\UserBundle\SmirikUserBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
