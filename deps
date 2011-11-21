@@ -126,3 +126,10 @@
 [FOSUserBundle]
     git=git://github.com/FriendsOfSymfony/FOSUserBundle.git
     target=bundles/FOS/UserBundle
+
+[JMSTranslationBundle]
+    git=https://github.com/schmittjoh/JMSTranslationBundle.git
+    target=/bundles/JMS/TranslationBundle
+
+[php-parser]
+    git=https://github.com/nikic/PHP-Parser.git
