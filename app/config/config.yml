@@ -74,4 +74,3 @@ fos_user:
     user_class: Smirik\QuizBundle\Entity\User
     group:
         group_class: Smirik\QuizBundle\Entity\Group
-    
