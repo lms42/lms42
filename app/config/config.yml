@@ -69,7 +69,7 @@ stof_doctrine_extensions:
         sortable: true
 
 fos_user:
-    db_driver: orm # other valid values are 'mongodb', 'couchdb'
+    db_driver: orm
     firewall_name: main
     user_class: Smirik\QuizBundle\Entity\User
     group:

@@ -31,6 +31,7 @@ class AppKernel extends Kernel
             new Smirik\AdminBundle\SmirikAdminBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new JMS\TranslationBundle\JMSTranslationBundle(),
+            new Smirik\CourseBundle\SmirikCourseBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
