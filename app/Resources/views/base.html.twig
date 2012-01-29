@@ -57,7 +57,7 @@
             <p class="pull-right">
               {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
                 {% if is_granted("ROLE_ADMIN") %}
-                  <a href="{{ path('sonata_admin_dashboard') }}">Администрирование</a> | 
+                  <a href="{{ path('admin_main') }}">Администрирование</a> | 
                 {% endif %}
                 <a href="{{ path('fos_user_profile_show') }}">
                   {{ app.user.username }}</a> | 
