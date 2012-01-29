@@ -25,6 +25,7 @@ $loader->registerNamespaces(array(
         __DIR__.'/../vendor/bundles',
         __DIR__.'/../vendor/knp/menu/src',
     ),
+    'Stfalcon'                       => __DIR__.'/../vendor/bundles',
 ));
 $loader->registerPrefixes(array(
     'Twig_Extensions_' => __DIR__.'/../vendor/twig-extensions/lib',

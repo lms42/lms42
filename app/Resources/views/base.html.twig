@@ -43,6 +43,7 @@
         <script type="text/javascript">
           VK.init({apiId: 1969513, onlyWidgets: true});
         </script>
+
     </head>
     <body>
       
@@ -53,8 +54,7 @@
             
             {% render "SmirikContentBundle:Content:navigation" %}
             
-            <p class="pull-right"><a href="#">Lasciate ogni speranza voi ch'entrate</a> 
-              &nbsp;&nbsp;&nbsp;&nbsp;
+            <p class="pull-right">
               {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
                 {% if is_granted("ROLE_ADMIN") %}
                   <a href="{{ path('sonata_admin_dashboard') }}">Администрирование</a> | 
@@ -84,6 +84,10 @@
         </div>
         
         <div class="content">
+          
+          {% block content_navigation %}
+          {% endblock %}
+          
           <!-- Main hero unit for a primary marketing message or call to action -->
           {% block hero %}
           {% endblock %}
@@ -94,8 +98,6 @@
             {% endblock %}
           </div>
 
-          {% block content_navigation %}
-          {% endblock %}
           
           {% block body %}
           {% endblock %}
@@ -107,5 +109,6 @@
         <p>&copy; 2010-{{ "now"|date("Y") }}</p>
       </footer>
       
+			{{ tinymce_init() }}
     </body>
 </html>

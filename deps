@@ -126,3 +126,7 @@
 [php-parser]
     git=https://github.com/nikic/PHP-Parser.git
 
+# Addons
+[TinymceBundle]
+    git=git://github.com/stfalcon/TinymceBundle.git
+    target=/bundles/Stfalcon/Bundle/TinymceBundle
