@@ -19,15 +19,15 @@ class AppKernel extends Kernel
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
             new JMS\AopBundle\JMSAopBundle(),
             new JMS\DiExtraBundle\JMSDiExtraBundle($this),
-            new Smirik\ContentBundle\SmirikContentBundle(),
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new Symfony\Bundle\DoctrineFixturesBundle\DoctrineFixturesBundle(),
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
-            new Smirik\QuizBundle\SmirikQuizBundle(),
-            new Smirik\AdminBundle\SmirikAdminBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new JMS\TranslationBundle\JMSTranslationBundle(),
+            new Smirik\QuizBundle\SmirikQuizBundle(),
+            new Smirik\AdminBundle\SmirikAdminBundle(),
             new Smirik\CourseBundle\SmirikCourseBundle(),
+            new Smirik\ContentBundle\SmirikContentBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

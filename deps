@@ -112,3 +112,21 @@
     git=https://github.com/nikic/PHP-Parser.git
 
 # Addons
+
+# Smirik Bundles
+[SmirikAdminBundle]
+  git=git://github.com/smirik/SmirikAdminBundle.git
+  target=/bundles/Smirik/AdminBundle
+
+[SmirikContentBundle]
+  git=git://github.com/smirik/SmirikContentBundle.git
+  target=/bundles/Smirik/ContentBundle
+
+[SmirikQuizBundle]
+  git=git://github.com/smirik/SmirikQuizBundle.git
+  target=/bundles/Smirik/QuizBundle
+
+[SmirikCourseBundle]
+  git=git://github.com/smirik/SmirikCourseBundle.git
+  target=/bundles/Smirik/CourseBundle
+
