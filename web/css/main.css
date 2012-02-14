@@ -20,3 +20,7 @@ div.content {
 
 a.ajax { font-size: 1.1em; text-decoration: none; border-bottom: 1px dashed; }
 
+textarea.tinymce {
+	width: 80%;
+	height: 400px; 
+}
