@@ -1,137 +1,122 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>{% block title %}Информатика 2.0{% endblock %}</title>
-        <link href="{{ asset('css/main.css') }}" rel="stylesheet" type="text/css" />
-        <link href="{{ asset('js/redactor/css/redactor.css') }}" rel="stylesheet" type="text/css" />
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>{% block title %}Информатика 2.0{% endblock %}</title>
 
-        {% stylesheets
-            '@SmirikAdminBundle/Resources/public/css/*'
-        %}
-        <link rel="stylesheet" href="{{ asset_url }}" />
-        {% endstylesheets %}
-        
+    {{ bootstrap_js() }}
+    {{ bootstrap_css() }}
 
-        {% javascripts
-            '@SmirikAdminBundle/Resources/public/js/jquery-1.7.1.js'
-            '@SmirikAdminBundle/Resources/public/js/bootstrap.js'
-        %}
-        <script type="text/javascript" src="{{ asset_url }}"></script>
-        {% endjavascripts %}
-        <script type="text/javascript" src="{{ asset('js/redactor/redactor.js') }}"></script>
+    {% stylesheets
+    '@SmirikAdminBundle/Resources/public/css/*'
+    '@SmirikContentBundle/Resources/public/css/*' %}
+    <link rel="stylesheet" href="{{ asset_url }}"/>
+    {% endstylesheets %}
 
-        {% block stylesheets %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+    {% block stylesheets %}{% endblock %}
+    {% block javascripts %}{% endblock %}
 
-        <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
-            <!--[if lt IE 9]>
-              <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-            <![endif]-->
-            
-        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}"/>
 
-        <style type="text/css">
-              body {
-                padding-top: 60px;
-              }
-        </style>  
 
-        <script type="text/javascript">
+    <script type="text/javascript">
 
-          var _gaq = _gaq || [];
-          _gaq.push(['_setAccount', 'UA-11430636-3']);
-          _gaq.push(['_trackPageview']);
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-11430636-3']);
+        _gaq.push(['_trackPageview']);
 
-          (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-          })();
-        </script>    
-          
-        <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
-          {lang: 'ru'}
-        </script>
-          
-        <script src="http://vkontakte.ru/js/api/openapi.js" type="text/javascript" charset="windows-1251"></script>    
-        <script type="text/javascript">
-          VK.init({apiId: 1969513, onlyWidgets: true});
-        </script>
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
 
-    </head>
-    <body>
-      
-      <div class="navbar navbar-fixed-top">
-        <div class="navbar-inner">
-          <div class="container-fluid">
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+        {
+            lang: 'ru'
+        }
+    </script>
+
+    <script src="http://vkontakte.ru/js/api/openapi.js" type="text/javascript" charset="windows-1251"></script>
+    <script type="text/javascript">
+        VK.init({apiId:1969513, onlyWidgets:true});
+    </script>
+
+</head>
+<body>
+
+{% block navbar %}
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container-fluid">
             <a class="brand" href="{{ path('homepage') }}">Главная</a>
-            
-            {% render "SmirikContentBundle:Content:navigation" %}
-            
-            <p class="navbar-text pull-right">
-              {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-                {% if is_granted("ROLE_ADMIN") %}
-                  <a href="{{ path('admin_main') }}">Администрирование</a> | 
-                {% endif %}
-                <a href="{{ path('fos_user_profile_show') }}">
-                  {{ app.user.username }}</a> | 
-                  <a href="{{ path('fos_user_security_logout') }}">
-                      {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
-                  </a>
-              {% else %}
-                  <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
-              {% endif %}
-                            
-            </p>
-          </div>
-        </div>
-      </div>
 
-      <div class="container-fluid">
-        
-        <div class="row-fluid">
-          <div class="span3">
-              <div class="well sidebar-nav">
+            {% render "SmirikContentBundle:Content:navigation" %}
+
+            <p class="navbar-text pull-right">
+                {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                    {% if is_granted("ROLE_ADMIN") %}
+                        <a href="{{ path('admin_main') }}">Администрирование</a> |
+                    {% endif %}
+                    <a href="{{ path('fos_user_profile_show') }}">
+                        {{ app.user.username }}</a> |
+                    <a href="{{ path('fos_user_security_logout') }}">
+                        {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
+                    </a>
+                {% else %}
+                    <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
+                {% endif %}
+
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block body %}
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span3">
+            {% block left_without_well %}
+            <div class="sidebar-nav">
                 {% block left %}
-                {% render "SmirikContentBundle:Content:sidebar" %}
+                    {% render "SmirikContentBundle:Content:sidebar" %}
                 {% endblock %}
-              </div>
-          </div>
-        
-          <div class="span9">
-          
+            </div>
+            {% endblock %}
+        </div>
+
+        <div class="span9">
+
             <!-- Main hero unit for a primary marketing message or call to action -->
             {% block hero %}
             {% endblock %}
-            
-            <div class="content">
-              {% block content_navigation %}
-              {% endblock %}
-            {% block header %}
-            <h1>Обновления <small>проекта и материалов</small></h1>
-            {% endblock %}
-            </div>            
-            <div class="content">
-              {% block body %}
-              {% endblock %}
-            </div>
-          </div>
-        </div>
-      </div>
-      <footer>
-        <p>&copy; 2010-{{ "now"|date("Y") }}</p>
-      </footer>
 
-      <script type="text/javascript">
-          $(document).ready(
-              function()
-              {
-                $.each($("textarea.tinymce"), function(key, value){
-                    $(value).redactor();
-                });
-              }
-          );
-      </script>      
-    </body>
+            <div class="content">
+                {% block content_navigation %}
+                {% endblock %}
+                {% block header %}
+                    <h1>Обновления
+                        <small>проекта и материалов</small>
+                    </h1>
+                {% endblock %}
+            </div>
+            <div class="content">
+                {% block content %}
+
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <p>&copy; 2010-{{ "now"|date("Y") }}</p>
+</footer>
+{% endblock %}
+
+</body>
 </html>

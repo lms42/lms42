@@ -1294,12 +1294,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/smirik/SmirikBootstrapBundle.git",
-                "reference": "v2.2.2"
+                "reference": "v2.3.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/smirik/SmirikBootstrapBundle/zipball/v2.2.2",
-                "reference": "v2.2.2",
+                "url": "https://api.github.com/repos/smirik/SmirikBootstrapBundle/zipball/v2.3.0",
+                "reference": "v2.3.0",
                 "shasum": ""
             },
             "require": {
@@ -1308,7 +1308,7 @@
             "suggest": {
                 "symfony/twig-bundle": "2.*"
             },
-            "time": "2013-01-30 12:47:57",
+            "time": "2013-02-11 19:37:45",
             "type": "symfony-bundle",
             "autoload": {
                 "psr-0": {

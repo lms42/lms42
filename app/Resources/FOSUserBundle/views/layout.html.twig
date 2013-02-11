@@ -1,16 +1,16 @@
 {% extends 'SmirikQuizBundle::layout.html.twig' %}
 
-{% block header %}<h1>Профиль <small>регистрация, вход, обновление</small></h1>{% endblock %}
+{% block header %}<h1>Профиль</h1>{% endblock %}
 
-{% block body %}
-{% for key, message in app.session.getFlashes() %}
-<div class="{{ key }}">
-    {{ message|trans({}, 'FOSUserBundle') }}
-</div>
-{% endfor %}
+{% block content %}
+    {% for key, message in app.session.getFlashes() %}
+        <div class="{{ key }}">
+            {{ message|trans({}, 'FOSUserBundle') }}
+        </div>
+    {% endfor %}
 
-<div>
-    {% block fos_user_content %}
-    {% endblock fos_user_content %}
-</div>
+    <div>
+        {% block fos_user_content %}
+        {% endblock fos_user_content %}
+    </div>
 {% endblock %}

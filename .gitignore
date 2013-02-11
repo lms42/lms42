@@ -7,3 +7,6 @@
 /app/config/parameters.ini
 /app/config/parameters.yml
 /src/*
+/web/media
+.DS_Store
+.idea
