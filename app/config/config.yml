@@ -1,22 +1,22 @@
 imports:
-    - { resource: parameters.ini }
+    - { resource: parameters.yml }
     - { resource: security.yml }
 
 framework:
     #esi:             ~
     #translator:      { fallback: %locale% }
-    translator:      ~
     secret:          %secret%
-    charset:         UTF-8
-    router:          { resource: "%kernel.root_dir%/config/routing.yml" }
+    router:
+        resource: "%kernel.root_dir%/config/routing.yml"
+        strict_requirements: %kernel.debug%
     form:            true
     csrf_protection: true
     validation:      { enable_annotations: true }
     templating:      { engines: ['twig'] } #assets_version: SomeVersionScheme
     translator:      { fallback: ru }
-    session:
-        default_locale: ru
-        auto_start:     true
+    default_locale:  %locale%
+    trust_proxy_headers: false # Should Request object should trust proxy headers (X_FORWARDED_FOR/HTTP_CLIENT_IP)
+    session:         ~
 
 # Twig Configuration
 twig:
@@ -24,18 +24,25 @@ twig:
     strict_variables: %kernel.debug%
     form:
       resources:
-        - 'SmirikAdminBundle:Form:fields.html.twig'
+        - 'SmirikBootstrapBundle:Form:fields.html.twig'
+
+services:
+    twig.extension.text:
+        class: Twig_Extensions_Extension_Text
+        tags:
+            - { name: twig.extension }
 
 # Assetic Configuration
 assetic:
     debug:          %kernel.debug%
     use_controller: false
+    #java: /usr/bin/java
     filters:
         cssrewrite: ~
-        # closure:
-        #     jar: %kernel.root_dir%/java/compiler.jar
-        # yui_css:
-        #     jar: %kernel.root_dir%/java/yuicompressor-2.4.2.jar
+        #closure:
+        #    jar: %kernel.root_dir%/Resources/java/compiler.jar
+        #yui_css:
+        #    jar: %kernel.root_dir%/Resources/java/yuicompressor-2.4.7.jar
 
 # Doctrine Configuration
 doctrine:
@@ -58,19 +65,31 @@ swiftmailer:
     host:      %mailer_host%
     username:  %mailer_user%
     password:  %mailer_password%
-
-jms_security_extra:
-    secure_all_services: false
-
-stof_doctrine_extensions:
-    orm:
-      default:
-        timestampable: true
-        sortable: true
+    spool:     { type: memory }
 
 fos_user:
-    db_driver: orm
+    db_driver: propel
     firewall_name: main
-    user_class: Smirik\QuizBundle\Entity\User
-    group:
-        group_class: Smirik\QuizBundle\Entity\Group
+    user_class: FOS\UserBundle\Propel\User
+
+propel:
+    dbal:
+        driver:               %database_driver%
+        user:                 %database_user%
+        password:             %database_password%
+        dsn:                  %database_driver%:host=%database_host%;dbname=%database_name%;charset=UTF8
+        options:              {}
+        attributes:           {}
+
+avalanche_imagine:
+    filters:
+        avatar_profile:
+            type:    thumbnail
+            options: { size: [250, 400], mode: outbound }
+        company_profile:
+            type:    thumbnail
+            options: { size: [200, 200], mode: outbound }
+        carousel_help:
+            type:    thumbnail
+            options: { size: [1050, 500], mode: outbound }
+        

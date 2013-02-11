@@ -3,8 +3,8 @@ SmirikCourseBundle:
     type:     annotation
     prefix:   /
 
-SmirikAdminBundle:
-    resource: "@SmirikAdminBundle/Controller/"
+SmirikContentBundle:
+    resource: "@SmirikContentBundle/Controller/"
     type:     annotation
     prefix:   /
 
@@ -13,17 +13,37 @@ SmirikQuizBundle:
     type:     annotation
     prefix:   /
 
-SmirikContentBundle:
-    resource: "@SmirikContentBundle/Controller/"
+SmirikAdminBundle:
+    resource: "@SmirikAdminBundle/Controller/"
     type:     annotation
     prefix:   /
+
+SmirikContentBundleRouting:
+    resource: "@SmirikContentBundle/Resources/config/routing.yml"
+    prefix:   /admin/
+
+SmirikAdminBundleRouting:
+    resource: "@SmirikAdminBundle/Resources/config/routing.yml"
+    prefix:   /admin/
+
+SmirikQuizBundleRouting:
+    resource: "@SmirikQuizBundle/Resources/config/routing.yml"
+    prefix:   /admin/
+
+SmirikCourseBundleRouting:
+    resource: "@SmirikCourseBundle/Resources/config/routing.yml"
+    prefix:   /admin/
+
+_imagine:
+    resource: .
+    type:     imagine
 
 fos_user_security:
     resource: "@FOSUserBundle/Resources/config/routing/security.xml"
 
 fos_user_profile:
     resource: "@FOSUserBundle/Resources/config/routing/profile.xml"
-    prefix: /profile
+    prefix: /fos/profile
 
 fos_user_register:
     resource: "@FOSUserBundle/Resources/config/routing/registration.xml"
@@ -31,12 +51,8 @@ fos_user_register:
 
 fos_user_resetting:
     resource: "@FOSUserBundle/Resources/config/routing/resetting.xml"
-    prefix: /resetting
+    prefix: /fos/resetting
 
 fos_user_change_password:
     resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
-    prefix: /change-password
-  
-fos_user_group:
-    resource: "@FOSUserBundle/Resources/config/routing/group.xml"
-    prefix: /admin/group
+    prefix: /fos/profile
