@@ -29,6 +29,8 @@ class AppKernel extends Kernel
             new Smirik\PropelAdminBundle\SmirikPropelAdminBundle(),
 	        new Avalanche\Bundle\ImagineBundle\AvalancheImagineBundle(),
 	        new Knp\Bundle\MenuBundle\KnpMenuBundle(),
+            new Smirik\ExamBundle\SmirikExamBundle(),
+            new Smirik\ConfigBundle\SmirikConfigBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>{% block title %}Информатика 2.0{% endblock %}</title>
+    <title>{% block title %}{{ 'mainpage.header'|config('LMS42') }}{% endblock %}</title>
 
     {{ bootstrap_js() }}
     {{ bootstrap_css() }}
@@ -50,72 +50,72 @@
 <body>
 
 {% block navbar %}
-<div class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-        <div class="container-fluid">
-            <a class="brand" href="{{ path('homepage') }}">Главная</a>
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <a class="brand" href="{{ path('homepage') }}">Главная</a>
 
-            {% render "SmirikContentBundle:Content:navigation" %}
+                {% render "SmirikContentBundle:Content:navigation" %}
 
-            <p class="navbar-text pull-right">
-                {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-                    {% if is_granted("ROLE_ADMIN") %}
-                        <a href="{{ path('admin_main') }}">Администрирование</a> |
+                <p class="navbar-text pull-right">
+                    {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                        {% if is_granted("ROLE_ADMIN") %}
+                            <a href="{{ path('admin_main') }}">Администрирование</a> |
+                        {% endif %}
+                        <a href="{{ path('fos_user_profile_show') }}">
+                            {{ app.user.username }}</a> |
+                        <a href="{{ path('fos_user_security_logout') }}">
+                            {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
+                        </a>
+                    {% else %}
+                        <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
                     {% endif %}
-                    <a href="{{ path('fos_user_profile_show') }}">
-                        {{ app.user.username }}</a> |
-                    <a href="{{ path('fos_user_security_logout') }}">
-                        {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
-                    </a>
-                {% else %}
-                    <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
-                {% endif %}
 
-            </p>
+                </p>
+            </div>
         </div>
     </div>
-</div>
 {% endblock %}
 
 {% block body %}
-<div class="container-fluid">
-    <div class="row-fluid">
-        <div class="span3">
-            {% block left_without_well %}
-            <div class="sidebar-nav">
-                {% block left %}
-                    {% render "SmirikContentBundle:Content:sidebar" %}
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span3">
+                {% block left_without_well %}
+                    <div class="sidebar-nav">
+                        {% block left %}
+                            {% include 'SmirikContentBundle:Default:_sidebar.html.twig' %}
+                        {% endblock %}
+                    </div>
                 {% endblock %}
             </div>
-            {% endblock %}
-        </div>
 
-        <div class="span9">
+            <div class="span9">
 
-            <!-- Main hero unit for a primary marketing message or call to action -->
-            {% block hero %}
-            {% endblock %}
-
-            <div class="content">
-                {% block content_navigation %}
+                <!-- Main hero unit for a primary marketing message or call to action -->
+                {% block hero %}
                 {% endblock %}
-                {% block header %}
-                    <h1>Обновления
-                        <small>проекта и материалов</small>
-                    </h1>
-                {% endblock %}
-            </div>
-            <div class="content">
-                {% block content %}
 
-                {% endblock %}
+                <div class="content">
+                    {% block content_navigation %}
+                    {% endblock %}
+                    {% block header %}
+                        <h1>{{ 'Updates'|trans }}
+                            <small>{{ 'project & data'|trans }}</small>
+                        </h1>
+                    {% endblock %}
+                </div>
+                <div class="content">
+                    {% block content %}
+
+                    {% endblock %}
+                </div>
             </div>
         </div>
     </div>
-</div>
-<footer>
-    <p>&copy; 2010-{{ "now"|date("Y") }}</p>
-</footer>
+    <footer>
+        <p>&copy; 2010-{{ "now"|date("Y") }}</p>
+    </footer>
 {% endblock %}
 
 </body>

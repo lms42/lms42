@@ -85,6 +85,25 @@ CREATE TABLE `profiles`
 ) ENGINE=MyISAM;
 
 -- ---------------------------------------------------------------------
+-- configs
+-- ---------------------------------------------------------------------
+
+DROP TABLE IF EXISTS `configs`;
+
+CREATE TABLE `configs`
+(
+    `id` INTEGER NOT NULL AUTO_INCREMENT,
+    `pid` INTEGER,
+    `title` VARCHAR(200),
+    `key` VARCHAR(200) NOT NULL,
+    `value` TEXT NOT NULL,
+    `type` VARCHAR(20) NOT NULL,
+    `is_visible` TINYINT(1) DEFAULT 1,
+    PRIMARY KEY (`id`),
+    INDEX `configs_FI_1` (`pid`)
+) ENGINE=MyISAM;
+
+-- ---------------------------------------------------------------------
 -- categories
 -- ---------------------------------------------------------------------
 
@@ -456,6 +475,59 @@ CREATE TABLE `users_tasks_reviews`
     PRIMARY KEY (`id`),
     INDEX `users_tasks_reviews_I_1` (`user_id`),
     INDEX `users_tasks_reviews_I_2` (`user_task_id`)
+) ENGINE=MyISAM;
+
+-- ---------------------------------------------------------------------
+-- exams
+-- ---------------------------------------------------------------------
+
+DROP TABLE IF EXISTS `exams`;
+
+CREATE TABLE `exams`
+(
+    `id` INTEGER NOT NULL AUTO_INCREMENT,
+    `quiz_id` INTEGER NOT NULL,
+    `type_id` INTEGER NOT NULL,
+    `name` VARCHAR(100) NOT NULL,
+    `started_at` DATETIME,
+    `description` TEXT NOT NULL,
+    `status` INTEGER DEFAULT 0,
+    `created_at` DATETIME,
+    `updated_at` DATETIME,
+    PRIMARY KEY (`id`),
+    INDEX `exams_FI_1` (`type_id`),
+    INDEX `exams_FI_2` (`quiz_id`)
+) ENGINE=MyISAM;
+
+-- ---------------------------------------------------------------------
+-- exams_types
+-- ---------------------------------------------------------------------
+
+DROP TABLE IF EXISTS `exams_types`;
+
+CREATE TABLE `exams_types`
+(
+    `id` INTEGER NOT NULL AUTO_INCREMENT,
+    `name` VARCHAR(100) NOT NULL,
+    PRIMARY KEY (`id`)
+) ENGINE=MyISAM;
+
+-- ---------------------------------------------------------------------
+-- exams_users
+-- ---------------------------------------------------------------------
+
+DROP TABLE IF EXISTS `exams_users`;
+
+CREATE TABLE `exams_users`
+(
+    `id` INTEGER NOT NULL AUTO_INCREMENT,
+    `exam_id` INTEGER NOT NULL,
+    `user_id` INTEGER NOT NULL,
+    `user_quiz_id` INTEGER,
+    PRIMARY KEY (`id`),
+    INDEX `exams_users_FI_1` (`exam_id`),
+    INDEX `exams_users_FI_2` (`user_id`),
+    INDEX `exams_users_FI_3` (`user_quiz_id`)
 ) ENGINE=MyISAM;
 
 -- ---------------------------------------------------------------------
