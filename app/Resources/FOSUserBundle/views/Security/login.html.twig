@@ -10,7 +10,6 @@
 {% if error %}
     <div>{{ error }}</div>
 {% endif %}
-<hr>
 <form class="form-horizontal" action="{{ path("fos_user_security_check") }}" method="post">
     <div class="control-group">
         <label class="control-label" for="username">{{ 'security.login.username'|trans({}, 'FOSUserBundle') }}</label>
