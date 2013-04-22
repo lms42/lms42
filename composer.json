@@ -27,7 +27,7 @@
         "kriswallsmith/assetic": "1.1.*@dev",
         "propel/propel-bundle": "1.1.*",
         "friendsofsymfony/user-bundle": "*",
-        "willdurand/propel-typehintable-behavior": "*",
+        "willdurand/propel-typehintable-behavior": "dev-master",
         "imagine/Imagine": "v0.4.1",
         "avalanche123/imagine-bundle": "dev-master",
         "smirik/bootstrap-bundle": "dev-master",
