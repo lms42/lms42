@@ -104,7 +104,7 @@ trsteel_ckeditor:
         basicstyles: ['Bold','Italic','Underline','Strike','Subscript','Superscript','-','RemoveFormat']
         paragraph: ['NumberedList','BulletedList','-','Outdent','Indent','-','JustifyLeft', 'JustifyCenter','JustifyRight','JustifyBlock']
         links: ['Link','Unlink','Anchor']
-        insert: ['Image','Flash','Table','HorizontalRule']
+        insert: ['Image','Flash','Table','HorizontalRule','mathedit']
         styles: ['Styles','Format']
         tools: ['Maximize', 'ShowBlocks']
     ui_color: '#000000'
@@ -118,3 +118,6 @@ trsteel_ckeditor:
         route: ~
         route_parameters:
             type: image
+    external_plugins:
+        mathedit:
+            path: bundles/smirikadmin/js/ckeditor_plugins/mathedit
