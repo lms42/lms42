@@ -9,4 +9,6 @@
 /src/*
 /web/media
 .DS_Store
-.idea
+.idea/
+build.sh
+routes.sh

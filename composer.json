@@ -4,15 +4,9 @@
     "autoload": {
         "psr-0": { "": "src/" }
     },
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "http://package.4xxi.com"
-        }
-    ],
     "require": {
         "php": ">=5.3.3",
-        "symfony/symfony": "2.3.*",
+        "symfony/symfony": "2.3.*@dev",
         "doctrine/orm": ">=2.2.3,<2.4-dev",
         "doctrine/doctrine-bundle": "1.2.*",
         "twig/extensions": "1.0.*",
@@ -23,16 +17,19 @@
         "sensio/framework-extra-bundle": "2.3.*",
         "sensio/generator-bundle": "2.3.*",
         "incenteev/composer-parameter-handler": "~2.0",
-        "jms/security-extra-bundle": "1.2.*",
-        "jms/di-extra-bundle": "1.1.*",
+        "jms/security-extra-bundle": "1.5.*@dev",
+        "jms/di-extra-bundle": "1.4.*@dev",
         "kriswallsmith/assetic": "1.1.*@dev",
-        "propel/propel-bundle": "1.2.*",
-        "friendsofsymfony/user-bundle": "*",
+        "propel/propel-bundle": "1.2.*@dev",
         "willdurand/propel-typehintable-behavior": "dev-master",
-        "avalanche123/imagine-bundle": "v2.1",
-        "smirik/bootstrap-bundle": "v2.3.2",
-        "knplabs/knp-menu-bundle": "dev-master",
-        "kriswallsmith/assetic": "1.1.*@dev"
+
+        "friendsofsymfony/user-bundle": "*",
+        "imagine/Imagine": "v0.4.1",
+        "avalanche123/imagine-bundle": "dev-master",
+        "knplabs/knp-menu": "v2.0.0-alpha1",
+        "knplabs/knp-menu-bundle": "v2.0.0-alpha1",
+        "kriswallsmith/assetic": "1.1.*@dev",
+        "Trsteel/ckeditor-bundle": "1.1.*@dev"
     },
     "scripts": {
         "post-install-cmd": [
@@ -53,7 +50,7 @@
     "config": {
         "bin-dir": "bin"
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "extra": {
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",
@@ -63,6 +60,5 @@
         "branch-alias": {
             "dev-master": "2.3-dev"
         }
-
     }
 }
