@@ -113,9 +113,9 @@ trsteel_ckeditor:
     height: 300 # Integer or %
     language: 'en-au'
     filebrowser_upload_url:
-        url: relative-url.php?type=file
+        route: ckeditor_upload_file
     filebrowser_image_browse_url:
-        route: ~
+        route: ckeditor_browse_files
         route_parameters:
             type: image
     external_plugins:
