@@ -12,3 +12,4 @@
 .idea/
 build.sh
 routes.sh
+composer-dev.json

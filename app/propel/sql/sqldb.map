@@ -2,3 +2,5 @@
 default.sql=default
 # Sqlfile -> Database map
 default.sql=default
+# Sqlfile -> Database map
+default.sql=default
