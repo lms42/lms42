@@ -4,45 +4,53 @@
     "autoload": {
         "psr-0": { "": "src/" }
     },
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "http://package.4xxi.com"
-        }
-    ],
     "require": {
         "php": ">=5.3.3",
-        "symfony/symfony": "2.1.*",
+        "symfony/symfony": "2.3.*@dev",
         "doctrine/orm": ">=2.2.3,<2.4-dev",
-        "doctrine/doctrine-bundle": "1.1.*",
-        "twig/extensions": "1.0.*@dev",
-        "symfony/assetic-bundle": "2.1.*",
-        "symfony/swiftmailer-bundle": "2.1.*",
-        "symfony/monolog-bundle": "2.1.*",
-        "sensio/distribution-bundle": "2.1.*",
-        "sensio/framework-extra-bundle": "2.1.*",
-        "sensio/generator-bundle": "2.1.*",
-        "jms/security-extra-bundle": "1.2.*",
-        "jms/di-extra-bundle": "1.1.*",
+        "doctrine/doctrine-bundle": "1.2.*",
+        "twig/extensions": "1.0.*",
+        "symfony/assetic-bundle": "2.3.*",
+        "symfony/swiftmailer-bundle": "2.3.*",
+        "symfony/monolog-bundle": "2.3.*",
+        "sensio/distribution-bundle": "2.3.*",
+        "sensio/framework-extra-bundle": "2.3.*",
+        "sensio/generator-bundle": "2.3.*",
+        "incenteev/composer-parameter-handler": "~2.0",
+        "jms/security-extra-bundle": "1.5.*@dev",
+        "jms/di-extra-bundle": "1.4.*@dev",
         "kriswallsmith/assetic": "1.1.*@dev",
-        "propel/propel-bundle": "1.1.*",
-        "friendsofsymfony/user-bundle": "*",
+        "propel/propel-bundle": "1.2.*@dev",
         "willdurand/propel-typehintable-behavior": "dev-master",
+
+        "friendsofsymfony/user-bundle": "*",
         "imagine/Imagine": "v0.4.1",
         "avalanche123/imagine-bundle": "dev-master",
+        "knplabs/knp-menu": "v2.0.0-alpha1",
+        "knplabs/knp-menu-bundle": "v2.0.0-alpha1",
+        "kriswallsmith/assetic": "1.1.*@dev",
+        "Trsteel/ckeditor-bundle": "1.1.*@dev",
+
+        "smirik/propel-admin-bundle": "dev-develop",
         "smirik/bootstrap-bundle": "dev-master",
-        "knplabs/knp-menu": "2.0.x-dev@dev",
-        "knplabs/knp-menu-bundle": "dev-master",
-        "kriswallsmith/assetic": "1.1.*@dev"
+        "smirik/config-bundle": "dev-master",
+
+        "lms42/admin-bundle": "dev-develop",
+        "lms42/content-bundle": "dev-develop",
+        "lms42/course-bundle": "dev-develop",
+        "lms42/quiz-bundle": "dev-develop",
+        "lms42/exam-bundle": "dev-develop"
     },
     "scripts": {
         "post-install-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
         ],
         "post-update-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
@@ -55,6 +63,12 @@
     "minimum-stability": "dev",
     "extra": {
         "symfony-app-dir": "app",
-        "symfony-web-dir": "web"
+        "symfony-web-dir": "web",
+        "incenteev-parameters": {
+            "file": "app/config/parameters.yml"
+        },
+        "branch-alias": {
+            "dev-master": "2.3-dev"
+        }
     }
 }

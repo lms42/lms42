@@ -55,7 +55,9 @@
             <div class="container-fluid">
                 <a class="brand" href="{{ path('homepage') }}">Главная</a>
 
-                {% render "SmirikContentBundle:Content:navigation" %}
+                {{ render(controller('SmirikContentBundle:Content:navigation', { 'some_var': 123 })) }}
+                {% render controller('SmirikContentBundle:Content:navigation', { 'some_var': 123 }) %}
+                {#% render "SmirikContentBundle:Content:navigation" %#}
 
                 <p class="navbar-text pull-right">
                     {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}

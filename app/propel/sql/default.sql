@@ -99,6 +99,7 @@ CREATE TABLE `configs`
     `value` TEXT NOT NULL,
     `type` VARCHAR(20) NOT NULL,
     `is_visible` TINYINT(1) DEFAULT 1,
+    `rank` INTEGER DEFAULT 0,
     PRIMARY KEY (`id`),
     INDEX `configs_FI_1` (`pid`)
 ) ENGINE=MyISAM;

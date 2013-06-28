@@ -3,7 +3,7 @@
 {% block header %}<h1>Профиль</h1>{% endblock %}
 
 {% block content %}
-    {% for key, message in app.session.getFlashes() %}
+    {% for key, message in app.session.flashbag.all() %}
         <div class="{{ key }}">
             {{ message|trans({}, 'FOSUserBundle') }}
         </div>

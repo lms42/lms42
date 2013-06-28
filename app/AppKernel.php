@@ -31,6 +31,7 @@ class AppKernel extends Kernel
 	        new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new Smirik\ExamBundle\SmirikExamBundle(),
             new Smirik\ConfigBundle\SmirikConfigBundle(),
+            new Trsteel\CkeditorBundle\TrsteelCkeditorBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
