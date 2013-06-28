@@ -15,3 +15,5 @@ routes.sh
 composer-dev.json
 /bin
 /composer.phar
+/web/css
+/web/js
