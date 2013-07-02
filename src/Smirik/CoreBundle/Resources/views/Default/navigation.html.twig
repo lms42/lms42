@@ -1,0 +1,70 @@
+{# block navbar %}this content was in `navbar` block{ % endblock #}
+
+{% set menuItem = knp_menu_get('SmirikAdminBundle:Builder:main') %}
+{% for item in menuItem %}
+    <li class="{% if item.isCurrent %}active{% endif %}">
+        {% if item.hasChildren %}
+            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                {{ item.label|trans|raw }}
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                {% for child in item %}
+                    <li class="{% if child.isCurrent %}active{% endif %}">
+                        <a href="{{ child.uri }}">{{ child.label|trans }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+            <b class="caret-out"></b>
+        {% else %}
+            <li class="{% if item.isCurrent %}active{% endif %}"><a href="{{ item.uri }}">{{ item.label|trans|raw }}</a></li>
+        {% endif %}
+    </li>
+{% endfor %}
+
+
+{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+
+    {% set profile_filled = true %}
+
+    {% if app.user.profile.firstName == '' or app.user.profile.lastName == '' %}
+        {% set profile_filled = false %}
+        <li>
+            <a href="{{ path('profile_edit') }}">Профиль <span class="badge badge-important">!</span></a>
+        </li>
+    {% endif %}
+
+    <li class="active NEW">
+        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+            {{ app.user.profile.name }}
+            {% if not profile_filled %} <span class="badge badge-important">!</span>{% endif %}
+            <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+            {% if is_granted("ROLE_ADMIN") %}
+                <li><a href="{{ path('admin_main') }}">{{ 'Admin'|trans }}</a></li>
+            {% endif %}
+            <li>
+                <a href="{{ path('profile_index') }}">{{ 'Profile'|trans }}</a>
+            </li>
+            <li>
+                <a href="{{ path('fos_user_security_logout') }}">
+                    {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
+                </a>
+            </li>
+        </ul>
+        <b class="caret-out"></b>
+    </li>
+{% else %}
+    <li>
+        <a href="#signin_modal" role="button" class="" data-toggle="modal">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
+    </li>
+{% endif %}
+
+
+{% if not is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+    <!-- Button to trigger modal -->
+
+{% endif %}
+
+{% include 'SmirikCoreBundle:Default:_login.html.twig' %}

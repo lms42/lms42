@@ -1,0 +1,11 @@
+{% extends '::base.html.twig' %}
+
+{% block header %}
+    <h1>{{ 'Updates'|trans }}
+        <small>{{ 'project & data'|trans }}</small>
+    </h1>
+{% endblock %}
+
+{% block content %}
+    {% render url('course_updates') %}
+{% endblock %}

@@ -1,0 +1,19 @@
+{% set courses = courses_list() %}
+{% set route = app.request.get('_route') %}
+
+
+<ul class="nav nav-list well">
+    {% if courses|length %}
+        <li class="nav-header">{{ 'List of courses'|trans }}</li>
+        {% if route == 'course_show' %}
+            {% set id = app.request.get('id') %}
+        {% else %}
+            {% set id = false %}
+        {% endif %}
+        {% for course in courses %}
+            <li{% if id == course.id %} class="active"{% endif %}><a
+                        href="{{ path('course_show', {'id': course.id }) }}">{{ course.title }}</a>
+            </li>
+        {% endfor %}
+    {% endif %}
+</ul>

@@ -1,0 +1,29 @@
+div#signin_modal {
+    width: 300px;
+    margin-left: -100px;
+}
+
+.header {
+    margin-top: -60px;
+    position: fixed;
+    background-color: #FFFFFF;
+    z-index: inherit;
+}
+
+footer {
+    margin: 0 auto;
+    text-align: center;
+}
+
+ol.white {
+    color: white;
+}
+
+body {
+    padding-top: 60px;
+}
+
+div.modal-backdrop {
+    z-index: 1000 !important;
+}
+

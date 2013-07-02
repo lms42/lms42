@@ -1,0 +1,25 @@
+{% extends '::base.html.twig' %}
+
+{% block header %}
+<h1>О проекте <small>Информатика 2.0</small></h1>
+{% endblock %}
+
+{% block content %}
+
+    {% include 'SmirikCoreBundle:Default:slideshow.html.twig' %}
+    <p>
+        На сайте собраны материалы лекций и практических занятий по информатике 8—11 классов общеобразовательной школы. Контент разбит на несколько категорий в зависимости от типа. Любой материал можно скачать и свободно использовать в некоммерческих образовательных целях (лицензия Creative Commons Share-Alike для академических целей) с указанием авторства. При размещении данного контента в Интернете активная гиперссылка на данный сайт обязательна.
+    </p>
+
+    <h5>Типы материалов</h5>
+    <ul>
+        <li>Презентации</li>
+        <li>Видеолекции уроков</li>
+        <li>Сборник пособий</li>
+        <li>Сборник тестов</li>
+    </ul>
+
+    <h5>Автор</h5>
+    <!-- Facebook Badge START --><a href="https://www.facebook.com/smirik" target="_TOP" style="font-family: &quot;lucida grande&quot;,tahoma,verdana,arial,sans-serif; font-size: 11px; font-variant: normal; font-style: normal; font-weight: normal; color: #3B5998; text-decoration: none;" title="Evgeny Smirnov">Evgeny Smirnov</a><span style="font-family: &quot;lucida grande&quot;,tahoma,verdana,arial,sans-serif; font-size: 11px; line-height: 16px; font-variant: normal; font-style: normal; font-weight: normal; color: #555555; text-decoration: none;">&nbsp;|&nbsp;</span><a href="http://www.facebook.com/badges/" target="_TOP" style="font-family: &quot;lucida grande&quot;,tahoma,verdana,arial,sans-serif; font-size: 11px; font-variant: normal; font-style: normal; font-weight: normal; color: #3B5998; text-decoration: none;" title="Создайте свою собственную визитку!">Создайте свою визитку</a><br/><a href="https://www.facebook.com/smirik" target="_TOP" title="Evgeny Smirnov"><img src="https://badge.facebook.com/badge/1711276383.1372.941570909.png" style="border: 0px;" /></a><!-- Facebook Badge END -->
+  
+{% endblock %}

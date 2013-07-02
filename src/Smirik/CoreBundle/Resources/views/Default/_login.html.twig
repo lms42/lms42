@@ -1,0 +1,22 @@
+<!-- Modal -->
+<div id="signin_modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="">
+    <form class="form-signin" action="{{ path("fos_user_security_check") }}" method="post" autocomplete="off">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3>{{ 'Sign in'|trans }}</h3>
+        </div>
+        <div class="modal-body">
+            <input type="text" name="_username" class="input-block-level" placeholder="{{ 'Username'|trans }}">
+            <input type="password" name="_password" class="input-block-level" placeholder="{{ 'Password'|trans }}">
+            <label class="checkbox">
+                <input type="checkbox" value="_remember_me"> {{ 'Remember me'|trans }}
+            </label>
+        </div>
+        <input type="hidden" name="_csrf_token" value="{{ csrf }}"/>
+
+        <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" type="button" aria-hidden="true">{{ 'Close'|trans }}</button>
+            <button class="btn btn-success">{{ 'Sign in'|trans }}</button>
+        </div>
+    </form>
+</div>

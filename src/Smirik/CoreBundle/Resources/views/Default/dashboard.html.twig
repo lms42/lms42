@@ -1,0 +1,77 @@
+{% extends '::base.html.twig' %}
+
+{% block header %}
+    <h1>{{ 'Dashboard'|trans }}</h1>
+{% endblock %}
+
+{% block content %}
+    <div class="row-fluid">
+
+        <div class="headline"><h3>{{ 'Opened lessons'|trans }}</h3></div>
+        {% for lesson in lessons %}
+            {% if loop.index0 is divisibleby(3) or loop.index == 1 %}
+                <div class="row-fluid servive-block servive-block-in">
+            {% endif %}
+
+            <div class="span4">
+                <h4><a href="{{ path('lesson_index', {"id": lesson.id }) }}" style="color: #72C02C;">{{ lesson.title }}</a></h4>
+                <!--<i class="icon-bell"></i>
+                <p>Some Lesson Description</p>-->
+            </div>
+
+            {% if loop.index is divisibleby(3) or loop.last %}
+                </div>
+            {% endif %}
+        {% endfor %}
+
+
+        <div class="headline"><h3>{{ 'TODO'|trans }}</h3></div>
+        {% for user_task in user_tasks %}
+            {% if loop.index0 is divisibleby(2) or loop.index == 1 %}
+                <div class="row-fluid servive-block servive-block-in">
+            {% endif %}
+            <div class="span6">
+                <h4><a href="{{ path('lesson_index', {'id': user_task.lessonId }) }}#task{{ user_task.taskId }}" style="color: #72C02C;">{{ user_task.task.title }}</a></h4>
+                <p>{{ user_task.task.text|raw }}</p>
+
+                <!-- Reviews  -->
+                {% set reviews = user_task.getUserTaskReviews() %}
+                {% if reviews|length %}
+                    <div style="margin-left: 20px">
+                        <h5 style="text-decoration: underline">{{ 'Reviews'|trans }}</h5>
+                        {% for review in reviews %}
+                            <blockquote>
+                                <p style="font-weight: bold; font-size: 12px;">{{ review.text }}</p>
+                            </blockquote>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+            {% if loop.index is divisibleby(2) or loop.last %}
+                </div>
+            {% endif %}
+        {% endfor %}
+
+
+        <div class="headline"><h3>{{ 'Completed quizes'|trans }}</h3></div>
+        {% if completed_users_quiz|length %}
+            {% include "SmirikQuizBundle:Quiz/parts:quiz.completed.html.twig" %}
+        {% endif %}
+
+
+        <div class="headline"><h3>{{ 'Latest Content'|trans }}</h3></div>
+        {% for item in contents %}
+            {% if loop.index0 is divisibleby(2) or loop.index == 1 %}
+                <div class="row-fluid servive-block servive-block-in">
+            {% endif %}
+
+            <div class="span6">
+                {% include "SmirikContentBundle:Content:item.html.twig" with { item: item } %}
+            </div>
+
+            {% if loop.index is divisibleby(2) or loop.last %}
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endblock %}

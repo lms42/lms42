@@ -1,0 +1,7 @@
+parameters:
+#    smirik_core.example.class: Smirik\CoreBundle\Example
+
+services:
+#    smirik_core.example:
+#        class: %smirik_core.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
