@@ -1,23 +1,50 @@
 <!DOCTYPE html>
-<html>
+<!--[if IE 7]> <html lang="en" class="ie7"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>{% block title %}{{ 'mainpage.header'|config('LMS42') }}{% endblock %}</title>
 
     {{ bootstrap_js() }}
     {{ bootstrap_css() }}
 
     {% stylesheets
-    '@SmirikAdminBundle/Resources/public/css/*'
-    '@SmirikContentBundle/Resources/public/css/*' %}
-    <link rel="stylesheet" href="{{ asset_url }}"/>
+        '@SmirikAdminBundle/Resources/public/css/*'
+
+        '@SmirikCoreBundle/Resources/public/unify/css/style.css'
+        '@SmirikCoreBundle/Resources/public/unify/css/headers/header1.css'
+        '@SmirikCoreBundle/Resources/public/unify/plugins/bootstrap/css/bootstrap-responsive.min.css'
+        '@SmirikCoreBundle/Resources/public/unify/css/style_responsive.css'
+
+        '@SmirikCoreBundle/Resources/public/unify/plugins/font-awesome/css/font-awesome.css'
+        '@SmirikCoreBundle/Resources/public/unify/plugins/flexslider/flexslider.css'
+        '@SmirikCoreBundle/Resources/public/unify/plugins/parallax-slider/css/parallax-slider.css'
+        '@SmirikCoreBundle/Resources/public/unify/css/themes/default.css'
+
+        '@SmirikCoreBundle/Resources/public/css/*'
+    %}
+        <link rel="stylesheet" href="{{ asset_url }}"/>
     {% endstylesheets %}
+
+    <!--
+        // '@SmirikCoreBundle/Resources/public/unify/plugins/bootstrap/css/bootstrap.min.css'
+
+        // Header theme (include this css after `unify/css/themes/default.css`)
+        '@SmirikCoreBundle/Resources/public/unify/css/themes/headers/default.css'
+
+        // Maybe to need the id attributes
+        <link rel="stylesheet" href="assets/css/themes/default.css" id="style_color">
+        <link rel="stylesheet" href="assets/css/themes/headers/default.css" id="style_color-header-1">
+    -->
 
     {% block stylesheets %}{% endblock %}
     {% block javascripts %}{% endblock %}
 
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}"/>
-
 
     <script type="text/javascript">
 
@@ -36,9 +63,7 @@
     </script>
 
     <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
-        {
-            lang: 'ru'
-        }
+        { lang: 'ru' }
     </script>
 
     <script src="http://vkontakte.ru/js/api/openapi.js" type="text/javascript" charset="windows-1251"></script>
@@ -50,69 +75,51 @@
 <body>
 
 {% block navbar %}
-    <div class="navbar navbar-fixed-top">
-        <div class="navbar-inner">
-            <div class="container-fluid">
-                <a class="brand" href="{{ path('homepage') }}">Главная</a>
-
-                {{ render(controller('SmirikContentBundle:Content:navigation', { 'some_var': 123 })) }}
-                {% render controller('SmirikContentBundle:Content:navigation', { 'some_var': 123 }) %}
-                {#% render "SmirikContentBundle:Content:navigation" %#}
-
-                <p class="navbar-text pull-right">
-                    {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-                        {% if is_granted("ROLE_ADMIN") %}
-                            <a href="{{ path('admin_main') }}">Администрирование</a> |
-                        {% endif %}
-                        <a href="{{ path('fos_user_profile_show') }}">
-                            {{ app.user.username }}</a> |
-                        <a href="{{ path('fos_user_security_logout') }}">
-                            {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
-                        </a>
-                    {% else %}
-                        <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
-                    {% endif %}
-
-                </p>
-            </div>
-        </div>
-    </div>
+    {% include "SmirikCoreBundle:Default:navbar.html.twig" %}
 {% endblock %}
 
 {% block body %}
-    <div class="container-fluid">
-        <div class="row-fluid">
-            <div class="span3">
-                {% block left_without_well %}
-                    <div class="sidebar-nav">
-                        {% block left %}
-                            {% include 'SmirikContentBundle:Default:_sidebar.html.twig' %}
-                        {% endblock %}
-                    </div>
-                {% endblock %}
-            </div>
 
-            <div class="span9">
+    {% block breadcrumbs %}
+        {% include "SmirikCoreBundle:Default:breadcrumbs.html.twig" %}
+    {% endblock %}
 
-                <!-- Main hero unit for a primary marketing message or call to action -->
-                {% block hero %}
-                {% endblock %}
+    {% block container %}
+        <div class="container">
 
-                <div class="content">
-                    {% block content_navigation %}
+            <div class="row-fluid">
+                <div class="span3">
+                    {% block left_without_well_DEL %}
+                        <div class="sidebar-nav">
+                            {% block left %}
+                                {% if is_granted('ROLE_USER') %}
+                                    {% include 'SmirikCoreBundle:Default/parts:sidebar.user.html.twig' %}
+                                {% else %}
+                                    {% include 'SmirikCoreBundle:Default/parts:sidebar.guest.html.twig' %}
+                                {% endif %}
+                            {% endblock %}
+                        </div>
                     {% endblock %}
-                    {% block header %}
-                    {% endblock %}
-                    <hr>
                 </div>
-                <div class="content">
-                    {% block content %}
 
-                    {% endblock %}
+                <div class="span9">
+
+                    <!-- Main hero unit for a primary marketing message or call to action -->
+                    {% block hero %}{% endblock %}
+
+                    <div class="content">
+                        {% block content_navigation %}{% endblock %}
+                        {% block header %}{% endblock %}
+                        <hr>
+                    </div>
+                    <div class="content">
+                        {% block content %}{% endblock %}
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    {% endblock %}
+
     <footer>
         <p>&copy; 2010-{{ "now"|date("Y") }}</p>
     </footer>

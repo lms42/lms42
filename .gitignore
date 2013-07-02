@@ -17,3 +17,5 @@ composer-dev.json
 /composer.phar
 /web/css
 /web/js
+/unify
+\.*~
