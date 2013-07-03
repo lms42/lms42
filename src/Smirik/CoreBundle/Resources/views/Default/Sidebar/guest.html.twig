@@ -1,7 +1,6 @@
 {% set courses = courses_list() %}
 {% set route = app.request.get('_route') %}
 
-
 <ul class="nav nav-list well">
     {% if courses|length %}
         <li class="nav-header">{{ 'List of courses'|trans }}</li>

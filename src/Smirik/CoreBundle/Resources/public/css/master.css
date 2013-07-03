@@ -1,5 +1,5 @@
 div#signin_modal {
-    width: 300px;
+    width: 352px;
     margin-left: -100px;
 }
 
@@ -22,7 +22,7 @@ ol.white {
 }
 
 body {
-    padding-top: 60px;
+    padding-top: 10px;
 }
 
 div.modal-backdrop {

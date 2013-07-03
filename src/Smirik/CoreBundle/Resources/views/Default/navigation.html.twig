@@ -1,6 +1,7 @@
 {# block navbar %}this content was in `navbar` block{ % endblock #}
 
 {% set menuItem = knp_menu_get('SmirikAdminBundle:Builder:main') %}
+
 {% for item in menuItem %}
     <li class="{% if item.isCurrent %}active{% endif %}">
         {% if item.hasChildren %}
@@ -24,7 +25,6 @@
 
 
 {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-
     {% set profile_filled = true %}
 
     {% if app.user.profile.firstName == '' or app.user.profile.lastName == '' %}
@@ -67,4 +67,3 @@
 
 {% endif %}
 
-{% include 'SmirikCoreBundle:Default:_login.html.twig' %}
