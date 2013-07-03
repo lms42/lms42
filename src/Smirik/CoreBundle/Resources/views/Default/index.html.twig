@@ -1,11 +1,15 @@
 {% extends 'SmirikCoreBundle::layout.html.twig' %}
 
 {% block header %}
-    <h1>{{ 'Updates'|trans }}
-        <small>{{ 'project & data'|trans }}</small>
-    </h1>
+    <div class="span9">
+            <span>LMS42</span>
+            <p>{{ 'New way for e-learning'|trans }}. </p>
+    </div>
+    <a href="#" class="btn-buy hover-effect">Demo</a>
 {% endblock %}
 
 {% block content %}
-    {% render url('course_updates') %}
+    {% for course in courses %}
+        {% include 'SmirikCoreBundle:Course:_card.html.twig' with { 'index': loop.index } %}
+    {% endfor %}
 {% endblock %}

@@ -86,9 +86,9 @@ avalanche_imagine:
         avatar_profile:
             type:    thumbnail
             options: { size: [250, 400], mode: outbound }
-        company_profile:
+        course_preview:
             type:    thumbnail
-            options: { size: [200, 200], mode: outbound }
+            options: { size: [265, 200], mode: outbound }
         carousel_help:
             type:    thumbnail
             options: { size: [1050, 500], mode: outbound }

@@ -7,7 +7,7 @@
 {% block content %}
     <div class="row-fluid">
 
-        <div class="headline"><h3>{{ 'Opened lessons'|trans }}</h3></div>
+        <div class="headline"><h3>{{ 'Current lessons'|trans }}</h3></div>
         {% for lesson in lessons %}
             {% if loop.index0 is divisibleby(3) or loop.index == 1 %}
                 <div class="row-fluid servive-block servive-block-in">
@@ -15,8 +15,7 @@
 
             <div class="span4">
                 <h4><a href="{{ path('lesson_index', {"id": lesson.id }) }}" style="color: #72C02C;">{{ lesson.title }}</a></h4>
-                <!--<i class="icon-bell"></i>
-                <p>Some Lesson Description</p>-->
+                <p>{{ lesson.course.title }}</p>
             </div>
 
             {% if loop.index is divisibleby(3) or loop.last %}
@@ -25,7 +24,7 @@
         {% endfor %}
 
 
-        <div class="headline"><h3>{{ 'TODO'|trans }}</h3></div>
+        <div class="headline"><h3>{{ 'Current tasks'|trans }}</h3></div>
         {% for user_task in user_tasks %}
             {% if loop.index0 is divisibleby(2) or loop.index == 1 %}
                 <div class="row-fluid servive-block servive-block-in">

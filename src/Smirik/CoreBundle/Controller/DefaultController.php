@@ -35,9 +35,12 @@ class DefaultController extends Controller
             ->limit(10)
             ->orderByCreatedAt('desc')
             ->find();
+        
+        $courses = $this->get('course.manager')->getAll();
 
         return array(
-            'news' => $news
+            'news' => $news,
+            'courses' => $courses,
         );
     }
 
