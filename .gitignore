@@ -14,6 +14,7 @@
 build.sh
 routes.sh
 composer-dev.json
+composer-dev.lock
 /bin
 /composer.phar
 /web/css

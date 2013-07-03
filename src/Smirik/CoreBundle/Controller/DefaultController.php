@@ -13,6 +13,8 @@ use Smirik\ContentBundle\Model\CategoryQuery;
 use Smirik\CourseBundle\Model\CourseQuery;
 use Smirik\CourseBundle\Model\LessonQuery;
 
+use Symfony\Component\HttpFoundation\Response;
+
 class DefaultController extends Controller
 {
     /**
@@ -100,6 +102,14 @@ class DefaultController extends Controller
             'courses' => $courses,
             'csrf' => $csrf,
         );
+    }
+    
+    /**
+     */
+    public function csrfAction()
+    {
+        $csrf = $this->container->get('form.csrf_provider')->generateCsrfToken('authenticate');
+        return new Response($csrf);
     }
 
     /**

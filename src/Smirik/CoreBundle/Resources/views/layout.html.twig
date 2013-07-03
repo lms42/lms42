@@ -1,0 +1,47 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+
+    {% block navbar %}
+        {% include "SmirikCoreBundle:Default:navbar.html.twig" %}
+    {% endblock %}
+
+    {% block breadcrumbs %}
+    {% endblock %}
+
+    {% block container %}
+        <div class="container">
+
+            <div class="row-fluid">
+                <div class="span3">
+                    {% block left_without_well_DEL %}
+                        <div class="sidebar-nav">
+                            {% block left %}
+                                {% if is_granted('ROLE_USER') %}
+                                    {% include 'SmirikCoreBundle:Default/Sidebar:user.html.twig' %}
+                                {% else %}
+                                    {% include 'SmirikCoreBundle:Default/Sidebar:guest.html.twig' %}
+                                {% endif %}
+                            {% endblock %}
+                        </div>
+                    {% endblock %}
+                </div>
+
+                <div class="span9">
+
+                    <!-- Main hero unit for a primary marketing message or call to action -->
+                    {% block hero %}{% endblock %}
+
+                    <div class="content">
+                        {% block content_navigation %}{% endblock %}
+                        {% block header %}{% endblock %}
+                        <hr>
+                    </div>
+                    <div class="content">
+                        {% block content %}{% endblock %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+{% endblock %}

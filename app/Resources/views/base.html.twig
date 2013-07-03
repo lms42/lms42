@@ -74,11 +74,11 @@
 </head>
 <body>
 
-{% block navbar %}
-    {% include "SmirikCoreBundle:Default:navbar.html.twig" %}
-{% endblock %}
-
 {% block body %}
+
+    {% block navbar %}
+        {% include "SmirikCoreBundle:Default:navbar.html.twig" %}
+    {% endblock %}
 
     {% block breadcrumbs %}
         {% include "SmirikCoreBundle:Default:breadcrumbs.html.twig" %}
@@ -93,9 +93,9 @@
                         <div class="sidebar-nav">
                             {% block left %}
                                 {% if is_granted('ROLE_USER') %}
-                                    {% include 'SmirikCoreBundle:Default/parts:sidebar.user.html.twig' %}
+                                    {% include 'SmirikCoreBundle:Default/Sidebar:user.html.twig' %}
                                 {% else %}
-                                    {% include 'SmirikCoreBundle:Default/parts:sidebar.guest.html.twig' %}
+                                    {% include 'SmirikCoreBundle:Default/Sidebar:guest.html.twig' %}
                                 {% endif %}
                             {% endblock %}
                         </div>
