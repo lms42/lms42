@@ -4,6 +4,7 @@
 /app/cache/*
 /app/logs/*
 /vendor/
+/app/propel/sql
 /app/config/parameters.ini
 /app/config/parameters.yml
 /web/media
