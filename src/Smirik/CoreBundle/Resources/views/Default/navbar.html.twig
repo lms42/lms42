@@ -1,15 +1,7 @@
 {% include 'SmirikCoreBundle:Default:_login.html.twig' %}
 
-<div class="header">
-    <div class="container-fluid">
-
-        <div class="logo">
-            <h3><a href="{{ path('homepage') }}">LOGO</a></h3>
-            <!--<a href="{{ path('homepage') }}">
-                Logo
-                <img class="" alt="Logo" id="logo-header" src="{{ asset('/bundles/smirikcore/unify/img/logo1-default.png') }}" alt="">
-            </a>-->
-        </div>
+<div class="container">
+    <div class="row-fluid">
 
         <!-- Menu -->
         <div class="navbar">
@@ -21,10 +13,7 @@
                 </a><!-- /nav-collapse -->
                 <div class="nav-collapse collapse">
                     <ul class="nav top-2">
-
                         {% render controller('SmirikCoreBundle:Default:navigation') %}
-
-                        <li class="hide"><a class="search"><i class="search-btn icon-search"></i></a></li>
                     </ul>
                     <div class="search-open" style="display: none;">
                         <div class="input-append">
