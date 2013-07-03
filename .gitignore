@@ -29,4 +29,4 @@ composer-dev.lock
 /src/Smirik/PropelAdminBundle
 /src/Smirik/QuizBundle
 
-/unify
+src/Smirik/CoreBundle/Resources/public/unify/img
