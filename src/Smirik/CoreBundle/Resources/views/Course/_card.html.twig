@@ -1,24 +1,17 @@
-{% if index is divisibleby(3) or index == 1 %}
-    <ul class="thumbnails">
-{% endif %}
-
-    <li class="span4">
-        <div class="thumbnail" style="height: 350px;">
-            <div class="overflow-hidden">
-                {% if course.file != '' %}
-                    <img alt="" src="{{ course.file|apply_filter('course_preview') }}">
-                {% else %}
-                    <img alt="" src="{{ asset('/bundles/smirikcore/images/default.gif')|apply_filter('course_preview') }}">
-                {% endif %}
-            </div>
-            <div class="caption">
-                <h4>{{ course.title }}</h4>
-                <p>{{ course.description|raw }}</p>
-                <p><a class="btn-u" href="{{ path('course_show', { "id": course.id }) }}">{{ 'Start'|trans }}</a></p>
-            </div>
+<li class="span4">
+    <div class="thumbnail">
+        <div class="overflow-hidden" style="text-align: center">
+            {% if course.file != '' %}
+                <img alt="" src="{{ course.file|apply_filter('course_preview') }}">
+            {% else %}
+                <img alt="" src="{{ asset('/bundles/smirikcore/images/default.gif')|apply_filter('course_preview') }}">
+            {% endif %}
         </div>
-    </li>
+        <div class="caption">
+            <h4>{{ course.title }}</h4>
+            <p>{{ course.description|raw }}</p>
+            <p><a class="btn-u" href="{{ path('course_show', { "id": course.id }) }}">{{ 'Start'|trans }}</a></p>
+        </div>
+    </div>
+</li>
 
-{% if loop.index is divisibleby(3) or loop.last %}
-    </ul>
-{% endif %}

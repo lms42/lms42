@@ -1,15 +1,34 @@
-{% extends 'SmirikCoreBundle::layout.html.twig' %}
+{#% extends 'SmirikCoreBundle::layout.html.twig' %#}
+{% extends '::1column.html.twig' %}
 
-{% block header %}
-    <div class="span9">
-            <span>LMS42</span>
-            <p>{{ 'New way for e-learning'|trans }}. </p>
+{% block summary %}
+    <div class="row-fluid purchase margin-bottom-30">
+        <div class="container">
+            <div class="span9">
+                <span>LMS42</span>
+                <p>{{ 'New way for e-learning'|trans }}. </p>
+            </div>
+            <a class="btn-buy hover-effect" href="#">Demo</a>
+        </div>
     </div>
-    <a href="#" class="btn-buy hover-effect">Demo</a>
+{% endblock %}
+
+{% block body %}
+    {{ parent() }}
+    {% block breadcrumbs "" %}
 {% endblock %}
 
 {% block content %}
     {% for course in courses %}
-        {% include 'SmirikCoreBundle:Course:_card.html.twig' with { 'index': loop.index } %}
+        {% if loop.index0 is divisibleby(3) %}
+            <ul class="thumbnails">
+        {% endif %}
+
+        {% include 'SmirikCoreBundle:Course:_card.html.twig' %}
+
+        {% if loop.index is divisibleby(3) or loop.last %}
+            </ul>
+        {% endif %}
+
     {% endfor %}
 {% endblock %}

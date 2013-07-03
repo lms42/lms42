@@ -26,11 +26,24 @@
 
         <div class="headline"><h3>{{ 'Current tasks'|trans }}</h3></div>
         {% for user_task in user_tasks %}
-            {% if loop.index0 is divisibleby(2) or loop.index == 1 %}
+            {% if loop.index0 is divisibleby(2) %}
                 <div class="row-fluid servive-block servive-block-in">
             {% endif %}
             <div class="span6">
-                <h4><a href="{{ path('lesson_index', {'id': user_task.lessonId }) }}#task{{ user_task.taskId }}" style="color: #72C02C;">{{ user_task.task.title }}</a></h4>
+                <h4>
+                    <a href="{{ path('lesson_index', {'id': user_task.lessonId }) }}#task{{ user_task.taskId }}" style="color: #72C02C;">{{ user_task.task.title }}</a>
+                    {% if user_task.status == 0 %}
+                        <span class="label label-inverse"><i class="icon-leaf" style="margin-right: 0"></i></span>
+                    {% elseif user_task.status == 1 %}
+                        <span class="label label-important"><i class="icon-bell-alt" style="margin-right: 0"></i></span>icon-bell-alt
+                    {% elseif user_task.status == 2 %}
+                        <span class="label label-warning"><i class="icon-exclamation-sign" style="margin-right: 0"></i></span>
+                    {% elseif user_task.status == 3 %}
+                        <span class="label label-success"><i class="icon-ok" style="margin-right: 0"></i></span>
+                    {% elseif user_task.status == 4 %}
+                        <span class="label label-warning"><i class="icon-exclamation" style="margin-right: 0"></i></span>
+                    {% endif %}
+                </h4>
                 <p>{{ user_task.task.text|raw }}</p>
 
                 <!-- Reviews  -->
@@ -52,6 +65,22 @@
         {% endfor %}
 
 
+        <div class="row-fluid">
+            <div class="span6">
+                <div class="headline"><h3>{{ 'Completed tasks'|trans }}</h3></div>
+                {% if completed_user_tasks|length %}
+                    {% include "SmirikCourseBundle:Task:user_task.latest.table.html.twig" with { user_tasks: completed_user_tasks } %}
+                {% endif %}
+            </div>
+            <div class="span6">
+                <div class="headline"><h3>{{ 'Pending tasks'|trans }}</h3></div>
+                {% if pending_user_tasks|length %}
+                    {% include "SmirikCourseBundle:Task:user_task.latest.table.html.twig" with { user_tasks: pending_user_tasks } %}
+                {% endif %}
+            </div>
+        </div>
+
+
         <div class="headline"><h3>{{ 'Completed quizes'|trans }}</h3></div>
         {% if completed_users_quiz|length %}
             {% include "SmirikQuizBundle:Quiz/parts:quiz.completed.html.twig" %}
@@ -59,18 +88,11 @@
 
 
         <div class="headline"><h3>{{ 'Latest Content'|trans }}</h3></div>
+        <div class="row-fluid servive-block servive-block-in">
         {% for item in contents %}
-            {% if loop.index0 is divisibleby(2) or loop.index == 1 %}
-                <div class="row-fluid servive-block servive-block-in">
-            {% endif %}
+            {% include "SmirikContentBundle:Content:item.html.twig" with { item: item } %}
+         {% endfor %}
+        </div>
 
-            <div class="span6">
-                {% include "SmirikContentBundle:Content:item.html.twig" with { item: item } %}
-            </div>
-
-            {% if loop.index is divisibleby(2) or loop.last %}
-                </div>
-            {% endif %}
-        {% endfor %}
     </div>
 {% endblock %}

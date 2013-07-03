@@ -58,9 +58,11 @@ class DefaultController extends Controller
 
         $tm = $this->get('user_task.manager');
         $user_tasks = $tm->latestUserTodo($user, 6);
+        $completed_user_tasks = $tm->lastCompleted($user, 5);
+        $pending_user_tasks   = $tm->lastPending($user, 5);
 
         $uqm  = $this->get('user_quiz.manager');
-        $completed_users_quiz = $uqm->completed($user, 10);
+        $completed_users_quiz = $uqm->completed($user, 5);
 
         $cm = $this->get('content.manager');
         $contents = $cm->last(5);
@@ -68,6 +70,8 @@ class DefaultController extends Controller
         return array(
             'lessons'    => $lessons,
             'user_tasks' => $user_tasks,
+            'completed_user_tasks' => $completed_user_tasks,
+            'pending_user_tasks'   => $pending_user_tasks,
             'completed_users_quiz' => $completed_users_quiz,
             'contents'   => $contents
         );

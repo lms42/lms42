@@ -14,7 +14,6 @@
 
     {% stylesheets
         '@SmirikAdminBundle/Resources/public/css/*'
-
         '@SmirikCoreBundle/Resources/public/unify/css/style.css'
         '@SmirikCoreBundle/Resources/public/unify/css/headers/header1.css'
         '@SmirikBootstrapBundle/Resources/public/css/bootstrap-responsive.min.css'
@@ -22,6 +21,7 @@
 
         '@SmirikCoreBundle/Resources/public/unify/css/themes/default.css'
 
+        '@SmirikCoreBundle/Resources/public/css/icons/style.css'
         '@SmirikCoreBundle/Resources/public/css/*'
     %}
         <link rel="stylesheet" href="{{ asset_url }}"/>
@@ -81,27 +81,25 @@
         {% include "SmirikCoreBundle:Default:breadcrumbs.html.twig" %}
     {% endblock %}
 
+    {% block summary "" %}
+
     {% block container %}
         <div class="container">
-
             <div class="row-fluid">
+
                 <div class="span3">
-                    {% block left_without_well_DEL %}
-                        <div class="sidebar-nav">
-                            {% block left %}
-                                {% if is_granted('ROLE_USER') %}
-                                    {% include 'SmirikCoreBundle:Default/Sidebar:user.html.twig' %}
-                                {% else %}
-                                    {% include 'SmirikCoreBundle:Default/Sidebar:guest.html.twig' %}
-                                {% endif %}
-                            {% endblock %}
-                        </div>
-                    {% endblock %}
+                    <div class="sidebar-nav">
+                        {% block left %}
+                            {% if is_granted('ROLE_USER') %}
+                                {% include 'SmirikCoreBundle:Default/Sidebar:user.html.twig' %}
+                            {% else %}
+                                {% include 'SmirikCoreBundle:Default/Sidebar:guest.html.twig' %}
+                            {% endif %}
+                        {% endblock %}
+                    </div>
                 </div>
 
                 <div class="span9">
-
-                    <!-- Main hero unit for a primary marketing message or call to action -->
                     {% block hero %}{% endblock %}
 
                     <div class="content">
@@ -113,13 +111,17 @@
                         {% block content %}{% endblock %}
                     </div>
                 </div>
+
             </div>
         </div>
     {% endblock %}
 
-    <footer>
-        <p>&copy; 2010-{{ "now"|date("Y") }}</p>
-    </footer>
+    {% block footer %}
+        <footer>
+            <p>&copy; 2010-{{ "now"|date("Y") }}</p>
+        </footer>
+    {% endblock %}
+
 {% endblock %}
 
 </body>
