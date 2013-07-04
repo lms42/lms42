@@ -78,7 +78,18 @@
     {% endblock %}
 
     {% block breadcrumbs %}
-        {% include "SmirikCoreBundle:Default:breadcrumbs.html.twig" %}
+        <div class="row-fluid breadcrumbs margin-bottom-20">
+            <div class="container">
+                <h1 class="pull-left">
+                    {% block header "" %}
+                </h1>
+                <ul class="pull-right breadcrumb">
+                    <li><a href="index.html">Home</a> <span class="divider">/</span></li>
+                    <li><a href="">Features</a> <span class="divider">/</span></li>
+                    <li class="active">Navigation</li>
+                </ul>
+            </div>
+        </div>
     {% endblock %}
 
     {% block summary "" %}
@@ -104,7 +115,7 @@
 
                     <div class="content">
                         {% block content_navigation %}{% endblock %}
-                        {% block header %}{% endblock %}
+
                         <hr>
                     </div>
                     <div class="content">

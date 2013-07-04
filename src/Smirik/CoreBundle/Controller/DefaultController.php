@@ -51,7 +51,6 @@ class DefaultController extends Controller
     public function dashboardAction()
     {
         $user = $this->getUser();
-        $user_id = is_object($user) ? $user->getId() : false;
 
         $lm = $this->get('lesson.manager');
         $lessons = $lm->getOpened($user);
