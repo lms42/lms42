@@ -1,3 +1,6 @@
+p a { text-decoration: underline }
+p a:hover { text-decoration: none; color: inherit; }
+
 div#signin_modal {
     width: 352px;
     margin-left: -100px;

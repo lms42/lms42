@@ -22,7 +22,7 @@
         '@SmirikCoreBundle/Resources/public/unify/css/themes/default.css'
 
         '@SmirikCoreBundle/Resources/public/css/icons/style.css'
-        '@SmirikCoreBundle/Resources/public/css/*'
+        '@SmirikCoreBundle/Resources/public/css/master.css'
     %}
         <link rel="stylesheet" href="{{ asset_url }}"/>
     {% endstylesheets %}
@@ -84,7 +84,7 @@
                     {% block header "" %}
                 </h1>
                 <ul class="pull-right breadcrumb">
-                    <li><a href="index.html">Home</a> <span class="divider">/</span></li>
+                    <li><a href="{{ path('homepage') }}">{{ 'Home'|trans }}</a> <span class="divider">/</span></li>
                     <li><a href="">Features</a> <span class="divider">/</span></li>
                     <li class="active">Navigation</li>
                 </ul>

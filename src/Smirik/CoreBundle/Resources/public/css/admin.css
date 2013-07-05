@@ -1,0 +1,17 @@
+div#signin_modal {
+    margin-left: -100px;
+    width: 300px;
+}
+footer {
+    margin: 0 auto;
+    text-align: center;
+}
+ol.white {
+    color: white;
+}
+body {
+    padding-top: 60px;
+}
+div.modal-backdrop {
+    z-index: 1000 !important;
+}
