@@ -85,18 +85,6 @@
                     {% block header "" %}
                 </h1>
                 {{ knp_menu_render('main_breadcrumbs', {template: "SmirikCoreBundle:Menu:breacrumb.html.twig"}) }}
-                <ul class="pull-right breadcrumb">
-                    {% set temp = knp_menu_get('main_breadcrumbs') %}
-                    {% if not temp is null %}
-                    {% for item in temp %}
-                        <li><a href="{{ item.url }}">{{ item.label }}</a> <span class="divider">/</span></li>
-                    {% endfor %}
-                    {% endif %}
-
-                    {#<li><a href="{{ path('homepage') }}">{{ 'Home'|trans }}</a> <span class="divider">/</span></li>#}
-                    {#<li><a href="">Features</a> <span class="divider">/</span></li>#}
-                    {#<li class="active">Navigation</li>#}
-                </ul>
             </div>
         </div>
     {% endblock %}

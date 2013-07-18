@@ -1,0 +1,50 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}{{ 'Мой кабинет'|trans }}{% endblock %}
+
+{% block header %}
+    {{ 'Мой кабинет'|trans }}
+{% endblock %}
+
+{% block content %}
+    <div class="row-fluid">
+        <div class="span4">
+            <div class="service clearfix">
+                <div class="desc">
+                    <h4><a href="{{ path("course_index") }}">Все курсы</a></h4>
+                </div>
+            </div>
+        </div>
+        <div class="span4">
+            <div class="service clearfix">
+                <div class="desc">
+                    <h4><a href="{{ path("course_results") }}">Результаты курсов</a></h4>
+                </div>
+            </div>
+        </div>
+        <div class="span4">
+            <div class="service clearfix">
+                <div class="desc">
+                    <h4><a href="{{ path("quiz_results") }}">Результаты тестов</a></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span4">
+            <div class="service clearfix">
+                <div class="desc">
+                    <h4><a href="{{ path("smirik_quiz_index") }}">Все тесты</a></h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="span4">
+            <div class="service clearfix">
+                <div class="desc">
+                    <h4><a href="{{ path("exam_index") }}">Контрольные работы</a></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
