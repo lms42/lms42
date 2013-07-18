@@ -1,7 +1,11 @@
-parameters:
-#    smirik_core.example.class: Smirik\CoreBundle\Example
-
 services:
-#    smirik_core.example:
-#        class: %smirik_core.example.class%
-#        arguments: [@service_id, "plain_value", %parameter%]
+  lms42_main_menu_builder:
+    class: Smirik\CoreBundle\Menu\MainMenuBuilder
+    arguments: [@knp_menu.factory, @service_container]
+
+  lms42_main_menu:
+    class: Knp\Menu\MenuItem
+    factory_service: lms42_main_menu_builder
+    factory_method: build
+    tags:
+      - { name: knp_menu.menu, alias: main }
