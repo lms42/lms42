@@ -35,20 +35,25 @@
                 <div class="row-fluid servive-block servive-block-in">
             {% endif %}
             <div class="span6">
-                <h4>
-                    <a href="{{ path('lesson_index', {'id': user_task.lessonId }) }}#task{{ user_task.taskId }}" class="blue">{{ user_task.task.title }}</a>
-                    {% if user_task.status == 0 %}
-                        <span class="label label-inverse"><i class="icon-leaf" style="margin-right: 0"></i></span>
-                    {% elseif user_task.status == 1 %}
-                        <span class="label label-important"><i class="icon-bell-alt" style="margin-right: 0"></i></span>icon-bell-alt
-                    {% elseif user_task.status == 2 %}
-                        <span class="label label-warning"><i class="icon-exclamation-sign" style="margin-right: 0"></i></span>
-                    {% elseif user_task.status == 3 %}
-                        <span class="label label-success"><i class="icon-ok" style="margin-right: 0"></i></span>
-                    {% elseif user_task.status == 4 %}
-                        <span class="label label-warning"><i class="icon-exclamation" style="margin-right: 0"></i></span>
-                    {% endif %}
-                </h4>
+                <ul class="unstyled inline">
+                    <li>
+                        <a  href="{{ path('lesson_index', {'id': user_task.lessonId }) }}#task{{ user_task.taskId }}"
+                            class="blue font-size-18">
+                            {{ user_task.task.title }}
+                        </a>
+                        {% if user_task.status == 0 %}
+                            <i class="icon-leaf" style="margin-right: 0"></i>
+                        {% elseif user_task.status == 1 %}
+                            <i class="icon-bell-alt" style="margin-right: 0"></i>
+                        {% elseif user_task.status == 2 %}
+                            <i class="icon-exclamation-sign" style="margin-right: 0"></i>
+                        {% elseif user_task.status == 3 %}
+                            <i class="icon-ok" style="margin-right: 0"></i>
+                        {% elseif user_task.status == 4 %}
+                            <i class="icon-exclamation" style="margin-right: 0"></i>
+                        {% endif %}
+                    </li>
+                </ul>
                 <p>{{ user_task.task.text|raw }}</p>
 
                 <!-- Reviews  -->

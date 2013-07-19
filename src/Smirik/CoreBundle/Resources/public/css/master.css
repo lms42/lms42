@@ -35,3 +35,11 @@ div.modal-backdrop {
 .blue {
     color: #3498db;
 }
+
+[class^="icon-"], [class*=" icon-"]{
+    background-image: none;
+}
+
+.font-size-18{
+    font-size: 18px;
+}
