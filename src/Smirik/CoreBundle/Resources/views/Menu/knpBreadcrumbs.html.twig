@@ -1,0 +1,5 @@
+{% block root %}
+    {% if item.breadcrumbsArray and item.breadcrumbsArray|length > 1 %}
+       {% include "SmirikCoreBundle:Menu:breadcrumbs.html.twig" with {items: item.breadcrumbsArray} %}
+    {% endif %}
+{% endblock %}

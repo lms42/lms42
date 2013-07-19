@@ -1,7 +1,6 @@
-{% block root %}
-    {% if item.breadcrumbsArray and item.breadcrumbsArray|length > 1 %}
-        <ul class="pull-right breadcrumb">
-        {%- for link in item.breadcrumbsArray %}
+{% if items and items|length > 1 %}
+    <ul class="pull-right breadcrumb">
+        {%- for link in items %}
             <li>
                 {% if loop.first %}
                     <a href="{{ path("dashboard") }}" title="dashboard">{{ "Dashboard"|trans }}</a>
@@ -14,6 +13,5 @@
                 {% if not loop.last %}<span class="divider">/</span>{% endif %}
             </li>
         {%- endfor %}
-        </ul>
-    {% endif %}
-{% endblock %}
+    </ul>
+{% endif %}

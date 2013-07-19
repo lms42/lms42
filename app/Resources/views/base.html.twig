@@ -78,16 +78,18 @@
         {% include "SmirikCoreBundle:Default:navbar.html.twig" %}
     {% endblock %}
 
-    {% block breadcrumbs %}
-        <div class="row-fluid breadcrumbs margin-bottom-20">
-            <div class="container">
-                <h1 class="pull-left">
-                    {% block header "" %}
-                </h1>
-                {{ knp_menu_render('main_breadcrumbs', {template: "SmirikCoreBundle:Menu:breacrumb.html.twig"}) }}
-            </div>
+
+    <div class="row-fluid breadcrumbs margin-bottom-20">
+        <div class="container">
+            <h1 class="pull-left">
+                {% block header "" %}
+            </h1>
+            {% block breadcrumbs %}
+                {{ knp_menu_render('main_breadcrumbs', {template: "SmirikCoreBundle:Menu:knpBreadcrumbs.html.twig"}) }}
+            {% endblock %}
         </div>
-    {% endblock %}
+    </div>
+
 
     {% block summary "" %}
 
