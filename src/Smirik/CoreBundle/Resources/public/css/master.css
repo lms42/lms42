@@ -32,3 +32,6 @@ div.modal-backdrop {
     z-index: 1000 !important;
 }
 
+.blue {
+    color: #3498db;
+}
