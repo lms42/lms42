@@ -79,6 +79,7 @@
     {% endblock %}
 
 
+    {% block breadcrumbsContainer %}
     <div class="row-fluid breadcrumbs margin-bottom-20">
         <div class="container">
             <h1 class="pull-left">
@@ -89,6 +90,7 @@
             {% endblock %}
         </div>
     </div>
+    {% endblock %}
 
 
     {% block summary "" %}
@@ -114,8 +116,6 @@
 
                     <div class="content">
                         {% block content_navigation %}{% endblock %}
-
-                        <hr>
                     </div>
                     <div class="content">
                         {% block content %}{% endblock %}
