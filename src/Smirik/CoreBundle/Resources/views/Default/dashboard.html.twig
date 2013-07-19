@@ -80,12 +80,16 @@
                 <div class="headline"><h3>{{ 'Completed tasks'|trans }}</h3></div>
                 {% if completed_user_tasks|length %}
                     {% include "SmirikCourseBundle:Task:user_task.latest.table.html.twig" with { user_tasks: completed_user_tasks } %}
+                {% else %}
+                    <p>{{ "You have no tasks to do"|trans }}</p>
                 {% endif %}
             </div>
             <div class="span6">
                 <div class="headline"><h3>{{ 'Pending tasks'|trans }}</h3></div>
                 {% if pending_user_tasks|length %}
                     {% include "SmirikCourseBundle:Task:user_task.latest.table.html.twig" with { user_tasks: pending_user_tasks } %}
+                {% else %}
+                    {{ "You have pending no tasks to do"|trans }}
                 {% endif %}
             </div>
         </div>
