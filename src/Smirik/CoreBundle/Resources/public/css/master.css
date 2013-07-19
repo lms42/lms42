@@ -43,3 +43,7 @@ div.modal-backdrop {
 .font-size-18{
     font-size: 18px;
 }
+
+.tab-content.no-border{
+    border: none;
+}
