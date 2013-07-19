@@ -4,6 +4,8 @@
     {{ 'Dashboard'|trans }}
 {% endblock %}
 
+{% block breadcrumbs "" %}
+
 {% block content %}
     <div class="row-fluid">
 
@@ -14,7 +16,10 @@
             {% endif %}
 
             <div class="span4">
-                <h4><a href="{{ path('lesson_index', {"id": lesson.id }) }}" style="color: #72C02C;">{{ lesson.title }}</a></h4>
+                <h4><a href="{{ path('lesson_index', {"id": lesson.id }) }}" class="blue">
+                        {{ lesson.title }}
+                    </a>
+                </h4>
                 <p>{{ lesson.course.title }}</p>
             </div>
 
@@ -31,7 +36,7 @@
             {% endif %}
             <div class="span6">
                 <h4>
-                    <a href="{{ path('lesson_index', {'id': user_task.lessonId }) }}#task{{ user_task.taskId }}" style="color: #72C02C;">{{ user_task.task.title }}</a>
+                    <a href="{{ path('lesson_index', {'id': user_task.lessonId }) }}#task{{ user_task.taskId }}" class="blue">{{ user_task.task.title }}</a>
                     {% if user_task.status == 0 %}
                         <span class="label label-inverse"><i class="icon-leaf" style="margin-right: 0"></i></span>
                     {% elseif user_task.status == 1 %}
