@@ -47,3 +47,11 @@ div.modal-backdrop {
 .tab-content.no-border{
     border: none;
 }
+
+.color-error{
+    color:#ff0000;
+}
+
+.color-success{
+    color:forestgreen;
+}
