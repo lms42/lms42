@@ -39,7 +39,8 @@
         "lms42/content-bundle": "dev-develop",
         "lms42/course-bundle": "dev-develop",
         "lms42/quiz-bundle": "dev-develop",
-        "lms42/exam-bundle": "dev-develop"
+        "lms42/exam-bundle": "dev-develop",
+        "smirik/php-datetime-ago": "dev-master@dev"
     },
     "scripts": {
         "post-install-cmd": [
@@ -60,7 +61,7 @@
     "config": {
         "bin-dir": "bin"
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "extra": {
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",

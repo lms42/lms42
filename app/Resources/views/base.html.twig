@@ -14,7 +14,6 @@
 
     {% stylesheets
         '@SmirikAdminBundle/Resources/public/css/*'
-        '@SmirikCoreBundle/Resources/public/css/icons/style.css'
         '@SmirikCoreBundle/Resources/public/css/master.css'
     %}
         <link rel="stylesheet" href="{{ asset_url }}"/>
@@ -24,77 +23,40 @@
     {% block javascripts %}{% endblock %}
 
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}"/>
-
-    <script type="text/javascript">
-
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-11430636-3']);
-        _gaq.push(['_trackPageview']);
-
-        (function () {
-            var ga = document.createElement('script');
-            ga.type = 'text/javascript';
-            ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(ga, s);
-        })();
-    </script>
-
-    <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
-        { lang: 'ru' }
-    </script>
-
-    <script src="http://vkontakte.ru/js/api/openapi.js" type="text/javascript" charset="windows-1251"></script>
-    <script type="text/javascript">
-        VK.init({apiId:1969513, onlyWidgets:true});
-    </script>
-
 </head>
 <body>
 
 {% block body %}
 
     {% block navbar %}
-        {% include "SmirikCoreBundle:Default:navbar.html.twig" %}
+        {% render controller('SmirikCoreBundle:Default:navigation') %}
     {% endblock %}
 
-
+    
     {% block breadcrumbsContainer %}
-    <div class="row-fluid breadcrumbs margin-bottom-20">
+    <div class="row breadcrumbs margin-bottom-20">
         <div class="container">
-            <h1 class="pull-left">
-                {% block header "" %}
-            </h1>
-            {% block breadcrumbs %}
-                {{ knp_menu_render('main_breadcrumbs', {template: "SmirikCoreBundle:Menu:knpBreadcrumbs.html.twig"}) }}
-            {% endblock %}
+            <div>
+                <h1 class="pull-left">
+                    {% block header "" %}
+                </h1>
+                {% block breadcrumbs %}
+                    {{ knp_menu_render('main_breadcrumbs', {template: "SmirikCoreBundle:Menu:knpBreadcrumbs.html.twig"}) }}
+                {% endblock %}
+            </div>
+            <div class="clearfix"><!-- --></div>
+            <hr>
         </div>
     </div>
     {% endblock %}
 
-
     {% block summary "" %}
 
     {% block container %}
-        <div class="container-fluid">
+        <div class="container">
             <div class="row-fluid">
-
-                <div class="span3">
-                    <div class="sidebar-nav">
-                        {% block left %}
-                            {% if is_granted('ROLE_USER') %}
-                                {% include 'SmirikCoreBundle:Default/Sidebar:user.html.twig' %}
-                            {% else %}
-                                {% include 'SmirikCoreBundle:Default/Sidebar:guest.html.twig' %}
-                            {% endif %}
-                        {% endblock %}
-                    </div>
-                </div>
-
-                <div class="span9">
+                <div class="span12">
                     {% block hero %}{% endblock %}
-
                     <div class="content">
                         {% block content_navigation %}{% endblock %}
                     </div>
@@ -102,7 +64,6 @@
                         {% block content %}{% endblock %}
                     </div>
                 </div>
-
             </div>
         </div>
     {% endblock %}

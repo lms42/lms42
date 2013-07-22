@@ -41,7 +41,7 @@ class MainMenuBuilder
     public function build()
     {
         $menu = $this->factory->createItem('root');
-        $menu->addChild('Dashboard', array('route' => 'dashboard'));
+        $menu->addChild('Dashboard', array('route' => 'homepage'));
 
         $this->container->get('event_dispatcher')->dispatch(
             ConfigureMainMenuEvent::CONFIGURE,

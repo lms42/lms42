@@ -1,0 +1,10 @@
+<div class="news well">
+    <h3>{{ 'Latest Content'|trans }}</h3>
+    {% for item in contents %}
+        <p class="dashboard_news">
+            <a href="{{ path('content_show', { 'id': item.id }) }}">{{ item.title }}</a>
+            {{ item.description|raw }}
+            <small>{{ item.createdAt|ago }}</small>
+        </p>
+    {% endfor %}
+</div>

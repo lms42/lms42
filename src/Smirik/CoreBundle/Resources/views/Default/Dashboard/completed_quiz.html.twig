@@ -1,0 +1,17 @@
+<table class="table table-striped table-bordered">
+    <tr>
+        <th>{{ 'quiz.index.table.header.quiz'|trans }}</th>
+        <th>{{ 'quiz.my.table.header.num_right_answers'|trans }}</th>
+        <th>{{ 'quiz.my.table.header.percent'|trans }}</th>
+        <th>{{ 'quiz.my.table.header.started_at'|trans }}</th>
+    </tr>
+
+    {% for uquiz in completed_users_quiz %}
+        <tr>
+            <td>{{ uquiz.quiz.title }}</td>
+            <td>{{ uquiz.numrightanswers}} / {{ uquiz.quiz.numquestions}}</td>
+            <td>{{ uquiz.numrightanswers * 100 // uquiz.quiz.numquestions}}%</td>
+            <td>{{ uquiz.startedat.format('H:i, Y-m-d') }}</td>
+        </tr>
+    {% endfor %}
+</table>

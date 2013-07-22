@@ -1,29 +1,12 @@
 {% include 'SmirikCoreBundle:Default:_login.html.twig' %}
 
-<div class="container-fluid">
-    <div class="row-fluid">
-
-        <!-- Menu -->
-        <div class="navbar">
+<div class="container">
+    <div class="row">
+        <div class="navbar navbar-inverse">
             <div class="navbar-inner">
-                <a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </a><!-- /nav-collapse -->
-                <div class="nav-collapse collapse">
-                    <ul class="nav top-2">
-                        {% render controller('SmirikCoreBundle:Default:navigation') %}
-                    </ul>
-                    <div class="search-open" style="display: none;">
-                        <div class="input-append">
-                            <form>
-                                <input type="text" placeholder="Search" class="span3">
-                                <button class="btn-u" type="submit">Go</button>
-                            </form>
-                        </div>
-                    </div>
-                </div><!-- /nav-collapse -->
+                <ul class="nav" role="navigation">
+                    {% render controller('SmirikCoreBundle:Default:navigation') %}
+                </ul>
             </div><!-- /navbar-inner -->
         </div><!-- /navbar -->
     </div><!-- /container -->

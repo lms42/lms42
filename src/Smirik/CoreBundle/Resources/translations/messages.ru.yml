@@ -6,9 +6,9 @@ Login: Войти
 Dashboard: Главная
 Current lessons: Ваши уроки
 Current tasks: Ваши задания
-Completed tasks: Завершенные задания
-Pending tasks: Нерешенные задания
-Completed quizes: Пройденные тесты
+Completed: Завершенные
+Pending: Нерешённые
+Quizes: Тесты
 Latest Content: Последние новости
 Read More: Подробнее
 Results: Результаты
@@ -20,4 +20,4 @@ Lessons and Tasks: Ваши уроки и задания
 Success: Успешно
 Failed: Отклонено
 Chore: В работе
-
+Your tasks: Ваши задания

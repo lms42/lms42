@@ -11,122 +11,55 @@
     {% block container %}
         <div class="container">
             <div class="row-fluid">
-                <div class="span9">
-                    <ul class="nav nav-pills my-courses">
+                <div class="span8">
+                    <ul class="nav nav-tabs my-courses">
                         <li class="active">
                             <a href="#lessons-and-tasks" data-toggle="pill">{{ 'Lessons and Tasks'|trans }}</a>
                         </li>
-                        {% if completed_users_quiz|length %}
-                        <li><a href="#completed-quizzes" data-toggle="pill">{{ 'Completed quizes'|trans }}</a></li>
-                        {% endif %}
                         {% if completed_user_tasks|length %}
-                        <li><a href="#completed-tasks" data-toggle="pill">{{ 'Completed tasks'|trans }}</a></li>
+                        <li><a href="#completed-tasks" data-toggle="pill">{{ 'Completed'|trans }}</a></li>
                         {% endif %}
                         {% if pending_user_tasks|length %}
-                        <li><a href="#pending-tasks" data-toggle="pill">{{ 'Pending tasks'|trans }}</a></li>
+                        <li><a href="#pending-tasks" data-toggle="pill">{{ 'Pending'|trans }}</a></li>
+                        {% endif %}
+                        {% if completed_users_quiz|length %}
+                        <li><a href="#completed-quizzes" data-toggle="pill">{{ 'Quizes'|trans }}</a></li>
                         {% endif %}
                     </ul><br>
 
-                    <div class="pill-content">
+                    <div class="dashboard-content pill-content">
                         <div id="lessons-and-tasks" class="pill-pane active">
-                            <!-- Current lessons -->
-                            {#<div class="headline"><h3>{{ 'Current lessons'|trans }}</h3></div>#}
-                            {% for lesson in lessons %}
-                                {% if loop.index0 is divisibleby(3) or loop.index == 1 %}
-                                    <div class="row-fluid servive-block servive-block-in">
-                                {% endif %}
-
-                                <div class="span4">
-                                    <h4><a href="{{ path('lesson_index', {"id": lesson.id }) }}" class="blue">
-                                            {{ lesson.title }}
-                                        </a>
-                                    </h4>
-                                    <p>{{ lesson.course.title }}</p>
-                                </div>
-
-                                {% if loop.index is divisibleby(3) or loop.last %}
-                                    </div>
-                                {% endif %}
-                            {% endfor %}
-                            <!--/ Current lessons -->
-
-                            {#<div class="headline"><h3>{{ 'Current tasks'|trans }}</h3></div>#}
-
-                            {% for user_task in user_tasks %}
-                            <div class="blog margin-bottom-30">
-                                <h3><a href="{{ path('lesson_index', {'id': user_task.lessonId }) }}" class="blue">
-                                        {{user_task.task.title }}
-                                    </a>
-                                </h3>
-                                <ul class="unstyled inline blog-info">
-                                    <li>
-                                        {% if user_task.status == 0 %}
-                                            <i class="icon-leaf"></i>
-                                            <span class="disabled">
-                                                {{ "Chore"|trans }}
-                                            </span>
-                                        {% elseif user_task.status == 1 %}
-                                            <i class="icon-bell-alt"></i>
-                                        {% elseif user_task.status == 2 %}
-                                            <i class="icon-exclamation-sign" style="color: #ff0000;"></i>
-                                            <span class="color-error"> {{ "Failed"|trans }}</span>
-                                        {% elseif user_task.status == 3 %}
-                                            <i class="icon-ok"></i>
-                                        {% elseif user_task.status == 4 %}
-                                            <i class="icon-exclamation"></i>
-                                        {% endif %}
-                                        </li>
-                                </ul>
-                                <p>{{ user_task.task.text|raw }}</p>
-
-                                {% set reviews = user_task.getUserTaskReviews() %}
-                                {% if reviews|length %}
-                                    <div style="margin-left: 20px">
-                                        <h5 style="text-decoration: underline">{{ 'Reviews'|trans }}</h5>
-                                        {% for review in reviews %}
-                                            <blockquote>
-                                                <p style="font-weight: bold; font-size: 12px;">{{ review.text }}</p>
-                                            </blockquote>
-                                        {% endfor %}
-                                    </div>
-                                {% endif %}
-                            </div>
-                            {% endfor %}
+                            {% include 'SmirikCoreBundle:Default/Dashboard:lessons.html.twig' with {'lessons': lessons } %}
+                            <hr>
+                            {% include 'SmirikCoreBundle:Default/Dashboard:user_tasks.html.twig' with {'user_tasks': user_tasks } %}
                         </div>
 
                         <div id="completed-quizzes" class="pill-pane">
                             <!-- Quizzes -->
                             {% if completed_users_quiz|length %}
-                                <div class="headline"><h3>{{ 'Completed quizes'|trans }}</h3></div>
-                                {% include "SmirikQuizBundle:Quiz/parts:quiz.completed.html.twig" %}
+                                <h3 class="dashboard_headline">{{ 'Completed quizes'|trans }}</h3>
+                                {% include "SmirikCoreBundle:Default/Dashboard:completed_quiz.html.twig" %}
                             {% endif %}
                             <!--/ Quizzes -->
                         </div>
 
                         <div id="completed-tasks" class="pill-pane">
                             {% if completed_user_tasks|length %}
-                                <div class="headline"><h3>{{ 'Completed tasks'|trans }}</h3></div>
-                                {% include "SmirikCourseBundle:Task:user_task.latest.table.html.twig" with { user_tasks: completed_user_tasks } %}
+                                <h3 class="dashboard_headline">{{ 'Completed tasks'|trans }}</h3>
+                                {% include "SmirikCoreBundle:Default/Dashboard:latest_tasks.html.twig" with { user_tasks: completed_user_tasks } %}
                             {% endif %}
                         </div>
 
                         <div id="pending-tasks" class="pill-pane">
                             {% if pending_user_tasks|length %}
-                                <div class="headline"><h3>{{ 'Pending tasks'|trans }}</h3></div>
-                                {% include "SmirikCourseBundle:Task:user_task.latest.table.html.twig" with { user_tasks: pending_user_tasks } %}
+                                <h3 class="dashboard_headline">{{ 'Pending tasks'|trans }}</h3>
+                                {% include "SmirikCoreBundle:Default/Dashboard:latest_tasks.html.twig" with { user_tasks: pending_user_tasks } %}
                             {% endif %}
                         </div>
                     </div>
                 </div>
-                <div class="span3">
-                    <div class="blog-twitter">
-                        <div class="headline"><h3>{{ 'Latest Content'|trans }}</h3></div>
-                        {% for item in contents %}
-                            <p>
-                                <a href="{{ path('content_show', { 'id': item.id }) }}">{{ item.title }}</a>
-                                <span>{{ item.createdAt.format('d.m.Y') }}</span></p>
-                        {% endfor %}
-                    </div>
+                <div class="span4">
+                    {% include 'SmirikCoreBundle:Default/Dashboard:news.html.twig' with {'contents': contents } %}
                 </div>
             </div>
         </div>

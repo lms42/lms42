@@ -1,6 +1,8 @@
 p a { text-decoration: underline }
 p a:hover { text-decoration: none; color: inherit; }
 
+div.container { width: 1100px !important; }
+
 div#signin_modal {
     width: 352px;
     margin-left: -100px;
@@ -20,38 +22,9 @@ footer {
     text-align: center;
 }
 
-ol.white {
-    color: white;
-}
+div.news p.dashboard_news small { color: gray; font-size: 0.7em; }
+div.dashboard_task { padding: 10px 0px 5px 0; border-bottom: 1px solid lightgray; }
+div.dashboard_task p a.task_header { font-size: 1.3em; }
+span.task-review { font-size: 0.8em; }
 
-body {
-    padding-top: 10px;
-}
-
-div.modal-backdrop {
-    z-index: 1000 !important;
-}
-
-.blue {
-    color: #3498db;
-}
-
-[class^="icon-"], [class*=" icon-"]{
-    background-image: none;
-}
-
-.font-size-18{
-    font-size: 18px;
-}
-
-.tab-content.no-border{
-    border: none;
-}
-
-.color-error{
-    color:#ff0000;
-}
-
-.color-success{
-    color:forestgreen;
-}
+ul.breadcrumb { margin: 15px 0 0 0; }

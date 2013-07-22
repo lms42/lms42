@@ -14,6 +14,7 @@ use Smirik\CourseBundle\Model\CourseQuery;
 use Smirik\CourseBundle\Model\LessonQuery;
 
 use Symfony\Component\HttpFoundation\Response;
+use JMS\SecurityExtraBundle\Annotation\Secure;
 
 class DefaultController extends Controller
 {
@@ -29,11 +30,7 @@ class DefaultController extends Controller
         }
 
         $news = ContentQuery::create()
-            ->useCategoryQuery()
-                ->filterByUrlkey('news')
-            ->endUse()
-            ->limit(10)
-            ->orderByCreatedAt('desc')
+            ->lastNews(10)
             ->find();
         
         $courses = $this->get('course.manager')->getAll();
@@ -47,6 +44,7 @@ class DefaultController extends Controller
     /**
      * @Route("/dashboard", name="dashboard")
      * @Template("SmirikCoreBundle:Default:dashboard.html.twig", vars={"get"})
+     * @Secure(roles="ROLE_USER")
      */
     public function dashboardAction()
     {
@@ -56,7 +54,7 @@ class DefaultController extends Controller
         $lessons = $lm->getOpened($user);
 
         $tm = $this->get('user_task.manager');
-        $user_tasks = $tm->latestUserTodo($user, 6);
+        $user_tasks = $tm->latestUserTodo($user, 10);
         $completed_user_tasks = $tm->lastCompleted($user, 5);
         $pending_user_tasks   = $tm->lastPending($user, 5);
 
