@@ -2,33 +2,14 @@
 {% extends '::1column.html.twig' %}
 
 {% block summary %}
-    <div class="row-fluid purchase margin-bottom-30">
-        <div class="container">
-            <div class="span9">
-                <span>LMS42</span>
-                <p>{{ 'New way for e-learning'|trans }}. </p>
-            </div>
-            <a class="btn-buy hover-effect" href="#">Demo</a>
-        </div>
-    </div>
 {% endblock %}
 
 {% block body %}
     {{ parent() }}
-    {% block breadcrumbs "" %}
 {% endblock %}
 
+{% block breadcrumbsContainer %}{% endblock %}
+
 {% block content %}
-    {% for course in courses %}
-        {% if loop.index0 is divisibleby(3) %}
-            <ul class="thumbnails">
-        {% endif %}
-
-        {% include 'SmirikCoreBundle:Course:_card.html.twig' %}
-
-        {% if loop.index is divisibleby(3) or loop.last %}
-            </ul>
-        {% endif %}
-
-    {% endfor %}
+{% include 'SmirikCourseBundle:Course/List:_courses.html.twig' with { 'courses': courses } %}
 {% endblock %}
