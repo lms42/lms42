@@ -15,3 +15,8 @@ body {
 div.modal-backdrop {
     z-index: 1000 !important;
 }
+
+/* Admin table width */
+table th.column-header-file { width: 100px; }
+table th.column-header-type-boolean { width: 90px; }
+table td.column-type-boolean { text-align: center; }
