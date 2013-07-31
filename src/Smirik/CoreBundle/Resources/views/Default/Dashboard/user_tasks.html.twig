@@ -1,4 +1,6 @@
-<h3>{{ 'Your tasks'|trans }}</h3>
+{% if user_tasks|length %}
+    <h3>{{ 'Your tasks'|trans }}</h3>
+{% endif %}
 {% for user_task in user_tasks %}
 
     <div class="dashboard_task">
@@ -24,4 +26,6 @@
             </div>
         {% endfor %}
     </div>
+{% else %}
+<p class="lead alert alert-success">{{ 'All tasks are completed'|trans }}</p>
 {% endfor %}

@@ -15,4 +15,6 @@
     {% if loop.index is divisibleby(2) or loop.last %}
         </div>
     {% endif %}
+{% else %}
+<p class="lead alert alert-success">{{ 'All lessons are completed'|trans }}!</p>
 {% endfor %}

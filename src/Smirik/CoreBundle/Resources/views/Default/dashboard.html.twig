@@ -38,7 +38,7 @@
                             <!-- Quizzes -->
                             {% if completed_users_quiz|length %}
                                 <h3 class="dashboard_headline">{{ 'Completed quizes'|trans }}</h3>
-                                {% include "SmirikCoreBundle:Default/Dashboard:completed_quiz.html.twig" %}
+                                {% include "SmirikQuizBundle:Quiz/List:_completed_quiz.html.twig" %}
                             {% endif %}
                             <!--/ Quizzes -->
                         </div>
