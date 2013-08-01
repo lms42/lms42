@@ -6,7 +6,7 @@
     },
     "require": {
         "php": ">=5.3.3",
-        "symfony/symfony": "2.3.*@dev",
+        "symfony/symfony": "2.3.*",
         "doctrine/orm": ">=2.2.3,<2.4-dev",
         "doctrine/doctrine-bundle": "1.2.*",
         "twig/extensions": "1.0.*",
@@ -17,22 +17,20 @@
         "sensio/framework-extra-bundle": "2.3.*",
         "sensio/generator-bundle": "2.3.*",
         "incenteev/composer-parameter-handler": "~2.0",
-        "jms/security-extra-bundle": "1.5.*@dev",
-        "jms/di-extra-bundle": "1.4.*@dev",
-        "kriswallsmith/assetic": "1.1.*@dev",
-        "propel/propel-bundle": "1.2.*@dev",
-        "willdurand/propel-typehintable-behavior": "dev-master",
+        
+        "jms/security-extra-bundle": "1.5.*",
+        "kriswallsmith/assetic": "1.1.*",
+        "propel/propel-bundle": "1.2.*",
+        "willdurand/propel-typehintable-behavior": "~1.0",
 
-        "friendsofsymfony/user-bundle": "*",
-        "imagine/Imagine": "v0.4.1",
-        "avalanche123/imagine-bundle": "dev-master",
+        "friendsofsymfony/user-bundle": "~2.0@dev",
+        "avalanche123/imagine-bundle": "v2.1",
         "knplabs/knp-menu": "v2.0.0-alpha1",
         "knplabs/knp-menu-bundle": "v2.0.0-alpha1",
-        "kriswallsmith/assetic": "1.1.*@dev",
-        "Trsteel/ckeditor-bundle": "1.1.*@dev",
+        "Trsteel/ckeditor-bundle": "1.2.*",
 
-        "smirik/propel-admin-bundle": "dev-develop",
-        "smirik/bootstrap-bundle": "dev-master",
+        "smirik/propel-admin-bundle": "1.0.*",
+        "smirik/bootstrap-bundle": "2.3.*",
         "smirik/config-bundle": "dev-master",
 
         "lms42/admin-bundle": "dev-develop",
@@ -40,7 +38,7 @@
         "lms42/course-bundle": "dev-develop",
         "lms42/quiz-bundle": "dev-develop",
         "lms42/exam-bundle": "dev-develop",
-        "smirik/php-datetime-ago": "dev-master@dev"
+        "smirik/php-datetime-ago": "~1.0"
     },
     "scripts": {
         "post-install-cmd": [
