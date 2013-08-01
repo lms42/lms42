@@ -14,6 +14,9 @@
 
     {% stylesheets
         '@SmirikAdminBundle/Resources/public/css/*'
+        '@SmirikCoreBundle/Resources/public/css/plain/bootstrap-override.css'
+        '@SmirikCoreBundle/Resources/public/css/plain/style.css'
+        '@SmirikCoreBundle/Resources/public/css/plain/font-awesome/font-awesome.css'
         '@SmirikCoreBundle/Resources/public/css/master.css'
     %}
         <link rel="stylesheet" href="{{ asset_url }}"/>
@@ -32,12 +35,11 @@
         {% render controller('SmirikCoreBundle:Default:navigation') %}
     {% endblock %}
 
-    
     {% block breadcrumbsContainer %}
     <div class="row breadcrumbs margin-bottom-20">
         <div class="container">
             <div>
-                <h1 class="pull-left">
+                <h1 class="pull-left title">
                     {% block header "" %}
                 </h1>
                 {% block breadcrumbs %}
@@ -69,9 +71,56 @@
     {% endblock %}
 
     {% block footer %}
-        <footer>
-            <p>&copy; 2010-{{ "now"|date("Y") }}</p>
-        </footer>
+    
+    <footer id="footer">
+    		<div class="container">
+    			<div class="row">
+    				<div class="span4">
+    					<a class="brand" href="http://lms42.com">
+    						LMS42
+    					</a>
+    					<p>
+    						{{ 'Open-source application'|trans }} <br>{{ 'for e-learning'|trans }}. <br>
+    						{{ 'Contribution is welcome'|trans }}.
+						
+    					</p>
+    				</div>
+    				<div class="span4 social-networks">
+    					<h3>{{ 'Find us elsewhere'|trans }}</h3>
+    					<p>
+                            {% if false %}
+    						<a class="social-network twitter"></a>
+    						<a class="social-network facebook"></a>
+    						<a class="social-network linkedin"></a>
+    						<a class="social-network dribbble"></a>
+    						<a class="social-network pinterest"></a>
+                            {% endif %}
+    						<a class="social-network gplus" href="https://plus.google.com/b/102108356343030781804/102108356343030781804"></a>
+    					</p>
+    				</div>
+    				<div class="span4 newsletter">
+    					<h3>Исходный код</h3>
+    					<p><a href="https://github.com/organizations/lms42">Github</a>, лицензия MIT</p>
+    				</div> 
+    			</div> <!-- end .row -->		
+    		</div> <!-- end .container -->
+    	</footer>
+    
+    <footer id="copyright">
+    		<div class="container">
+    			<div class="row">
+    				<div class="span4">
+    					&copy; 2010-{{ "now"|date("Y") }} by <a href="http://lms42.com">LMS42</a>
+    				</div>
+    				<div class="span4">
+    				</div>
+    				<div class="span4">
+    					<a href="http://lms42.com" rel="external" title="" target="_blank">MADE</a> BY <a title="LMS42" rel="external" href="http://lms42.com" target="_blank">LMS42</a>
+					
+    				</div>
+    			</div> <!-- end .row -->		
+    		</div> <!-- end .container -->
+    	</footer>
     {% endblock %}
 
 {% endblock %}

@@ -1,3 +1,6 @@
+{% if lessons|length %}
+<h3>{{ 'Your lessons'|trans }}</h3>
+{% endif %}
 {% for lesson in lessons %}
     {% if loop.index0 is divisibleby(2) or loop.index == 1 %}
         <div class="row-fluid">

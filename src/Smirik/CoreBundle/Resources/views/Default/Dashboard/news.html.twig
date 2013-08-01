@@ -1,10 +1,15 @@
-<div class="news well">
-    <h3>{{ 'Latest Content'|trans }}</h3>
-    {% for item in contents %}
-        <p class="dashboard_news">
-            <a href="{{ path('content_show', { 'id': item.id }) }}">{{ item.title }}</a>
-            {{ item.description|raw }}
-            <small>{{ item.createdAt|ago }}</small>
-        </p>
-    {% endfor %}
+<div class="widget">
+    {% include 'SmirikContentBundle:Category:_list.html.twig' with {'categories': categories } %}
+</div>
+<div class="widget">
+    <h4>{{ 'Latest Content'|trans }}</h4>
+    <ul class="icons-ul list-style">
+        {% for item in contents %}
+            <li><i class="icon-li icon-chevron-right"></i>
+                <a href="{{ path('content_show', { 'id': item.id }) }}">{{ item.title }}</a><br>
+                {{ item.description|raw }}
+                <small>//&nbsp;{{ item.createdAt|ago }}</small>
+            </li>
+        {% endfor %}
+    </ul>
 </div>

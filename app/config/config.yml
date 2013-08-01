@@ -88,7 +88,7 @@ avalanche_imagine:
             options: { size: [250, 400], mode: outbound }
         course_preview:
             type:    relative_resize
-            options: { widen: 265 }
+            options: { widen: 128 }
         carousel_help:
             type:    thumbnail
             options: { size: [1050, 500], mode: outbound }

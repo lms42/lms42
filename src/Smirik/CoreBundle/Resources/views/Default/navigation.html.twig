@@ -1,21 +1,23 @@
 {% include 'SmirikCoreBundle:Default:_login.html.twig' %}
 
-<div class="container">
-    <div class="row">
-        <div class="navbar navbar-inverse">
-            <div class="navbar-inner">
+<header id="header">
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="container">
+				<a class="brand" href="{{ path('homepage') }}">
+                    {{ 'LMS42'|config('LMS42') }}
+				</a>
                 <ul class="nav" role="navigation">
-                    
                     {% set menuItem = knp_menu_get('main') %}
 
                     {% for item in menuItem %}
                         <li class="{% if item.isCurrent %}active{% endif %}{% if item.hasChildren %}dropdown{% endif %}">
                             {% if item.hasChildren %}
-                                <a data-toggle="dropdown" id="drop{{ loop.index }}" class="dropdown-toggle" href="#">
+                                <a data-toggle="dropdown" id="drop{{ loop.index }}" title="{{ item.label|trans|raw }}">
                                     {{ item.label|trans|raw }}
                                     <b class="caret"></b>
                                 </a>
-                                <ul class="dropdown-menu" role="menu" aria-labelledby="drop{{ loop.index }}">
+                                <ul role="menu" aria-labelledby="drop{{ loop.index }}">
                                     {% for child in item %}
                                         <li class="{% if child.isCurrent %}active{% endif %}">
                                             <a href="{{ child.uri }}">{{ child.label|trans }}</a>
@@ -28,8 +30,6 @@
                             {% endif %}
                         </li>
                     {% endfor %}
-                </ul>
-                <ul class="nav pull-right" role="navigation">
 
                     {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
                         {% set profile_filled = true %}
@@ -40,14 +40,13 @@
                                 <a href="{{ path('profile_edit') }}">{{ 'Profile'|trans }} <span class="badge badge-important">!</span></a>
                             </li>
                         {% endif %}
-
-                        <li class="active">
-                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        <li class="dropdown">
+                            <a data-toggle="dropdown" href="#">
                                 {{ app.user.profile.name }}
                                 {% if not profile_filled %} <span class="badge badge-important">!</span>{% endif %}
                                 <b class="caret"></b>
                             </a>
-                            <ul class="dropdown-menu">
+                            <ul>
                                 {% if is_granted("ROLE_ADMIN") %}
                                     <li><a href="{{ path('admin_main') }}">{{ 'Admin'|trans }}</a></li>
                                 {% endif %}
@@ -72,12 +71,12 @@
                     {% if not is_granted("IS_AUTHENTICATED_REMEMBERED") %}
                         <!-- Button to trigger modal -->
                     {% endif %}
-                    
+                
                 </ul>
-            </div><!-- /navbar-inner -->
-        </div><!-- /navbar -->
-    </div><!-- /container -->
-</div>
+            </div>
+        </div><!-- /navbar-inner -->
+    </div>
+</header>
 
 
 

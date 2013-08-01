@@ -8,59 +8,59 @@
 {% block left "" %}
 
 
-    {% block container %}
-        <div class="container">
-            <div class="row-fluid">
-                <div class="span8">
-                    <ul class="nav nav-tabs my-courses">
-                        <li class="active">
-                            <a href="#lessons-and-tasks" data-toggle="pill">{{ 'Lessons and Tasks'|trans }}</a>
-                        </li>
-                        {% if completed_user_tasks|length %}
-                        <li><a href="#completed-tasks" data-toggle="pill">{{ 'Completed'|trans }}</a></li>
-                        {% endif %}
-                        {% if pending_user_tasks|length %}
-                        <li><a href="#pending-tasks" data-toggle="pill">{{ 'Pending'|trans }}</a></li>
-                        {% endif %}
+{% block container %}
+    <div class="container">
+        <div class="row-fluid">
+            <div class="span8">
+                <ul class="nav nav-tabs my-courses" id="portfolio-filter">
+                    <li class="active">
+                        <a href="#lessons-and-tasks" data-toggle="pill">{{ 'Lessons and Tasks'|trans }}</a>
+                    </li>
+                    {% if completed_user_tasks|length %}
+                    <li><a href="#completed-tasks" data-toggle="pill">{{ 'Completed tasks'|trans }}</a></li>
+                    {% endif %}
+                    {% if pending_user_tasks|length %}
+                    <li><a href="#pending-tasks" data-toggle="pill">{{ 'Pending'|trans }}</a></li>
+                    {% endif %}
+                    {% if completed_users_quiz|length %}
+                    <li><a href="#completed-quizzes" data-toggle="pill">{{ 'Quizes'|trans }}</a></li>
+                    {% endif %}
+                </ul>
+
+                <div class="dashboard-content pill-content">
+                    <div id="lessons-and-tasks" class="pill-pane active">
+                        {% include 'SmirikCoreBundle:Default/Dashboard:lessons.html.twig' with {'lessons': lessons } %}
+                        <hr>
+                        {% include 'SmirikCoreBundle:Default/Dashboard:user_tasks.html.twig' with {'user_tasks': user_tasks } %}
+                    </div>
+
+                    <div id="completed-quizzes" class="pill-pane">
+                        <!-- Quizzes -->
                         {% if completed_users_quiz|length %}
-                        <li><a href="#completed-quizzes" data-toggle="pill">{{ 'Quizes'|trans }}</a></li>
+                            <h3 class="dashboard_headline">{{ 'Completed quizes'|trans }}</h3>
+                            {% include "SmirikQuizBundle:Quiz/List:_completed_quiz.html.twig" %}
                         {% endif %}
-                    </ul><br>
+                        <!--/ Quizzes -->
+                    </div>
 
-                    <div class="dashboard-content pill-content">
-                        <div id="lessons-and-tasks" class="pill-pane active">
-                            {% include 'SmirikCoreBundle:Default/Dashboard:lessons.html.twig' with {'lessons': lessons } %}
-                            <hr>
-                            {% include 'SmirikCoreBundle:Default/Dashboard:user_tasks.html.twig' with {'user_tasks': user_tasks } %}
-                        </div>
+                    <div id="completed-tasks" class="pill-pane">
+                        {% if completed_user_tasks|length %}
+                            <h3 class="dashboard_headline">{{ 'Completed tasks'|trans }}</h3>
+                            {% include "SmirikCoreBundle:Default/Dashboard:latest_tasks.html.twig" with { user_tasks: completed_user_tasks } %}
+                        {% endif %}
+                    </div>
 
-                        <div id="completed-quizzes" class="pill-pane">
-                            <!-- Quizzes -->
-                            {% if completed_users_quiz|length %}
-                                <h3 class="dashboard_headline">{{ 'Completed quizes'|trans }}</h3>
-                                {% include "SmirikQuizBundle:Quiz/List:_completed_quiz.html.twig" %}
-                            {% endif %}
-                            <!--/ Quizzes -->
-                        </div>
-
-                        <div id="completed-tasks" class="pill-pane">
-                            {% if completed_user_tasks|length %}
-                                <h3 class="dashboard_headline">{{ 'Completed tasks'|trans }}</h3>
-                                {% include "SmirikCoreBundle:Default/Dashboard:latest_tasks.html.twig" with { user_tasks: completed_user_tasks } %}
-                            {% endif %}
-                        </div>
-
-                        <div id="pending-tasks" class="pill-pane">
-                            {% if pending_user_tasks|length %}
-                                <h3 class="dashboard_headline">{{ 'Pending tasks'|trans }}</h3>
-                                {% include "SmirikCoreBundle:Default/Dashboard:latest_tasks.html.twig" with { user_tasks: pending_user_tasks } %}
-                            {% endif %}
-                        </div>
+                    <div id="pending-tasks" class="pill-pane">
+                        {% if pending_user_tasks|length %}
+                            <h3 class="dashboard_headline">{{ 'Pending tasks'|trans }}</h3>
+                            {% include "SmirikCoreBundle:Default/Dashboard:latest_tasks.html.twig" with { user_tasks: pending_user_tasks } %}
+                        {% endif %}
                     </div>
                 </div>
-                <div class="span4">
-                    {% include 'SmirikCoreBundle:Default/Dashboard:news.html.twig' with {'contents': contents } %}
-                </div>
+            </div>
+            <div class="span4">
+                {% include 'SmirikCoreBundle:Default/Dashboard:news.html.twig' with {'contents': contents, 'categories': categories } %}
             </div>
         </div>
-    {% endblock %}
+    </div>
+{% endblock %}

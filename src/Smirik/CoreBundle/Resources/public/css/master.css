@@ -8,23 +8,9 @@ div#signin_modal {
     margin-left: -100px;
 }
 
-.header {
-    margin-top: -60px;
-    position: fixed;
-    background-color: #FFFFFF;
-    z-index: inherit;
-}
-
-.navbar { position: relative; z-index: 101; }
-
-footer {
-    margin: 0 auto;
-    text-align: center;
-}
-
-div.news p.dashboard_news small { color: gray; font-size: 0.7em; }
-div.dashboard_task { padding: 10px 0px 5px 0; border-bottom: 1px solid lightgray; }
-div.dashboard_task p a.task_header { font-size: 1.3em; }
 span.task-review { font-size: 0.8em; }
 
-ul.breadcrumb { margin: 15px 0 0 0; }
+ul.breadcrumb { margin: 0px 0 0 0; }
+h1.title { margin-bottom: 0px; }
+div.accordion-inner.widget { margin-bottom: 0px;}
+.no-border { border: 0px solid !important; }

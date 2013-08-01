@@ -5,11 +5,12 @@
 
     <div class="dashboard_task">
         <p>
-            <a href="{{ path('lesson_index', {'id': user_task.lessonId }) }}" class="task_header">{{user_task.task.title }}</a>
+            <h3><a href="{{ path('lesson_index', {'id': user_task.lessonId }) }}" class="task_header">{{user_task.task.title }}</a>
             {% if user_task.rejected %}<span class="badge badge-important">{{ 'Failed'|trans }}</span>
             {% elseif user_task.pending %}<span class="badge badge-warning">{{ 'Pending'|trans }}</span>
             {% else %}<span class="badge">{{ 'In Progress'|trans }}</i></span>
             {% endif %}
+            </h3>
         </p>
         
         <blockquote>{{ user_task.task.text|raw }}</blockquote>

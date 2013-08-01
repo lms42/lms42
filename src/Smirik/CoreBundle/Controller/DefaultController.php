@@ -36,8 +36,8 @@ class DefaultController extends Controller
         $courses = $this->get('course.manager')->getAll();
 
         return array(
-            'news' => $news,
-            'courses' => $courses,
+            'news'       => $news,
+            'courses'    => $courses,
         );
     }
 
@@ -50,19 +50,17 @@ class DefaultController extends Controller
     {
         $user = $this->getUser();
 
-        $lm = $this->get('lesson.manager');
-        $lessons = $lm->getOpened($user);
+        $lessons = $this->get('lesson.manager')->getOpened($user);
 
         $tm = $this->get('user_task.manager');
-        $user_tasks = $tm->latestUserTodo($user, 10);
+        $user_tasks           = $tm->latestUserTodo($user, 10);
         $completed_user_tasks = $tm->lastCompleted($user, 5);
         $pending_user_tasks   = $tm->lastPending($user, 5);
 
-        $uqm  = $this->get('user_quiz.manager');
-        $completed_users_quiz = $uqm->completed($user, 5);
+        $completed_users_quiz = $this->get('user_quiz.manager')->completed($user, 5);
 
-        $cm = $this->get('content.manager');
-        $contents = $cm->last(5);
+        $contents = $this->get('content.manager')->last(5);
+        $categories = $this->get('category.manager')->main();
 
         return array(
             'lessons'    => $lessons,
@@ -70,7 +68,8 @@ class DefaultController extends Controller
             'completed_user_tasks' => $completed_user_tasks,
             'pending_user_tasks'   => $pending_user_tasks,
             'completed_users_quiz' => $completed_users_quiz,
-            'contents'   => $contents
+            'contents'   => $contents,
+            'categories' => $categories,
         );
     }
 
