@@ -1,0 +1,16 @@
+p a { text-decoration: underline }
+p a:hover { text-decoration: none; color: inherit; }
+
+div.container { width: 1100px !important; }
+
+div#signin_modal {
+    width: 352px;
+    margin-left: -100px;
+}
+
+span.task-review { font-size: 0.8em; }
+
+ul.breadcrumb { margin: 0px 0 0 0; }
+h1.title { margin-bottom: 0px; }
+div.accordion-inner.widget { margin-bottom: 0px;}
+.no-border { border: 0px solid !important; }

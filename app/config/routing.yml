@@ -1,3 +1,8 @@
+smirik_core:
+    resource: "@SmirikCoreBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 smirik_exam:
     resource: "@SmirikExamBundle/Controller/"
     type:     annotation

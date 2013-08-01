@@ -86,12 +86,15 @@ avalanche_imagine:
         avatar_profile:
             type:    thumbnail
             options: { size: [250, 400], mode: outbound }
-        company_profile:
-            type:    thumbnail
-            options: { size: [200, 200], mode: outbound }
+        course_preview:
+            type:    relative_resize
+            options: { widen: 128 }
         carousel_help:
             type:    thumbnail
             options: { size: [1050, 500], mode: outbound }
+        propel_admin_preview:
+            type:    relative_resize
+            options: { widen: 100 }
 
 trsteel_ckeditor:
     class: Trsteel\CkeditorBundle\Form\Type\CkeditorType
@@ -107,7 +110,7 @@ trsteel_ckeditor:
         insert: ['Image','Flash','Table','HorizontalRule','mathedit']
         styles: ['Styles','Format']
         tools: ['Maximize', 'ShowBlocks']
-    ui_color: '#000000'
+    ui_color: '#FFFFFF'
     startup_outline_blocks: true
     width: 800  # Integer or %
     height: 300 # Integer or %

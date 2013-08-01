@@ -1,0 +1,32 @@
+{% if user_tasks|length %}
+    <h3>{{ 'Your tasks'|trans }}</h3>
+{% endif %}
+{% for user_task in user_tasks %}
+
+    <div class="dashboard_task">
+        <p>
+            <h3><a href="{{ path('lesson_index', {'id': user_task.lessonId }) }}" class="task_header">{{user_task.task.title }}</a>
+            {% if user_task.rejected %}<span class="badge badge-important">{{ 'Failed'|trans }}</span>
+            {% elseif user_task.pending %}<span class="badge badge-warning">{{ 'Pending'|trans }}</span>
+            {% else %}<span class="badge">{{ 'In Progress'|trans }}</i></span>
+            {% endif %}
+            </h3>
+        </p>
+        
+        <blockquote>{{ user_task.task.text|raw }}</blockquote>
+
+        {% set reviews = user_task.getUserTaskReviews() %}
+        {% for review in reviews %}
+            <div class="alert">
+               {{ review.text }}
+               <div class="pull-right">
+                   <span class="task-review">
+                       {{ review.user.profile.teacherName }} / {{ review.createdAt|ago }}
+                   </span>
+               </div>
+            </div>
+        {% endfor %}
+    </div>
+{% else %}
+<p class="lead alert alert-success">{{ 'All tasks are completed'|trans }}</p>
+{% endfor %}

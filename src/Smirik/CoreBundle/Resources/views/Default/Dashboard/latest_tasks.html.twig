@@ -1,0 +1,23 @@
+<table class="table">
+    <thead>
+        <tr class="info">
+            <th>#</th>
+            <th>{{ 'Task'|trans }}</th>
+            <th>{{ 'Score'|trans }}</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for user_task in user_tasks %}
+
+        <tr class="{% if user_task.mark < 3 %}error{% elseif user_task.mark == 5%}success{% endif %}">
+            <td>{{ user_task.taskId }}</td>
+            <td>
+                <a href="{{ path('lesson_index', { id: user_task.lessonId }) }}#task{{ user_task.taskId }}">
+                    {{ user_task.task.title }}
+                </a>
+            </td>
+            <td>{{ user_task.mark|default('pending'|trans) }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

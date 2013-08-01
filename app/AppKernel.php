@@ -32,6 +32,7 @@ class AppKernel extends Kernel
             new Smirik\ExamBundle\SmirikExamBundle(),
             new Smirik\ConfigBundle\SmirikConfigBundle(),
             new Trsteel\CkeditorBundle\TrsteelCkeditorBundle(),
+            new Smirik\CoreBundle\SmirikCoreBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

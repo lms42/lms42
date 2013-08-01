@@ -1,121 +1,128 @@
 <!DOCTYPE html>
-<html>
+<!--[if IE 7]> <html lang="en" class="ie7"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>{% block title %}{{ 'mainpage.header'|config('LMS42') }}{% endblock %}</title>
 
     {{ bootstrap_js() }}
     {{ bootstrap_css() }}
 
     {% stylesheets
-    '@SmirikAdminBundle/Resources/public/css/*'
-    '@SmirikContentBundle/Resources/public/css/*' %}
-    <link rel="stylesheet" href="{{ asset_url }}"/>
+        '@SmirikAdminBundle/Resources/public/css/*'
+        '@SmirikCoreBundle/Resources/public/css/plain/bootstrap-override.css'
+        '@SmirikCoreBundle/Resources/public/css/plain/style.css'
+        '@SmirikCoreBundle/Resources/public/css/plain/font-awesome/font-awesome.css'
+        '@SmirikCoreBundle/Resources/public/css/master.css'
+    %}
+        <link rel="stylesheet" href="{{ asset_url }}"/>
     {% endstylesheets %}
 
     {% block stylesheets %}{% endblock %}
     {% block javascripts %}{% endblock %}
 
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}"/>
-
-
-    <script type="text/javascript">
-
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-11430636-3']);
-        _gaq.push(['_trackPageview']);
-
-        (function () {
-            var ga = document.createElement('script');
-            ga.type = 'text/javascript';
-            ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(ga, s);
-        })();
-    </script>
-
-    <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
-        {
-            lang: 'ru'
-        }
-    </script>
-
-    <script src="http://vkontakte.ru/js/api/openapi.js" type="text/javascript" charset="windows-1251"></script>
-    <script type="text/javascript">
-        VK.init({apiId:1969513, onlyWidgets:true});
-    </script>
-
 </head>
 <body>
 
-{% block navbar %}
-    <div class="navbar navbar-fixed-top">
-        <div class="navbar-inner">
-            <div class="container-fluid">
-                <a class="brand" href="{{ path('homepage') }}">Главная</a>
-
-                {{ render(controller('SmirikContentBundle:Content:navigation', { 'some_var': 123 })) }}
-                {% render controller('SmirikContentBundle:Content:navigation', { 'some_var': 123 }) %}
-                {#% render "SmirikContentBundle:Content:navigation" %#}
-
-                <p class="navbar-text pull-right">
-                    {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-                        {% if is_granted("ROLE_ADMIN") %}
-                            <a href="{{ path('admin_main') }}">Администрирование</a> |
-                        {% endif %}
-                        <a href="{{ path('fos_user_profile_show') }}">
-                            {{ app.user.username }}</a> |
-                        <a href="{{ path('fos_user_security_logout') }}">
-                            {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
-                        </a>
-                    {% else %}
-                        <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
-                    {% endif %}
-
-                </p>
-            </div>
-        </div>
-    </div>
-{% endblock %}
-
 {% block body %}
-    <div class="container-fluid">
-        <div class="row-fluid">
-            <div class="span3">
-                {% block left_without_well %}
-                    <div class="sidebar-nav">
-                        {% block left %}
-                            {% include 'SmirikContentBundle:Default:_sidebar.html.twig' %}
-                        {% endblock %}
-                    </div>
+
+    {% block navbar %}
+        {% render controller('SmirikCoreBundle:Default:navigation') %}
+    {% endblock %}
+
+    {% block breadcrumbsContainer %}
+    <div class="row breadcrumbs margin-bottom-20">
+        <div class="container">
+            <div>
+                <h1 class="pull-left title">
+                    {% block header "" %}
+                </h1>
+                {% block breadcrumbs %}
+                    {{ knp_menu_render('main_breadcrumbs', {template: "SmirikCoreBundle:Menu:knpBreadcrumbs.html.twig"}) }}
                 {% endblock %}
             </div>
+            <div class="clearfix"><!-- --></div>
+            <hr>
+        </div>
+    </div>
+    {% endblock %}
 
-            <div class="span9">
+    {% block summary "" %}
 
-                <!-- Main hero unit for a primary marketing message or call to action -->
-                {% block hero %}
-                {% endblock %}
-
-                <div class="content">
-                    {% block content_navigation %}
-                    {% endblock %}
-                    {% block header %}
-                    {% endblock %}
-                    <hr>
-                </div>
-                <div class="content">
-                    {% block content %}
-
-                    {% endblock %}
+    {% block container %}
+        <div class="container">
+            <div class="row-fluid">
+                <div class="span12">
+                    {% block hero %}{% endblock %}
+                    <div class="content">
+                        {% block content_navigation %}{% endblock %}
+                    </div>
+                    <div class="content">
+                        {% block content %}{% endblock %}
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <footer>
-        <p>&copy; 2010-{{ "now"|date("Y") }}</p>
-    </footer>
+    {% endblock %}
+
+    {% block footer %}
+    
+    <footer id="footer">
+    		<div class="container">
+    			<div class="row">
+    				<div class="span4">
+    					<a class="brand" href="http://lms42.com">
+    						LMS42
+    					</a>
+    					<p>
+    						{{ 'Open-source application'|trans }} <br>{{ 'for e-learning'|trans }}. <br>
+    						{{ 'Contribution is welcome'|trans }}.
+						
+    					</p>
+    				</div>
+    				<div class="span4 social-networks">
+    					<h3>{{ 'Find us elsewhere'|trans }}</h3>
+    					<p>
+                            {% if false %}
+    						<a class="social-network twitter"></a>
+    						<a class="social-network facebook"></a>
+    						<a class="social-network linkedin"></a>
+    						<a class="social-network dribbble"></a>
+    						<a class="social-network pinterest"></a>
+                            {% endif %}
+    						<a class="social-network gplus" href="https://plus.google.com/b/102108356343030781804/102108356343030781804"></a>
+    					</p>
+    				</div>
+    				<div class="span4 newsletter">
+    					<h3>Исходный код</h3>
+    					<p><a href="https://github.com/organizations/lms42">Github</a>, лицензия MIT</p>
+    				</div> 
+    			</div> <!-- end .row -->		
+    		</div> <!-- end .container -->
+    	</footer>
+    
+    <footer id="copyright">
+    		<div class="container">
+    			<div class="row">
+    				<div class="span4">
+    					&copy; 2010-{{ "now"|date("Y") }} by <a href="http://lms42.com">LMS42</a>
+    				</div>
+    				<div class="span4">
+    				</div>
+    				<div class="span4">
+    					<a href="http://lms42.com" rel="external" title="" target="_blank">MADE</a> BY <a title="LMS42" rel="external" href="http://lms42.com" target="_blank">LMS42</a>
+					
+    				</div>
+    			</div> <!-- end .row -->		
+    		</div> <!-- end .container -->
+    	</footer>
+    {% endblock %}
+
 {% endblock %}
 
 </body>

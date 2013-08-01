@@ -1,0 +1,15 @@
+{#% extends 'SmirikCoreBundle::layout.html.twig' %#}
+{% extends '::1column.html.twig' %}
+
+{% block summary %}
+{% endblock %}
+
+{% block body %}
+    {{ parent() }}
+{% endblock %}
+
+{% block breadcrumbsContainer %}{% endblock %}
+
+{% block content %}
+{% include 'SmirikCourseBundle:Course/List:_courses.html.twig' with { 'courses': courses } %}
+{% endblock %}

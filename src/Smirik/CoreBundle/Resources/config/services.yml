@@ -1,0 +1,31 @@
+services:
+  lms42_main_menu_builder:
+    class: Smirik\CoreBundle\Menu\MainMenuBuilder
+    arguments: [@knp_menu.factory, @service_container, @lms42_main_menu_voter_request]
+
+  lms42_main_menu:
+    class: Knp\Menu\MenuItem
+    factory_service: lms42_main_menu_builder
+    factory_method: build
+    tags:
+      - { name: knp_menu.menu, alias: main }
+
+  lms42_main_menu_breadcrumbs:
+    class: Knp\Menu\MenuItem
+    factory_service: lms42_main_menu_builder
+    factory_method: buildBreadcrumbs
+    tags:
+      - { name: knp_menu.menu, alias: main_breadcrumbs }
+
+  lms42_main_menu_voter_request:
+    class: Smirik\CoreBundle\Menu\Voter\RequestVoter
+    arguments: [@service_container]
+    tags:
+      - { name: knp_menu.voter }
+
+  ago.twig.extension:
+    class: Smirik\CoreBundle\Twig\Extension\DateTimeAgoExtension
+    tags:
+      - { name: twig.extension }
+    calls:
+        - [ setContainer, [ "@service_container" ]]
