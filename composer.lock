@@ -3,26 +3,29 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "86cf920143df264a829156bb57c54b62",
+    "hash": "24b3cb410ab6edb62282cdb0c6b97b5d",
     "packages": [
         {
             "name": "avalanche123/imagine-bundle",
-            "version": "v2.1",
+            "version": "v2.1.2",
             "target-dir": "Avalanche/Bundle/ImagineBundle",
             "source": {
                 "type": "git",
                 "url": "git://github.com/avalanche123/AvalancheImagineBundle.git",
-                "reference": "v2.1"
+                "reference": "v2.1.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/avalanche123/AvalancheImagineBundle/archive/v2.1.zip",
-                "reference": "v2.1",
+                "url": "https://github.com/avalanche123/AvalancheImagineBundle/archive/v2.1.2.zip",
+                "reference": "v2.1.2",
                 "shasum": ""
             },
             "require": {
-                "imagine/imagine": "v0.3.0",
+                "imagine/imagine": "v0.4.1",
                 "symfony/framework-bundle": "2.*"
+            },
+            "require-dev": {
+                "makasim/temp-file": "dev-master"
             },
             "suggest": {
                 "symfony/twig-bundle": "2.*"
@@ -50,7 +53,7 @@
                 "image manipulation",
                 "imagine"
             ],
-            "time": "2012-11-15 18:54:56"
+            "time": "2012-12-13 18:34:10"
         },
         {
             "name": "doctrine/common",
@@ -395,16 +398,16 @@
         },
         {
             "name": "imagine/imagine",
-            "version": "v0.3.0",
+            "version": "v0.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/avalanche123/Imagine.git",
-                "reference": "v0.3.0"
+                "reference": "v0.4.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/avalanche123/Imagine/zipball/v0.3.0",
-                "reference": "v0.3.0",
+                "url": "https://api.github.com/repos/avalanche123/Imagine/zipball/v0.4.1",
+                "reference": "v0.4.1",
                 "shasum": ""
             },
             "require": {
@@ -438,7 +441,7 @@
                 "image manipulation",
                 "image processing"
             ],
-            "time": "2012-07-29 00:35:18"
+            "time": "2012-12-13 18:31:18"
         },
         {
             "name": "incenteev/composer-parameter-handler",
