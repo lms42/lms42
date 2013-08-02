@@ -92,6 +92,9 @@ avalanche_imagine:
         carousel_help:
             type:    thumbnail
             options: { size: [1050, 500], mode: outbound }
+        content_show:
+            type:    relative_resize
+            options: { widen: 600 }
         propel_admin_preview:
             type:    relative_resize
             options: { widen: 100 }

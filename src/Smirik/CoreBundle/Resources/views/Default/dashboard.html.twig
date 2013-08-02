@@ -59,6 +59,9 @@
                 </div>
             </div>
             <div class="span4">
+                <div class="widget">
+                    {% render(controller('SmirikCourseBundle:Course:progress')) %}
+                </div>
                 {% include 'SmirikCoreBundle:Default/Dashboard:news.html.twig' with {'contents': contents, 'categories': categories } %}
             </div>
         </div>

@@ -24,7 +24,7 @@
         "willdurand/propel-typehintable-behavior": "~1.0",
 
         "friendsofsymfony/user-bundle": "~2.0@dev",
-        "avalanche123/imagine-bundle": "v2.1",
+        "avalanche123/imagine-bundle": "2.1.*",
         "knplabs/knp-menu": "v2.0.0-alpha1",
         "knplabs/knp-menu-bundle": "v2.0.0-alpha1",
         "Trsteel/ckeditor-bundle": "1.2.*",
