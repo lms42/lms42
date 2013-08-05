@@ -1,0 +1,387 @@
+Smirik\CourseBundle\Model\Task:
+    Task_1:
+        lesson_id: Lesson_1
+        title: Калькулятор
+        text: 'Напишите программу, которая вычисляет 2 в степени 100, 3 в степени 50, 2+2*2, корень из 3. В ответе, помимо текста самой программы, укажите результат выполнения программы.&nbsp;'
+        created_at: '2012-09-02 22:40:31'
+        updated_at: '2012-09-02 22:40:31'
+        sortable_rank: '1'
+    Task_2:
+        lesson_id: Lesson_1
+        title: 'Смена переменных'
+        text: 'Даны две переменные типа integer: <i>a</i> и <i>b</i>. Напишите программу, которая без создания дополнительной переменной меняет их значения местами, то есть переменная&nbsp;<i>a</i> становится равной <i>b<b></b></i><b></b>, а&nbsp;<i>b</i> —&nbsp;<b></b><i>a</i>. Если вы не можете придумать решение, укажите хотя бы ваши идеи.'
+        created_at: '2012-09-02 22:42:04'
+        updated_at: '2012-09-02 22:42:04'
+        sortable_rank: '2'
+    Task_3:
+        lesson_id: Lesson_2
+        title: Сравнения
+        text: 'Напишите программу, которая сравнивает два числа: 2 в степени 100 и 3 в степени 50. Программа должна выводить слово "больше", если первое число больше второго, "равно" — если числа равны, "меньше" — если первое число меньше второго. Сами числа выводить не нужно.'
+        created_at: '2012-09-02 22:44:00'
+        updated_at: '2012-09-02 22:44:00'
+        sortable_rank: '1'
+    Task_4:
+        lesson_id: Lesson_3
+        title: 'Формула Хартли'
+        text: 'Задана переменная N (типа integer), в которой хранится количество символов некоего алфавита, неизвестно какого. Напишите программу, которая посчитает, какое минимальное количество&nbsp;бит может занимать один символ данного алфавита. В ответе программа должна выводить только число — количество бит.'
+        created_at: '2012-09-02 22:46:40'
+        updated_at: '2012-09-02 22:46:40'
+        sortable_rank: '1'
+    Task_5:
+        lesson_id: Lesson_3
+        title: 'Числа Фибоначчи'
+        text: 'Напишите программу, вычисляющую N-ное число Фибоначчи (N задаётся в виде переменной в начале программы) с помощью цикла whilte. Вычислите 100-ое число Фибоначчи с помощью программы и сравните результат с программой, указанной в презентации.<br><br>Дополнительно укажите, какая из программ вам кажется более удачной и почему?<br><br>В ответе нужно написать:<br><ul><li>программу с циклом while,</li><li>два значения: 100-ое число Фибоначчи, вычисленное обеими программами,</li><li>мнение насчёт явного и неявного циклов.</li></ul>'
+        created_at: '2012-09-02 22:48:41'
+        updated_at: '2012-09-02 22:48:41'
+        sortable_rank: '2'
+    Task_6:
+        lesson_id: Lesson_4
+        title: 'Произведение элементов'
+        text: 'Напишите программу, которая с помощью метода inject вычисляет произведение элементов массива. В качестве массива можно использовать любой набор целых чисел, задаваемый в начале программы.'
+        created_at: '2012-09-02 22:49:47'
+        updated_at: '2012-09-02 22:49:47'
+        sortable_rank: '1'
+    Task_7:
+        lesson_id: Lesson_4
+        title: Средние
+        text: 'Напишите программу, которая для заданного в начале программы массива натуральных чисел вычисляет:<br><ul><li>среднее арифметическое элементов массива,</li><li>среднее геометрическое элементов массива,</li><li>среднее гармоническое элементов массива.</li></ul>'
+        created_at: '2012-09-02 22:50:44'
+        updated_at: '2012-09-02 22:50:44'
+        sortable_rank: '2'
+    Task_8:
+        lesson_id: Lesson_4
+        title: 'Поиск элементов'
+        text: 'Задан массив из 10 целых чисел (любых). Напишите программу, которая с помощью метода find_all выводит на экран все элементы массива, меньшие нуля и делящиеся на 3.'
+        created_at: '2012-09-02 22:51:54'
+        updated_at: '2012-09-02 22:51:54'
+        sortable_rank: '3'
+    Task_9:
+        lesson_id: Lesson_4
+        title: 'Поиск и сумма'
+        text: 'Задан массив из 10 целых чисел (любых). Напишите программу, которая выводит на экран сумму всех чётных положитительных элементов массива.'
+        created_at: '2012-09-02 22:52:38'
+        updated_at: '2012-09-02 22:52:38'
+        sortable_rank: '4'
+    Task_10:
+        lesson_id: Lesson_5
+        title: 'Длина слов'
+        text: 'Задана строка <i>s</i>. Напишите программу, вычисляющую среднюю длину слова.<br><br><b>Пояснение:</b> <i>средняя длина слова в строке — это среднее арифметическое длин всех слов строки.</i><br><br><b>Пример:</b><br>Дана строка: "Мама мыла раму доместосом".<br>Средняя длина слова: (4+4+4+10)/4 = 5.5 символов.<br>Ответ: 5.5'
+        created_at: '2012-09-02 22:54:57'
+        updated_at: '2012-09-02 22:54:57'
+        sortable_rank: '1'
+    Task_11:
+        lesson_id: Lesson_5
+        title: Палиндромы
+        text: 'Дана строка <i>s</i>. Напишите программу, выводящую на экран все слова-палиндромы, встречающиеся в строке.<br><br><b>Пояснение</b><br>Палиндромом называют слово (или словосочетание), одинаково читающееся в обоих направлениях.<br><br><b>Примеры:</b><br><ul><li>топот,</li><li>анна,</li><li>А роза упала на лапу Азора.</li></ul>'
+        created_at: '2012-09-02 22:56:28'
+        updated_at: '2012-09-02 22:56:28'
+        sortable_rank: '2'
+    Task_12:
+        lesson_id: Lesson_5
+        title: 'Сложные палиндромы'
+        text: 'Дана строка <i>s</i>. Напишите программу, выводящую на экран все палиндромы, находящиеся в данной строке (включая палиндромы-словосочетания).<br><br><b>Комментарий</b><br>Если вы не можете решить эту задачу, в ответе укажите идеи насчёт решения.'
+        created_at: '2012-09-02 22:57:34'
+        updated_at: '2012-09-02 22:57:34'
+        sortable_rank: '3'
+    Task_13:
+        lesson_id: Lesson_6
+        title: '451 градус по Фаренгейту'
+        text: 'Напишите функцию, которая переводит градусы по Фаренгейту в градусы по Цельсию. С помощью функции найдите, чему равен 451 градус по Фаренгейту в Цельсиях и укажите это число в ответе. <br><br>Дополнительно поясните, откуда взялось вообще число 451.&nbsp;<br><br>Ответ должен содержать 3 части:<br><ul><li>функция перевода градусов,</li><li>значение 451 градуса по Фаренгейту в Цельсиях,</li><li>объяснение, откуда взялось число 451.&nbsp;<br></li></ul>'
+        created_at: '2012-09-02 23:00:52'
+        updated_at: '2012-09-02 23:00:52'
+        sortable_rank: '1'
+    Task_14:
+        lesson_id: Lesson_7
+        title: 'Взаимно-простые числа'
+        text: 'Дано натуральное число <i>a</i>. Выведите на экран все числа, которые взаимно просты с <i>a</i> и не превышают некоего числа N, заданного в начале программы.<br><br><b>Пример</b><br>N = 10<br>a = 3<br>Программа должна вывести все числа, меньшие либо равные&nbsp;10 и взаимно простые с 3. Таких чисел шесть: 2, 4, 5, 7, 8, 10.'
+        created_at: '2012-09-02 23:02:46'
+        updated_at: '2012-09-02 23:02:46'
+        sortable_rank: '1'
+    Task_15:
+        lesson_id: Lesson_7
+        title: 'Ханойские башни'
+        text: 'Напишите программу, которая выводит на экран алгоритм решения задачи о Ханойских башнях для заданного количества колец N (N задаётся в начале программы).<br><br><b>Дополнительно</b> решите следующую задачу:<br>Предположим, что на перекладывание одного кольца монахи тратят 1 минуту. Посчитайте, сколько потребуется монахам времени, чтобы выполнить условие Брахмы для конца света.'
+        created_at: '2012-09-02 23:05:46'
+        updated_at: '2012-09-02 23:05:46'
+        sortable_rank: '2'
+    Task_16:
+        lesson_id: Lesson_8
+        title: 'Задача о коммивояжёре'
+        text: 'Коммивояжёру для продажи своего товара нужно посетить несколько городов. Некоторые города соединены дорогами. Напишите самый простой жадный алгоритм, который бы выбрал коммивояжёру кратчайший путь из возможных.<br><br><b>Замечание</b><br>В данном задании не требуется:<br><ul><li>Написать программу. Достаточно только алгоритма.</li><li>Найти самый-самый короткий путь. Ваша цель — предложить рабочий алгоритм, использующий жадный принцип выбора.</li></ul>'
+        created_at: '2012-09-02 23:08:44'
+        updated_at: '2012-09-02 23:08:44'
+        sortable_rank: '1'
+    Task_17:
+        lesson_id: Lesson_9
+        title: 'Резюме'
+        text: 'Напишите краткое резюме, что вы поняли из презентации по паттернам программирования. Выделите те моменты, которые показались вам наиболее актуальными, и <b>объясните</b>, почему.'
+        created_at: '2012-09-02 23:11:36'
+        updated_at: '2012-09-02 23:11:36'
+        sortable_rank: '1'
+    Task_18:
+        lesson_id: Lesson_10
+        title: 'Повторение слов'
+        text: 'Задана строка <i>s</i>. Выведите на экран 10 наиболее встречающихся слов в строке.<br><br><b>Замечание</b><br>Для проверки в этой задаче рекомендуется вводить достаточно большой кусок текста. Взять его можно из любой книги, например, из Войны и Мира.'
+        created_at: '2012-09-02 23:13:01'
+        updated_at: '2012-09-02 23:13:01'
+        sortable_rank: '1'
+    Task_19:
+        lesson_id: Lesson_10
+        title: 'Парсинг данных'
+        text: 'Задан кусок вывода одной из метеорологических служб в виде строковой переменной <i>s</i> в следующем формате: весь текст состоит из строк (количество строк неизвестно), каждая строка состоит из:<br><ol><li>Даты в следующем формате: <i>число</i> (одна или&nbsp;две цифры), затем символ&nbsp;<i>точка</i>, затем <i>месяц</i> (одна или две цифры). Пример: 13.02</li><li>Символ <i>пробела</i> после даты.</li><li>Температуры в виде вещественного числа: 15.23. Дробная часть отделена от целой запятой.</li></ol>Пример входной строки <i>s</i>:<br>13.02 -22.5<br>14.01 -5.9<br>18.02 -9.5<br>15.04 2.3<br>17.05 10.4<br>18.06 22.2<br>01.01 -10.1<br><br><b>Задание</b><br>Вывести на экран среднемесячные температуры за каждый месяц в формате "<i>номер месяца</i> пробел <i>средняя температура</i>). Если для данного месяца данные отсутствуют — вывести "<i>номер месяца </i>пробел <i>данные отсутствуют</i>).<i> </i>Месяцы выводить в порядке возрастания, начиная с января (01).<br><br>Пример вывода:<br>01 -8.0<br>02 -16.0<br>03 данные отсутствуют<br>04 2.3<br>05 10.4<br>06 22.2<br>07 данные отсутствуют<br>08&nbsp;данные отсутствуют<br>09&nbsp;данные отсутствуют<br>10&nbsp;данные отсутствуют<br>11&nbsp;данные отсутствуют<br>12&nbsp;данные отсутствуют'
+        created_at: '2012-09-02 23:21:04'
+        updated_at: '2012-09-02 23:21:04'
+        sortable_rank: '2'
+    Task_20:
+        lesson_id: Lesson_11
+        title: Приоритет
+        text: '<p>Расставьте минусы информационного общества в порядке их важности (согласно вашим представлениям) и объясните, почему вы расставили именно так.</p>'
+        created_at: '2013-08-05 13:01:03'
+        updated_at: '2013-08-05 13:01:26'
+        sortable_rank: '1'
+    Task_21:
+        lesson_id: Lesson_11
+        title: 'Плюсы и минусы'
+        text: '<p>Дополните список плюсов и минусов информационного общества своими примерами, три (или больше) плюса и три (или больше) минуса.</p>'
+        created_at: '2013-08-05 13:01:44'
+        updated_at: '2013-08-05 13:01:44'
+        sortable_rank: '2'
+Smirik\CourseBundle\Model\UserTask:
+    UserTask_1:
+        lesson_id: Lesson_1
+        task_id: Task_1
+        user_id: User_1
+        text: 'puts 2**100<br>puts 3**50<br>puts 2+2*2<br>puts 3**0.5'
+        status: '3'
+        mark: '5'
+        created_at: '2012-09-02 23:31:46'
+        updated_at: '2012-09-02 23:49:25'
+    UserTask_2:
+        lesson_id: Lesson_1
+        task_id: Task_2
+        user_id: User_1
+        text: 'a = a-b<br>b = a+b<br>a = b-a'
+        status: '3'
+        mark: '4'
+        created_at: '2012-09-02 23:31:46'
+        updated_at: '2012-09-03 11:21:13'
+    UserTask_8:
+        lesson_id: Lesson_2
+        task_id: Task_3
+        user_id: User_1
+        text: 'if (2**100 &gt; 3**50)<br>&nbsp; puts "больше"<br>elsif (2**100 == 3**50)<br>&nbsp; puts "равно"<br>else<br>&nbsp; puts "меньше"<br>end'
+        status: '3'
+        mark: '4'
+        created_at: '2012-09-03 11:21:40'
+        updated_at: '2012-09-03 11:22:27'
+    UserTask_9:
+        lesson_id: Lesson_3
+        task_id: Task_4
+        user_id: User_1
+        text: логарифм
+        status: '3'
+        mark: '3'
+        created_at: '2012-09-03 11:22:38'
+        updated_at: '2012-11-20 10:57:14'
+    UserTask_10:
+        lesson_id: Lesson_3
+        task_id: Task_5
+        user_id: User_1
+        text: '544434'
+        status: '3'
+        mark: '5'
+        created_at: '2012-09-03 11:22:38'
+        updated_at: '2013-04-15 10:58:54'
+    UserTask_45:
+        lesson_id: Lesson_1
+        task_id: Task_1
+        user_id: User_3
+        text: 'puts 2**100<br>puts 3**50<br>puts 3**0.5<br>puts 2+2*2<br><br>1267650600228229401496703205376<br>717897987691852588770249<br>1.73205080756888<br>6'
+        status: '3'
+        mark: '5'
+        created_at: '2012-09-05 14:13:13'
+        updated_at: '2012-09-05 14:35:19'
+    UserTask_46:
+        lesson_id: Lesson_1
+        task_id: Task_2
+        user_id: User_3
+        text: 'a=2<br>b=3<br><br>a = a + b<br>b = a - b<br>a = a - b<br><br>puts a<br>puts b'
+        status: '3'
+        mark: '4'
+        created_at: '2012-09-05 14:13:13'
+        updated_at: '2012-09-11 09:50:18'
+    UserTask_80:
+        lesson_id: Lesson_2
+        task_id: Task_3
+        user_id: User_3
+        text: 'a = 2**100<br>b = 3**50<br>if (a &gt; b) <br> puts "Bolshe" <br> elsif (a == b)<br> puts "Ravno" <br> else <br> puts "Menshe"<br>end'
+        status: '3'
+        mark: '4'
+        created_at: '2012-09-11 21:29:30'
+        updated_at: '2012-09-12 14:04:10'
+    UserTask_100:
+        lesson_id: Lesson_3
+        task_id: Task_4
+        user_id: User_3
+        text: 'N=32<br>i=0 <br>for i in 1..N <br>&nbsp;&nbsp;break if (2**i&gt;=N) <br>end <br>puts i'
+        status: '3'
+        mark: '4'
+        created_at: '2012-09-12 14:09:21'
+        updated_at: '2012-09-26 07:36:16'
+    UserTask_101:
+        lesson_id: Lesson_3
+        task_id: Task_5
+        user_id: User_3
+        text: 'i = 1<br>a0 = 1<br>a1 = 1<br>a_new = 0<br>while (i &lt;&nbsp;100)<br>i = i +1<br>a_new = a1 + a0<br>a0 = a1<br>a1 = a_new<br>end<br><br>puts a_new'
+        status: '3'
+        mark: '5'
+        created_at: '2012-09-12 14:09:21'
+        updated_at: '2012-09-17 16:41:21'
+    UserTask_183:
+        lesson_id: Lesson_4
+        task_id: Task_6
+        user_id: User_3
+        text: 'arr=[3, 4, 4, 5] Res=arr.inject(1){ |res, elem| res*elem } puts Res<br>'
+        status: '3'
+        mark: '5'
+        created_at: '2012-09-27 22:11:52'
+        updated_at: '2012-10-01 14:03:25'
+    UserTask_184:
+        lesson_id: Lesson_4
+        task_id: Task_7
+        user_id: User_3
+        text: 'arr=[2, 3, 3, 5]&nbsp;<br>sum=arr.inject(0){ |res, elem| res+elem }&nbsp;<br>size=arr.size&nbsp;<br>ari=sum/size&nbsp;<br>m=arr.inject(1){ |res, elem| res*elem }&nbsp;<br>geom=m**0.5&nbsp;<br>sum1=arr.inject(0){ |res, elem| res+(1.0/elem)}&nbsp;<br>harm=size/sum1&nbsp;<br>puts ari<br>puts geom<br>puts harm<br><br>'
+        status: '3'
+        mark: '5'
+        created_at: '2012-09-27 22:11:52'
+        updated_at: '2012-10-15 20:46:03'
+    UserTask_185:
+        lesson_id: Lesson_4
+        task_id: Task_8
+        user_id: User_3
+        text: 'arr=[3, 4, 4, 5, -3, 6, -6, 7, 12, 8] <br>array=arr.find_all{ |elem| (elem&lt;0) &amp;&amp; (elem%3==0) } <br>puts array<br><br><br><br>'
+        status: '3'
+        mark: '5'
+        created_at: '2012-09-27 22:11:52'
+        updated_at: '2012-10-01 14:03:13'
+    UserTask_186:
+        lesson_id: Lesson_4
+        task_id: Task_9
+        user_id: User_3
+        text: 'arr=[3, 4, 4, 5, -3, 6, -6, 7, 12, 8]&nbsp;<br>array=arr.find_all{ |elem| (elem&gt;0) &amp;&amp; (elem%2==0) }&nbsp;<br>sum=array.inject(0){ |res, elem| elem+res }&nbsp;<br>puts sum'
+        status: '3'
+        mark: '5'
+        created_at: '2012-09-27 22:11:52'
+        updated_at: '2012-10-15 20:45:13'
+    UserTask_393:
+        lesson_id: Lesson_5
+        task_id: Task_10
+        user_id: User_3
+        text: 's = "ccc cc"<br>puts s.gsub(" ", "").size/s.split(" ").size.to_f'
+        status: '3'
+        mark: '5'
+        created_at: '2012-10-17 18:53:58'
+        updated_at: '2012-10-19 18:13:20'
+    UserTask_394:
+        lesson_id: Lesson_5
+        task_id: Task_11
+        user_id: User_3
+        text: "s = \"aa sd bb bdcg bccb\"<br>arr = s.split(\" \")<br><br>for i in 0..arr.size-1<span>\t<br>&nbsp;puts arr[i] if arr[i] == arr[i].reverse<br></span>end<br><br>"
+        status: '3'
+        mark: '5'
+        created_at: '2012-10-17 18:53:58'
+        updated_at: '2012-11-07 18:54:19'
+    UserTask_395:
+        lesson_id: Lesson_5
+        task_id: Task_12
+        user_id: User_3
+        text: 'Не знаю как делать.<br>'
+        status: '3'
+        mark: '2'
+        created_at: '2012-10-17 18:53:58'
+        updated_at: '2012-11-07 18:54:31'
+    UserTask_496:
+        lesson_id: Lesson_6
+        task_id: Task_13
+        user_id: User_3
+        text: '<b>array = [451]<br>Fahrenheit_to_Celsius=0.555555556<br>array_in_Celsius=array.map{|elem| elem*Fahrenheit_to_Celsius-32}<br><span>puts array_in_Celsius<br></span></b><br>451 градус по Фаренгейту = 218,5 градусов по Цельсию.<br><br>Температура при которой плавится бумага.<br><br>в этом задании мне немножко помогали)<br>'
+        status: '3'
+        mark: '5'
+        created_at: '2012-11-10 01:08:33'
+        updated_at: '2012-11-11 06:40:44'
+    UserTask_536:
+        lesson_id: Lesson_7
+        task_id: Task_14
+        user_id: User_3
+        status: '0'
+        created_at: '2012-11-13 09:16:34'
+        updated_at: '2012-11-13 09:16:34'
+    UserTask_537:
+        lesson_id: Lesson_7
+        task_id: Task_15
+        user_id: User_3
+        status: '0'
+        created_at: '2012-11-13 09:16:34'
+        updated_at: '2012-11-13 09:16:34'
+    UserTask_1265:
+        lesson_id: Lesson_4
+        task_id: Task_6
+        user_id: User_1
+        text: '231231123123'
+        status: '3'
+        mark: '5'
+        created_at: '2013-04-15 11:03:58'
+        updated_at: '2013-06-19 16:14:39'
+    UserTask_1266:
+        lesson_id: Lesson_4
+        task_id: Task_7
+        user_id: User_1
+        status: '4'
+        mark: '1'
+        created_at: '2013-04-15 11:03:58'
+        updated_at: '2013-04-19 15:36:52'
+    UserTask_1267:
+        lesson_id: Lesson_4
+        task_id: Task_8
+        user_id: User_1
+        status: '0'
+        created_at: '2013-04-15 11:03:58'
+        updated_at: '2013-04-15 11:03:58'
+    UserTask_1268:
+        lesson_id: Lesson_4
+        task_id: Task_9
+        user_id: User_1
+        status: '0'
+        created_at: '2013-04-15 11:03:58'
+        updated_at: '2013-04-15 11:03:58'
+Smirik\CourseBundle\Model\UserTaskReview:
+    UserTaskReview_1:
+        user_task_id: UserTask_1
+        user_id: User_1
+        text: 'Не понял, а где сама программа?'
+        created_at: '2012-09-02 23:47:11'
+        updated_at: '2012-09-02 23:47:11'
+    UserTaskReview_19:
+        user_task_id: UserTask_46
+        user_id: User_1
+        text: 'Третья переменная не должна присутствовать.'
+        created_at: '2012-09-11 09:11:15'
+        updated_at: '2012-09-11 09:11:15'
+    UserTaskReview_37:
+        user_task_id: UserTask_80
+        user_id: User_1
+        text: 'Вывод не соответствует условиям программы (посмотрите внимательнее условие).'
+        created_at: '2012-09-12 09:18:35'
+        updated_at: '2012-09-12 09:18:35'
+    UserTaskReview_201:
+        user_task_id: UserTask_9
+        user_id: User_1
+        text: Бред!
+        created_at: '2012-11-20 10:56:51'
+        updated_at: '2012-11-20 10:56:51'
+    UserTaskReview_445:
+        user_task_id: UserTask_1265
+        user_id: User_1
+        text: Бред
+        created_at: '2013-05-29 16:13:54'
+        updated_at: '2013-05-29 16:13:54'

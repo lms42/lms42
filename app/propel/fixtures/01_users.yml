@@ -1,0 +1,66 @@
+FOS\UserBundle\Propel\User:
+    User_1:
+        username: test
+        username_canonical: test
+        email: smirik@gmail.com
+        email_canonical: smirik@gmail.com
+        enabled: '1'
+        salt: 4u2oi7ahb62os0kk4ocg8gowg4ook0o
+        password: o9jtUCYjmar9GrxmHJGszZtpzV0UGPMDQ/EhaU7iWaCt2YqMgIHcnQdv3MvFG89lc8STsGiQW3nbL9CcmJKQ9Q==
+        locked: '0'
+        expired: '0'
+        credentials_expired: '0'
+        roles: [ROLE_USER, ROLE_ADMIN]
+    User_2:
+        username: test2
+        username_canonical: test2
+        email: smirik+2@gmail.com
+        email_canonical: smirik+2@gmail.com
+        enabled: '1'
+        salt: 4u2oi7ahb62os0kk4ocg8gowg4ook0o
+        password: EEKt4SmSa5f9I4T86ek2iwM80KAkZNgmzGkIxH6b+fKK3Q9CMf45s3qwxsHMyUDhOLPmTF25zLAvf61lzQf5CA==
+        locked: '0'
+        expired: '0'
+        credentials_expired: '0'
+        roles: [ROLE_USER]
+    User_3:
+        username: test3
+        username_canonical: test3
+        email: smirik+3@gmail.com
+        email_canonical: smirik+3@gmail.com
+        enabled: '1'
+        salt: 2fha40muvrk0ckgwwgoo8wooc0w08os
+        password: uGASEtYbRAicAlqAkMfcN/3SdMIRlETQcfuqerPp85DlTx30RikW1Cw7OWQQRBCHg2mFPDtV9cOmdGO0DCm++w==
+        locked: '0'
+        expired: '0'
+        credentials_expired: '0'
+Smirik\AdminBundle\Model\Profile:
+    Profile_1:
+        user_id: User_1
+        first_name: Евгений
+        last_name: Смирнов
+        created_at: '2013-03-18 21:43:58'
+        updated_at: '2013-03-18 21:44:08'
+    Profile_2:
+        user_id: User_2
+        first_name: dsasd
+        last_name: dsadsa
+        created_at: '2013-03-18 21:43:58'
+        updated_at: '2013-04-22 14:32:04'
+    Profile_3:
+        user_id: User_3
+        created_at: '2013-03-18 21:43:58'
+        updated_at: '2013-03-18 21:43:58'
+FOS\UserBundle\Propel\Group:
+    Group_1:
+        name: Test
+FOS\UserBundle\Propel\UserGroup:
+    UserGroup_1_1:
+        fos_user_id: User_1
+        fos_group_id: Group_1
+    UserGroup_2_1:
+        fos_user_id: User_2
+        fos_group_id: Group_1
+    UserGroup_3_1:
+        fos_user_id: User_3
+        fos_group_id: Group_1

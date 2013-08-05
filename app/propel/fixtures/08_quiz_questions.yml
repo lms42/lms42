@@ -1,0 +1,173 @@
+Smirik\QuizBundle\Model\UserQuiz:
+    UserQuiz_381:
+        user_id: User_1
+        quiz_id: Quiz_3
+        questions: '["74","72","71"]'
+        current: '2'
+        num_right_answers: '3'
+        started_at: '2013-08-05 10:51:52'
+        stopped_at: '2013-08-05 10:52:18'
+        is_active: '1'
+        is_closed: '1'
+        created_at: '2013-08-05 10:51:52'
+        updated_at: '2013-08-05 10:52:18'
+    UserQuiz_382:
+        user_id: User_2
+        quiz_id: Quiz_1
+        questions: '["69","76","90","78","82","86"]'
+        current: '5'
+        num_right_answers: '6'
+        started_at: '2013-08-05 11:30:52'
+        stopped_at: '2013-08-05 11:33:51'
+        is_active: '1'
+        is_closed: '1'
+        created_at: '2013-08-05 11:30:52'
+        updated_at: '2013-08-05 11:33:51'
+    UserQuiz_383:
+        user_id: User_1
+        quiz_id: Quiz_1
+        questions: '["95","67","93","75","81","94"]'
+        current: '5'
+        num_right_answers: '4'
+        started_at: '2013-08-05 11:30:52'
+        stopped_at: '2013-08-05 11:31:52'
+        is_active: '1'
+        is_closed: '1'
+        created_at: '2013-08-05 11:30:52'
+        updated_at: '2013-08-05 11:31:52'
+Smirik\QuizBundle\Model\UserQuestion:
+    UserQuestion_1638:
+        user_id: User_2
+        quiz_id: Quiz_1
+        question_id: Question_69
+        user_quiz_id: UserQuiz_382
+        answer_id: Answer_222
+        answer_text: ''
+        is_right: '1'
+        is_closed: '1'
+    UserQuestion_1639:
+        user_id: User_2
+        quiz_id: Quiz_1
+        question_id: Question_76
+        user_quiz_id: UserQuiz_382
+        answer_id: Answer_252
+        answer_text: ''
+        is_right: '1'
+        is_closed: '1'
+    UserQuestion_1640:
+        user_id: User_2
+        quiz_id: Quiz_1
+        question_id: Question_90
+        user_quiz_id: UserQuiz_382
+        answer_id: Answer_282
+        answer_text: ''
+        is_right: '1'
+        is_closed: '1'
+    UserQuestion_1641:
+        user_id: User_2
+        quiz_id: Quiz_1
+        question_id: Question_78
+        user_quiz_id: UserQuiz_382
+        answer_id: Answer_255
+        answer_text: '3'
+        is_right: '1'
+        is_closed: '1'
+    UserQuestion_1642:
+        user_id: User_2
+        quiz_id: Quiz_1
+        question_id: Question_82
+        user_quiz_id: UserQuiz_382
+        answer_id: Answer_259
+        answer_text: '100'
+        is_right: '1'
+        is_closed: '1'
+    UserQuestion_1643:
+        user_id: User_2
+        quiz_id: Quiz_1
+        question_id: Question_86
+        user_quiz_id: UserQuiz_382
+        answer_id: Answer_266
+        answer_text: ''
+        is_right: '1'
+        is_closed: '1'
+    UserQuestion_1637:
+        user_id: User_1
+        quiz_id: Quiz_1
+        question_id: Question_94
+        user_quiz_id: UserQuiz_383
+        answer_id: Answer_286
+        answer_text: '2.5'
+        is_right: '0'
+        is_closed: '1'
+    UserQuestion_1636:
+        user_id: User_1
+        quiz_id: Quiz_1
+        question_id: Question_81
+        user_quiz_id: UserQuiz_383
+        answer_id: Answer_258
+        answer_text: 'b*b-4*a*c'
+        is_right: '0'
+        is_closed: '1'
+    UserQuestion_1635:
+        user_id: User_1
+        quiz_id: Quiz_1
+        question_id: Question_75
+        user_quiz_id: UserQuiz_383
+        answer_id: Answer_249
+        answer_text: ''
+        is_right: '1'
+        is_closed: '1'
+    UserQuestion_1633:
+        user_id: User_1
+        quiz_id: Quiz_1
+        question_id: Question_67
+        user_quiz_id: UserQuiz_383
+        answer_id: Answer_214
+        answer_text: ''
+        is_right: '1'
+        is_closed: '1'
+    UserQuestion_1634:
+        user_id: User_1
+        quiz_id: Quiz_1
+        question_id: Question_93
+        user_quiz_id: UserQuiz_383
+        answer_id: Answer_285
+        answer_text: '15'
+        is_right: '1'
+        is_closed: '1'
+    UserQuestion_1632:
+        user_id: User_1
+        quiz_id: Quiz_1
+        question_id: Question_95
+        user_quiz_id: UserQuiz_383
+        answer_id: Answer_287
+        answer_text: '2.5'
+        is_right: '1'
+        is_closed: '1'
+    UserQuestion_1631:
+        user_id: User_1
+        quiz_id: Quiz_3
+        question_id: Question_71
+        user_quiz_id: UserQuiz_381
+        answer_id: Answer_233
+        answer_text: ''
+        is_right: '1'
+        is_closed: '1'
+    UserQuestion_1630:
+        user_id: User_1
+        quiz_id: Quiz_3
+        question_id: Question_72
+        user_quiz_id: UserQuiz_381
+        answer_id: Answer_234
+        answer_text: ''
+        is_right: '1'
+        is_closed: '1'
+    UserQuestion_1629:
+        user_id: User_1
+        quiz_id: Quiz_3
+        question_id: Question_74
+        user_quiz_id: UserQuiz_381
+        answer_id: Answer_242
+        answer_text: ''
+        is_right: '1'
+        is_closed: '1'
