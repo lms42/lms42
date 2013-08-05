@@ -21,7 +21,7 @@
                {{ review.text }}
                <div class="pull-right">
                    <span class="task-review">
-                       {{ review.user.profile.teacherName }} / {{ review.createdAt|ago }}
+                       {{ review.user.profile.teacherName }} / {{ time_diff(review.createdAt) }}
                    </span>
                </div>
             </div>

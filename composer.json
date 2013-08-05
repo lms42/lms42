@@ -38,7 +38,7 @@
         "lms42/course-bundle": "0.4.*",
         "lms42/quiz-bundle": "0.4.*",
         "lms42/exam-bundle": "0.4.*",
-        "smirik/php-datetime-ago": "~1.0"
+        "knplabs/knp-time-bundle": "1.1.*@dev"
     },
     "scripts": {
         "post-install-cmd": [
