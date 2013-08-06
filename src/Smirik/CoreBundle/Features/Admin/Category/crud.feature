@@ -19,6 +19,7 @@ Feature: Category CRUD
          And I wait for "2" seconds
         Then I should see "Доклады"
 
+    @javascript
     Scenario: add category to navigation
        Given I am logged in as admin
         When I am on "/admin/categories/3/edit"
@@ -29,6 +30,7 @@ Feature: Category CRUD
          And I am on "/"
         Then I should see "Доклады"
         
+    @javascript
     Scenario: remove category
        Given I am logged in as admin
         When I am on "/admin/categories/3/delete"
