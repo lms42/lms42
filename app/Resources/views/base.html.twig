@@ -38,7 +38,7 @@
     {% block breadcrumbsContainer %}
     <div id="breadcrumbs" class="row breadcrumbs margin-bottom-20">
         <div class="container">
-            <div>
+            <div id="breadcrumbs">
                 <h1 class="pull-left title">
                     {% block header "" %}
                 </h1>
@@ -71,7 +71,7 @@
     {% endblock %}
 
     {% block footer %}
-    
+
     <footer id="footer">
     		<div class="container">
     			<div class="row">
@@ -82,7 +82,7 @@
     					<p>
     						{{ 'Open-source application'|trans }} <br>{{ 'for e-learning'|trans }}. <br>
     						{{ 'Contribution is welcome'|trans }}.
-						
+
     					</p>
     				</div>
     				<div class="span4 social-networks">
@@ -101,11 +101,11 @@
     				<div class="span4 newsletter">
     					<h3>Исходный код</h3>
     					<p><a href="https://github.com/organizations/lms42">Github</a>, лицензия MIT</p>
-    				</div> 
-    			</div> <!-- end .row -->		
+    				</div>
+    			</div> <!-- end .row -->
     		</div> <!-- end .container -->
     	</footer>
-    
+
     <footer id="copyright">
     		<div class="container">
     			<div class="row">
@@ -116,9 +116,9 @@
     				</div>
     				<div class="span4">
     					<a href="http://lms42.com" rel="external" title="" target="_blank">MADE</a> BY <a title="LMS42" rel="external" href="http://lms42.com" target="_blank">LMS42</a>
-					
+
     				</div>
-    			</div> <!-- end .row -->		
+    			</div> <!-- end .row -->
     		</div> <!-- end .container -->
     	</footer>
     {% endblock %}
