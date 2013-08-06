@@ -1,0 +1,13 @@
+Smirik\CourseBundle\Model\LessonQuiz:
+    LessonQuiz_1:
+        lesson_id: Lesson_1
+        quiz_id: Quiz_3
+        sortable_rank: '1'
+    LessonQuiz_2:
+        lesson_id: Lesson_3
+        quiz_id: Quiz_2
+        sortable_rank: '1'
+    LessonQuiz_3:
+        lesson_id: Lesson_10
+        quiz_id: Quiz_1
+        sortable_rank: '1'

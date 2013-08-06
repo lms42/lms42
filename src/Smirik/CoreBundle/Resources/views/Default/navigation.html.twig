@@ -13,7 +13,7 @@
                     {% for item in menuItem %}
                         <li class="{% if item.isCurrent %}active{% endif %}{% if item.hasChildren %}dropdown{% endif %}">
                             {% if item.hasChildren %}
-                                <a data-toggle="dropdown" id="drop{{ loop.index }}" title="{{ item.label|trans|raw }}">
+                                <a data-toggle="dropdown" id="drop{{ loop.index }}" href="#" title="{{ item.label|trans|raw }}">
                                     {{ item.label|trans|raw }}
                                     <b class="caret"></b>
                                 </a>

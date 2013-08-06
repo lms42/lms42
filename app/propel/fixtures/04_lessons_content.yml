@@ -1,0 +1,192 @@
+Smirik\CourseBundle\Model\Content:
+    Content_1:
+        lesson_id: Lesson_1
+        title: 'Основы программирования на ruby'
+        created_at: '2012-09-02 22:22:50'
+        updated_at: '2012-09-02 22:22:50'
+        sortable_rank: '1'
+        descendant_class: SlideshareContent
+    Content_2:
+        lesson_id: Lesson_1
+        title: 'Официальный сайт по ruby'
+        created_at: '2012-09-02 22:28:44'
+        updated_at: '2012-09-02 22:28:44'
+        sortable_rank: '2'
+        descendant_class: UrlContent
+    Content_3:
+        lesson_id: Lesson_1
+        title: 'Ruby за 20 минут'
+        created_at: '2012-09-02 22:28:44'
+        updated_at: '2012-09-02 22:28:44'
+        sortable_rank: '3'
+        descendant_class: UrlContent
+    Content_4:
+        lesson_id: Lesson_1
+        title: 'Викиучебник по ruby'
+        created_at: '2012-09-02 22:28:44'
+        updated_at: '2012-09-02 22:28:44'
+        sortable_rank: '4'
+        descendant_class: UrlContent
+    Content_5:
+        lesson_id: Lesson_2
+        title: 'Управляющие структуры в ruby'
+        created_at: '2012-09-02 22:30:21'
+        updated_at: '2012-09-02 22:30:21'
+        sortable_rank: '1'
+        descendant_class: SlideshareContent
+    Content_6:
+        lesson_id: Lesson_3
+        title: 'Управляющие структуры: циклы'
+        created_at: '2012-09-02 22:30:55'
+        updated_at: '2012-09-02 22:30:55'
+        sortable_rank: '1'
+        descendant_class: SlideshareContent
+    Content_7:
+        lesson_id: Lesson_4
+        title: Массивы
+        created_at: '2012-09-02 22:31:21'
+        updated_at: '2012-09-02 22:31:21'
+        sortable_rank: '1'
+        descendant_class: SlideshareContent
+    Content_8:
+        lesson_id: Lesson_5
+        title: 'Строки в ruby'
+        created_at: '2012-09-02 22:32:11'
+        updated_at: '2012-09-02 22:32:11'
+        sortable_rank: '1'
+        descendant_class: SlideshareContent
+    Content_9:
+        lesson_id: Lesson_6
+        title: 'Концепция динамического программирования в ruby'
+        created_at: '2012-09-02 22:33:01'
+        updated_at: '2012-09-02 22:33:01'
+        sortable_rank: '1'
+        descendant_class: SlideshareContent
+    Content_10:
+        lesson_id: Lesson_7
+        title: 'Реализация перебора и рекурсии в ruby'
+        created_at: '2012-09-02 22:33:35'
+        updated_at: '2012-09-02 22:33:35'
+        sortable_rank: '1'
+        descendant_class: SlideshareContent
+    Content_11:
+        lesson_id: Lesson_8
+        title: 'Жадные алгоритмы в ruby'
+        created_at: '2012-09-02 22:34:00'
+        updated_at: '2012-09-02 22:34:00'
+        sortable_rank: '1'
+        descendant_class: SlideshareContent
+    Content_12:
+        lesson_id: Lesson_9
+        title: 'Паттерны программирования в ruby'
+        created_at: '2012-09-02 22:34:30'
+        updated_at: '2012-09-02 22:34:47'
+        sortable_rank: '1'
+        descendant_class: SlideshareContent
+    Content_13:
+        lesson_id: Lesson_10
+        title: 'Об использовании хэшей в ruby'
+        created_at: '2012-09-02 22:35:09'
+        updated_at: '2012-09-02 22:35:09'
+        sortable_rank: '1'
+        descendant_class: SlideshareContent
+Smirik\CourseBundle\Model\SlideshareContent:
+    Content_1:
+        url: 'http://www.slideshare.net/smirik/ruby-9448188'
+        lesson_id: Lesson_1
+        title: 'Основы программирования на ruby'
+        created_at: '2012-09-02 22:22:50'
+        updated_at: '2012-09-02 22:22:50'
+        sortable_rank: '1'
+    Content_5:
+        url: 'http://www.slideshare.net/smirik/ruby-9541023'
+        lesson_id: Lesson_2
+        title: 'Управляющие структуры в ruby'
+        created_at: '2012-09-02 22:30:21'
+        updated_at: '2012-09-02 22:30:21'
+        sortable_rank: '1'
+    Content_6:
+        url: 'http://www.slideshare.net/smirik/ruby-9660389'
+        lesson_id: Lesson_3
+        title: 'Управляющие структуры: циклы'
+        created_at: '2012-09-02 22:30:55'
+        updated_at: '2012-09-02 22:30:55'
+        sortable_rank: '1'
+    Content_7:
+        url: 'http://www.slideshare.net/smirik/ruby-9776149'
+        lesson_id: Lesson_4
+        title: Массивы
+        created_at: '2012-09-02 22:31:21'
+        updated_at: '2012-09-02 22:31:21'
+        sortable_rank: '1'
+    Content_8:
+        url: 'http://www.slideshare.net/smirik/ruby-10105277'
+        lesson_id: Lesson_5
+        title: 'Строки в ruby'
+        created_at: '2012-09-02 22:32:11'
+        updated_at: '2012-09-02 22:32:11'
+        sortable_rank: '1'
+    Content_9:
+        url: 'http://www.slideshare.net/smirik/ruby-10207425'
+        lesson_id: Lesson_6
+        title: 'Концепция динамического программирования в ruby'
+        created_at: '2012-09-02 22:33:01'
+        updated_at: '2012-09-02 22:33:01'
+        sortable_rank: '1'
+    Content_10:
+        url: 'http://www.slideshare.net/smirik/ruby-10449462'
+        lesson_id: Lesson_7
+        title: 'Реализация перебора и рекурсии в ruby'
+        created_at: '2012-09-02 22:33:35'
+        updated_at: '2012-09-02 22:33:35'
+        sortable_rank: '1'
+    Content_11:
+        url: 'http://www.slideshare.net/smirik/ruby-11212715'
+        lesson_id: Lesson_8
+        title: 'Жадные алгоритмы в ruby'
+        created_at: '2012-09-02 22:34:00'
+        updated_at: '2012-09-02 22:34:00'
+        sortable_rank: '1'
+    Content_12:
+        url: 'http://www.slideshare.net/smirik/ruby-11652000'
+        lesson_id: Lesson_9
+        title: 'Паттерны программирования в ruby'
+        created_at: '2012-09-02 22:34:30'
+        updated_at: '2012-09-02 22:34:47'
+        sortable_rank: '1'
+    Content_13:
+        url: 'http://www.slideshare.net/smirik/ruby-11601320'
+        lesson_id: Lesson_10
+        title: 'Об использовании хэшей в ruby'
+        created_at: '2012-09-02 22:35:09'
+        updated_at: '2012-09-02 22:35:09'
+        sortable_rank: '1'
+    Content_28:
+        url: 'http://www.slideshare.net/smirik/ss-14156533'
+        lesson_id: Lesson_11
+        title: 'Информационное общество: плюсы и минусы'
+        created_at: '2013-08-05 13:00:37'
+        updated_at: '2013-08-05 13:00:37'
+        sortable_rank: '1'
+Smirik\CourseBundle\Model\UrlContent:
+    Content_2:
+        url: 'http://ruby-lang.org'
+        lesson_id: Lesson_1
+        title: 'Официальный сайт по ruby'
+        created_at: '2012-09-02 22:28:44'
+        updated_at: '2012-09-02 22:28:44'
+        sortable_rank: '1'
+    Content_3:
+        url: 'http://preview.ruby-lang.org/ru/documentation/quickstart/'
+        lesson_id: Lesson_1
+        title: 'Ruby за 20 минут'
+        created_at: '2012-09-02 22:28:44'
+        updated_at: '2012-09-02 22:28:44'
+        sortable_rank: '2'
+    Content_4:
+        url: 'http://ru.wikibooks.org/wiki/Ruby'
+        lesson_id: Lesson_1
+        title: 'Викиучебник по ruby'
+        created_at: '2012-09-02 22:28:44'
+        updated_at: '2012-09-02 22:28:44'
+        sortable_rank: '3'
