@@ -1,14 +1,14 @@
-Feature: Content CRUD
+Feature: Category CRUD
     In order to check CRUD for category's admin panel
     As admin
     I need to list, create, edit & delete category.
     
     Background:
-        Given I am logged in as admin
     
     @javascript
     Scenario: list
-        Given I am on "/admin/categories"
+        Given I am logged in as admin
+          And I am on "/admin/categories"
           And I wait for "2" seconds
         Then  I should see 
             | Презентации | Новости | Базовая |
@@ -19,7 +19,9 @@ Feature: Content CRUD
          And I wait for "2" seconds
         Then I should see "Доклады"
 
+    @javascript
     Scenario: add category to navigation
+       Given I am logged in as admin
         When I am on "/admin/categories/3/edit"
          And I check "Category_navigation"
          And I check "Category_is_active"
@@ -28,7 +30,9 @@ Feature: Content CRUD
          And I am on "/"
         Then I should see "Доклады"
         
+    @javascript
     Scenario: remove category
+       Given I am logged in as admin
         When I am on "/admin/categories/3/delete"
         Then I should not see "Доклады"
         

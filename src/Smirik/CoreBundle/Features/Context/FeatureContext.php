@@ -37,7 +37,7 @@ class FeatureContext extends MinkContext
     public static function setupFeature(FeatureEvent $event)
     {
         exec('php ' . __DIR__ . '/../../../../../app/console propel:sql:insert --force --env=test');
-        exec('mysql -uroot -proot -D lms42-test < ' . __DIR__ . '/../../../../../app/propel/sql/fixtures.sql');
+        exec('mysql -uroot -proot -D lms42-test < ' . __DIR__ . '/../../../../../app/propel/sql-fixtures/fixtures.sql');
     }
     
     
