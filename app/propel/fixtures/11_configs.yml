@@ -1,0 +1,24 @@
+Smirik\ConfigBundle\Model\Config:
+    Config_1:
+        title: Config
+        key:   config
+        is_visible: false
+    Config_2:
+        pid:   Config_1
+        title: Layout for config
+        key:   layout
+        value: SmirikAdminBundle::layout.html.twig
+        type:  string
+        is_visible: false
+    Config_3:
+        title: LMS42
+        key:   lms42
+        is_visible: true
+    Config_4:
+        pid:   Config_3
+        title: Name of instance
+        key:   title
+        value: LMS42
+        type:  string
+        is_visible: true
+    

@@ -334,12 +334,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfSymfony/FOSUserBundle.git",
-                "reference": "f82149141bedbb966ae409e54f4c6fdeaaab2080"
+                "reference": "96c58334211aab5f57376f0f4f817a7fda853c4f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSUserBundle/zipball/f82149141bedbb966ae409e54f4c6fdeaaab2080",
-                "reference": "f82149141bedbb966ae409e54f4c6fdeaaab2080",
+                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSUserBundle/zipball/96c58334211aab5f57376f0f4f817a7fda853c4f",
+                "reference": "96c58334211aab5f57376f0f4f817a7fda853c4f",
                 "shasum": ""
             },
             "require": {
@@ -394,7 +394,7 @@
             "keywords": [
                 "User management"
             ],
-            "time": "2013-07-31 06:42:13"
+            "time": "2013-08-09 14:47:08"
         },
         {
             "name": "imagine/imagine",
@@ -1613,17 +1613,17 @@
         },
         {
             "name": "sensio/distribution-bundle",
-            "version": "v2.3.2",
+            "version": "v2.3.3",
             "target-dir": "Sensio/Bundle/DistributionBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/SensioDistributionBundle.git",
-                "reference": "v2.3.2"
+                "reference": "v2.3.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioDistributionBundle/zipball/v2.3.2",
-                "reference": "v2.3.2",
+                "url": "https://api.github.com/repos/sensiolabs/SensioDistributionBundle/zipball/v2.3.3",
+                "reference": "v2.3.3",
                 "shasum": ""
             },
             "require": {
@@ -1655,21 +1655,21 @@
                 "configuration",
                 "distribution"
             ],
-            "time": "2013-07-17 06:24:17"
+            "time": "2013-07-24 08:45:20"
         },
         {
             "name": "sensio/framework-extra-bundle",
-            "version": "v2.3.2",
+            "version": "v2.3.3",
             "target-dir": "Sensio/Bundle/FrameworkExtraBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/SensioFrameworkExtraBundle.git",
-                "reference": "v2.3.2"
+                "reference": "v2.3.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioFrameworkExtraBundle/zipball/v2.3.2",
-                "reference": "v2.3.2",
+                "url": "https://api.github.com/repos/sensiolabs/SensioFrameworkExtraBundle/zipball/v2.3.3",
+                "reference": "v2.3.3",
                 "shasum": ""
             },
             "require": {
@@ -1702,21 +1702,21 @@
                 "annotations",
                 "controllers"
             ],
-            "time": "2013-07-09 09:29:53"
+            "time": "2013-07-24 08:49:53"
         },
         {
             "name": "sensio/generator-bundle",
-            "version": "v2.3.2",
+            "version": "v2.3.3",
             "target-dir": "Sensio/Bundle/GeneratorBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/SensioGeneratorBundle.git",
-                "reference": "v2.3.2"
+                "reference": "v2.3.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioGeneratorBundle/zipball/v2.3.2",
-                "reference": "v2.3.2",
+                "url": "https://api.github.com/repos/sensiolabs/SensioGeneratorBundle/zipball/v2.3.3",
+                "reference": "v2.3.3",
                 "shasum": ""
             },
             "require": {
@@ -1750,7 +1750,7 @@
                 }
             ],
             "description": "This bundle generates code for you",
-            "time": "2013-07-04 12:20:59"
+            "time": "2013-07-24 09:19:19"
         },
         {
             "name": "smirik/bootstrap-bundle",
@@ -1837,17 +1837,17 @@
         },
         {
             "name": "smirik/propel-admin-bundle",
-            "version": "v1.0.2",
+            "version": "v1.0.3",
             "target-dir": "Smirik/PropelAdminBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/smirik/SmirikPropelAdminBundle.git",
-                "reference": "v1.0.2"
+                "reference": "v1.0.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/smirik/SmirikPropelAdminBundle/zipball/v1.0.2",
-                "reference": "v1.0.2",
+                "url": "https://api.github.com/repos/smirik/SmirikPropelAdminBundle/zipball/v1.0.3",
+                "reference": "v1.0.3",
                 "shasum": ""
             },
             "require": {
@@ -1885,7 +1885,7 @@
                 "generator",
                 "propel"
             ],
-            "time": "2013-07-29 09:11:41"
+            "time": "2013-08-06 11:53:11"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -2107,17 +2107,17 @@
         },
         {
             "name": "symfony/swiftmailer-bundle",
-            "version": "v2.3.2",
+            "version": "v2.3.3",
             "target-dir": "Symfony/Bundle/SwiftmailerBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/SwiftmailerBundle.git",
-                "reference": "v2.3.2"
+                "reference": "v2.3.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/SwiftmailerBundle/zipball/v2.3.2",
-                "reference": "v2.3.2",
+                "url": "https://api.github.com/repos/symfony/SwiftmailerBundle/zipball/v2.3.3",
+                "reference": "v2.3.3",
                 "shasum": ""
             },
             "require": {
@@ -2158,20 +2158,20 @@
             ],
             "description": "Symfony SwiftmailerBundle",
             "homepage": "http://symfony.com",
-            "time": "2013-05-15 08:38:58"
+            "time": "2013-08-05 08:18:16"
         },
         {
             "name": "symfony/symfony",
-            "version": "v2.3.2",
+            "version": "v2.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "v2.3.2"
+                "reference": "v2.3.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/v2.3.2",
-                "reference": "v2.3.2",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/v2.3.3",
+                "reference": "v2.3.3",
                 "shasum": ""
             },
             "require": {
@@ -2266,7 +2266,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2013-07-17 06:22:21"
+            "time": "2013-08-07 17:11:16"
         },
         {
             "name": "trsteel/ckeditor-bundle",
@@ -2489,7 +2489,7 @@
                 {
                     "name": "Alexandre Salomé",
                     "email": "alexandre.salome@gmail.com",
-                    "homepage": "http://alexandre-salome.fr"
+                    "homepage": "http://alexandre-salome.fr/"
                 }
             ],
             "description": "PHP Library for Selenium",
@@ -2959,22 +2959,25 @@
         },
         {
             "name": "instaclick/php-webdriver",
-            "version": "1.0.14",
+            "version": "1.0.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/instaclick/php-webdriver.git",
-                "reference": "1.0.14"
+                "reference": "1.0.16"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/instaclick/php-webdriver/zipball/1.0.14",
-                "reference": "1.0.14",
+                "url": "https://api.github.com/repos/instaclick/php-webdriver/zipball/1.0.16",
+                "reference": "1.0.16",
                 "shasum": ""
             },
             "require": {
                 "ext-curl": "*",
                 "php": ">=5.3.2"
             },
+            "bin": [
+                "bin/webunit"
+            ],
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -2999,18 +3002,18 @@
                 {
                     "name": "Anthon Pang",
                     "email": "apang@softwaredevelopment.ca",
-                    "role": "developer"
+                    "role": "Fork Maintainer"
                 }
             ],
             "description": "PHP WebDriver for Selenium 2",
-            "homepage": "http://instaclick.com/torontotechjobs/",
+            "homepage": "http://instaclick.com/",
             "keywords": [
                 "browser",
                 "selenium",
                 "webdriver",
                 "webtest"
             ],
-            "time": "2013-06-12 03:00:14"
+            "time": "2013-08-08 13:56:39"
         },
         {
             "name": "phpspec/php-diff",
@@ -3414,16 +3417,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "3.7.23",
+            "version": "3.7.24",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "3.7.23"
+                "reference": "3.7.24"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/3.7.23",
-                "reference": "3.7.23",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/3.7.24",
+                "reference": "3.7.24",
                 "shasum": ""
             },
             "require": {
@@ -3484,7 +3487,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2013-08-02 19:14:44"
+            "time": "2013-08-09 06:58:24"
         },
         {
             "name": "phpunit/phpunit-mock-objects",

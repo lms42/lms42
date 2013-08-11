@@ -18,35 +18,6 @@
     {% block javascripts %}{% endblock %}
 
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}"/>
-
-
-    <script type="text/javascript">
-
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-11430636-3']);
-        _gaq.push(['_trackPageview']);
-
-        (function () {
-            var ga = document.createElement('script');
-            ga.type = 'text/javascript';
-            ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(ga, s);
-        })();
-    </script>
-
-    <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
-        {
-            lang: 'ru'
-        }
-    </script>
-
-    <script src="http://vkontakte.ru/js/api/openapi.js" type="text/javascript" charset="windows-1251"></script>
-    <script type="text/javascript">
-        VK.init({apiId:1969513, onlyWidgets:true});
-    </script>
-
 </head>
 <body>
 
@@ -104,11 +75,9 @@
                     {% endblock %}
                     {% block header %}
                     {% endblock %}
-                    <hr>
                 </div>
                 <div class="content">
                     {% block content %}
-
                     {% endblock %}
                 </div>
             </div>
