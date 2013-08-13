@@ -3,7 +3,6 @@ Smirik\CourseBundle\Model\Course:
         title: 'Основы программирования на ruby'
         description: "<p>Курс посвящён основам программирования на ruby. Основные темы:<br />\r\n&nbsp;</p>\r\n\r\n<ul>\r\n\t<li>Основы ruby.</li>\r\n\t<li>Управляющие структуры.</li>\r\n\t<li>Циклы.</li>\r\n\t<li>Массивы.</li>\r\n\t<li>Работа со строками.</li>\r\n\t<li>Динамическое программирование.</li>\r\n\t<li>Алгоритмы: перебор и рекурсия.</li>\r\n\t<li>Алгоритмы: жадные алгоритмы.</li>\r\n\t<li>Паттерны программирования.</li>\r\n\t<li>Хэши.</li>\r\n</ul>"
         type: '0'
-        file: 1375314140_1_ruby_logo.png
         is_public: '1'
         is_active: '1'
         created_at: '2012-09-02 22:20:19'
