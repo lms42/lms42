@@ -130,5 +130,7 @@ trsteel_ckeditor:
     external_plugins:
         mathedit:
             path: bundles/smirikadmin/js/ckeditor_plugins/mathedit
+        youtube:
+            path: bundles/smirikadmin/js/ckeditor_plugins/youtube
 
 knp_time: ~
