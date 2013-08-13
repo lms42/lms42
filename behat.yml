@@ -1,0 +1,16 @@
+default:
+  paths:
+      features:  src/Smirik/CoreBundle/Features
+      bootstrap: src/Smirik/CoreBundle/Features/Context
+  context:
+      class: Smirik\CoreBundle\Features\Context\FeatureContext
+  extensions:
+      Behat\Symfony2Extension\Extension:
+          mink_driver: true
+          # kernel:
+          #     env: test
+          #     debug: true
+      Behat\MinkExtension\Extension:
+          base_url: http://lms42.loc/app_test.php/
+          default_session: symfony2
+          selenium2: ~

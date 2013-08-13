@@ -6,9 +6,9 @@
     <ul class="icons-ul list-style">
         {% for item in contents %}
             <li><i class="icon-li icon-chevron-right"></i>
-                <a href="{{ path('content_show', { 'id': item.id }) }}">{{ item.title }}</a><br>
+                <a href="{{ path('content_index', { 'id': item.id }) }}">{{ item.title }}</a><br>
                 {{ item.description|raw }}
-                <small>//&nbsp;{{ item.createdAt|ago }}</small>
+                <small>//&nbsp;{{ time_diff(item.createdAt) }}</small>
             </li>
         {% endfor %}
     </ul>

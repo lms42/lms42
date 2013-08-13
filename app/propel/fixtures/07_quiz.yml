@@ -1,0 +1,837 @@
+Smirik\QuizBundle\Model\Quiz:
+    Quiz_1:
+        title: 'Программирование на ruby'
+        description: 'Тест по основам программирования на ruby. Базовые вопросы, синтаксис, основные операторы, условия, циклы, методы работы с массивами. Простейшие программы и алгоритмы.'
+        time: '600'
+        num_questions: '6'
+        is_active: '1'
+        is_opened: '0'
+        created_at: '2011-11-23 05:37:07'
+        updated_at: '2012-09-02 23:27:04'
+    Quiz_2:
+        title: 'Ruby: основы, условия, циклы'
+        description: 'Тест по следующим темам:<br><ul><li>Основы программирования на ruby.</li><li>Управляющие структуры: условия.</li><li>Циклы в ruby.</li></ul>'
+        time: '180'
+        num_questions: '5'
+        is_active: '1'
+        is_opened: '1'
+        created_at: '2012-09-02 23:22:48'
+        updated_at: '2012-09-12 12:44:17'
+    Quiz_3:
+        title: 'Основы программирования на ruby'
+        description: 'Тест посвящён базовым основам программирования на ruby. Соответствует первому уроку курса по ruby.'
+        time: '120'
+        num_questions: '3'
+        is_active: '1'
+        is_opened: '0'
+        created_at: '2012-09-02 23:26:48'
+        updated_at: '2012-09-02 23:28:57'
+Smirik\QuizBundle\Model\Question:
+    Question_1:
+        text: 'Какой из нижеперечисленных операторов задаёт неявный цикл?'
+        type: radio
+        num_answers: '4'
+        created_at: '2011-11-23 05:37:07'
+        updated_at: '2011-11-23 05:37:07'
+    Question_2:
+        text: 'Как в ruby записывается операция дизъюнкция (логическое или)'
+        type: radio
+        num_answers: '4'
+        created_at: '2011-11-23 05:37:07'
+        updated_at: '2011-11-23 05:37:07'
+    Question_3:
+        text: 'Как в ruby записывается операция конъюнкция (логическое и)'
+        type: radio
+        num_answers: '4'
+        created_at: '2011-11-23 05:37:07'
+        updated_at: '2011-11-23 05:37:07'
+    Question_4:
+        text: 'Как в ruby записывается операция отрицание (логическое не)'
+        type: radio
+        num_answers: '4'
+        created_at: '2011-11-23 05:37:07'
+        updated_at: '2011-11-23 05:37:07'
+    Question_5:
+        text: 'Как в программировании (в т.ч. на ruby) называют логический тип переменных?'
+        type: radio
+        num_answers: '4'
+        created_at: '2011-11-23 05:37:07'
+        updated_at: '2011-11-23 05:37:07'
+    Question_6:
+        text: 'Как в программировании (в т.ч. на ruby) называют целочисленный тип переменных?'
+        type: radio
+        num_answers: '4'
+        created_at: '2011-11-23 05:37:07'
+        updated_at: '2011-11-23 05:37:07'
+    Question_7:
+        text: 'Как в программировании (в т.ч. на ruby) называют тип переменных для вещественных чисел?'
+        type: radio
+        num_answers: '4'
+        created_at: '2011-11-23 05:37:07'
+        updated_at: '2011-11-23 05:37:07'
+    Question_8:
+        text: 'Вася задал переменную, в которой будет хранить возраст человека. Какого типа будет переменная?'
+        type: radio
+        num_answers: '4'
+        created_at: '2011-11-23 05:37:07'
+        updated_at: '2011-11-23 05:37:07'
+    Question_9:
+        text: 'Вася задал переменную, в которой будет хранить информацию о том, женат / замужем ли человек. Какого типа будет переменная?'
+        type: radio
+        num_answers: '4'
+        created_at: '2011-11-23 05:37:07'
+        updated_at: '2011-11-23 05:37:07'
+    Question_10:
+        text: 'Вася задал переменную, в которой будет хранить e-mail человека. Какого типа будет переменная?'
+        type: radio
+        num_answers: '4'
+        created_at: '2011-11-23 05:37:07'
+        updated_at: '2011-11-23 05:37:07'
+    Question_11:
+        text: 'Чему будет равна в ruby переменная num = 6+3/3+2*5**2'
+        type: text
+        num_answers: '1'
+        created_at: '2011-11-23 05:37:07'
+        updated_at: '2011-11-23 05:37:07'
+    Question_12:
+        text: 'Чему будет равна переменная a после выполнения программы: <br>a = 5<br>b = 3<br>c = a<br>a = b<br>b = c<br>'
+        type: text
+        num_answers: '1'
+        created_at: '2011-11-23 05:37:07'
+        updated_at: '2012-09-02 23:25:03'
+    Question_13:
+        text: 'Что выведет на экран программа: <br>a = 5<br>if (a &gt; 10)<br>  puts "YES"<br>elsif (a &gt; 3)<br>  puts "MAY BE"<br>else<br>  puts "NO"<br>end<br><br>'
+        type: text
+        num_answers: '1'
+        created_at: '2011-11-23 05:37:07'
+        updated_at: '2012-09-19 12:24:40'
+    Question_14:
+        text: 'Запишите слитно без пробелов и операторов условие: переменная a БОЛЬШЕ ЛИБО РАВНА переменной b'
+        type: text
+        num_answers: '1'
+        created_at: '2011-11-23 05:37:07'
+        updated_at: '2011-11-23 05:37:07'
+    Question_15:
+        text: 'Даны a,b,c. Запишите слитно без пробелов вычисление дискриминанта D уравнения ax2+bx+c = 0 (используя только операции +, *, -, /). Результат должен быть записан в переменную D.'
+        type: text
+        num_answers: '1'
+        created_at: '2011-11-23 05:37:07'
+        updated_at: '2012-11-11 09:22:13'
+    Question_16:
+        text: 'Сколько чисел выведет программа:<br>i=0<br>while (i&lt;100)<br>  i=i+1<br>  puts i<br>end<br>'
+        type: text
+        num_answers: '1'
+        created_at: '2011-11-23 05:37:07'
+        updated_at: '2012-09-02 23:24:44'
+    Question_17:
+        text: 'Сколько чисел выведет программа:<br>i=1<br>while (i&lt;100)<br>  i=i+1<br>  puts i<br>end<br>'
+        type: text
+        num_answers: '1'
+        created_at: '2011-11-23 05:37:07'
+        updated_at: '2012-09-02 23:24:40'
+    Question_18:
+        text: 'Перечислите через запятую без пробелов числа, которые выведет программа:<br>3.times {|i| puts i**2}'
+        type: text
+        num_answers: '1'
+        created_at: '2011-11-23 05:37:07'
+        updated_at: '2012-09-02 23:24:35'
+    Question_19:
+        text: 'Какой оператор позволяет закончить выполнение цикла?'
+        type: radio
+        num_answers: '4'
+        created_at: '2011-11-23 05:37:07'
+        updated_at: '2011-11-23 05:37:07'
+    Question_20:
+        text: 'Какой оператор позволяет закончить текущую итерацию цикла и перейти к следующей?'
+        type: radio
+        num_answers: '4'
+        created_at: '2011-11-23 05:37:07'
+        updated_at: '2011-11-23 05:37:07'
+    Question_21:
+        text: 'Перечислите через запятую без пробелов числа, которые выведет программа:<br />3.times {|i| puts i**2}'
+        type: text
+        num_answers: '1'
+        created_at: '2011-11-23 05:37:07'
+        updated_at: '2011-11-23 05:37:07'
+    Question_22:
+        text: 'Какой из нижеперечисленных методов позволяет изменить каждый элемент массива?'
+        type: radio
+        num_answers: '4'
+        created_at: '2011-11-23 05:37:07'
+        updated_at: '2011-11-23 05:37:07'
+    Question_23:
+        text: 'Какой из нижеперечисленных методов позволяет извлечь из массива подмассив по заданному условию?'
+        type: radio
+        num_answers: '4'
+        created_at: '2011-11-23 05:37:07'
+        updated_at: '2011-11-23 05:37:07'
+    Question_24:
+        text: 'Какой из нижеперечисленных методов позволяет удалить элемент массива?'
+        type: radio
+        num_answers: '4'
+        created_at: '2011-11-23 05:37:07'
+        updated_at: '2011-11-23 05:37:07'
+    Question_25:
+        text: 'Что выведет на экран программа: <br />arr = [3,5,1]<br />puts arr.inject(0){|res, elem| res + elem}<br />'
+        type: text
+        num_answers: '1'
+        created_at: '2011-11-23 05:37:07'
+        updated_at: '2011-11-23 05:37:07'
+    Question_26:
+        text: 'Что выведет на экран программа: <br />arr = [3,5,1]<br />puts arr.inject(0){|res, elem| res * elem}<br />'
+        type: text
+        num_answers: '1'
+        created_at: '2011-11-23 05:37:07'
+        updated_at: '2011-11-23 05:37:07'
+    Question_27:
+        text: 'Что выведет на экран программа: <br />arr = [3,5,1]<br />puts arr.inject(1){|res, elem| res * elem}<br />'
+        type: text
+        num_answers: '1'
+        created_at: '2011-11-23 05:37:07'
+        updated_at: '2011-11-23 05:37:07'
+    Question_28:
+        text: 'Что выведет на экран программа: <br />arr = [3,5,1, 1]<br />puts arr.inject(0){|res, elem| res + elem}/arr.size<br />'
+        type: text
+        num_answers: '1'
+        created_at: '2011-11-23 05:37:07'
+        updated_at: '2011-11-23 05:37:07'
+    Question_29:
+        text: 'Что выведет на экран программа: <br />arr = [3.0,5.0,1.0, 1.0]<br />puts arr.inject(0){|res, elem| res + elem}/arr.size<br />'
+        type: text
+        num_answers: '1'
+        created_at: '2011-11-23 05:37:07'
+        updated_at: '2011-11-23 05:37:07'
+    Question_30:
+        text: 'Что выведет на экран программа: <br />arr = [3,5,1, 1]<br />puts arr.find_all{|elem| elem > arr.size}.size<br />'
+        type: text
+        num_answers: '1'
+        created_at: '2011-11-23 05:37:07'
+        updated_at: '2011-11-23 05:37:07'
+    Question_31:
+        text: 'Что выведет на экран программа: <br />arr = [3,-5,-1, 1]<br />puts arr.find_all{|elem| elem > 0}.size<br />'
+        type: text
+        num_answers: '1'
+        created_at: '2011-11-23 05:37:07'
+        updated_at: '2011-11-23 05:37:07'
+    Question_32:
+        text: 'Что выведет на экран программа: <br />arr = [3,-5,-1, 1]<br />arr = arr.map{|elem| 3*elem }<br />puts arr.inject(0){|res, elem| res+elem}<br />'
+        type: text
+        num_answers: '1'
+        created_at: '2011-11-23 05:37:07'
+        updated_at: '2011-11-23 05:37:07'
+    Question_33:
+        text: 'Что выведет на экран программа: <br>puts ‘abc’*3<br>'
+        type: text
+        num_answers: '1'
+        created_at: '2011-11-23 05:37:07'
+        updated_at: '2012-09-02 23:24:21'
+    Question_34:
+        text: 'Что выведет на экран программа: <br />puts ‘aabbcc’.sub(’a’, ‘d’).reverse<br />'
+        type: text
+        num_answers: '1'
+        created_at: '2011-11-23 05:37:07'
+        updated_at: '2011-11-23 05:37:07'
+    Question_35:
+        text: 'Что выведет на экран программа: <br />puts ‘aabbcc’.gsub(’a’, ‘d’).reverse<br />'
+        type: text
+        num_answers: '1'
+        created_at: '2011-11-23 05:37:07'
+        updated_at: '2011-11-23 05:37:07'
+    Question_36:
+        text: 'Что выведет на экран программа: <br />puts ‘aa bb cc’.split(’ ‘).size<br />'
+        type: text
+        num_answers: '1'
+        created_at: '2011-11-23 05:37:07'
+        updated_at: '2011-11-23 05:37:07'
+    Question_37:
+        text: 'Укажите через запятую без пробелов, что выведет на экран программа: <br />arr = ‘a bbb cc’.split(’ ‘)<br />arr.each {|elem| puts elem.size } '
+        type: text
+        num_answers: '1'
+        created_at: '2011-11-23 05:37:07'
+        updated_at: '2011-11-23 05:37:07'
+    Question_38:
+        text: 'Что выведет на экран программа: <br />puts ‘aa bb cc’.empty?<br />'
+        type: text
+        num_answers: '1'
+        created_at: '2011-11-23 05:37:07'
+        updated_at: '2011-11-23 05:37:07'
+    Question_39:
+        text: 'Что выведет на экран программа: <br />puts ‘aa bb cc’.any?<br />'
+        type: text
+        num_answers: '1'
+        created_at: '2011-11-23 05:37:07'
+        updated_at: '2011-11-23 05:37:07'
+    Question_40:
+        text: 'Что выведет на экран программа: <br />puts ‘aa bb cc’.include?(’b’)<br />'
+        type: text
+        num_answers: '1'
+        created_at: '2011-11-23 05:37:07'
+        updated_at: '2011-11-23 05:37:07'
+Smirik\QuizBundle\Model\Answer:
+    Answer_1:
+        question_id: Question_1
+        title: while
+        is_right: '1'
+    Answer_2:
+        question_id: Question_1
+        title: for
+        is_right: '0'
+    Answer_3:
+        question_id: Question_1
+        title: if
+        is_right: '0'
+    Answer_4:
+        question_id: Question_1
+        title: unless
+        is_right: '0'
+    Answer_5:
+        question_id: Question_2
+        title: '&&'
+        is_right: '0'
+    Answer_6:
+        question_id: Question_2
+        title: '!'
+        is_right: '0'
+    Answer_7:
+        question_id: Question_2
+        title: '||'
+        is_right: '1'
+    Answer_8:
+        question_id: Question_2
+        title: '!!'
+        is_right: '0'
+    Answer_9:
+        question_id: Question_3
+        title: '&&'
+        is_right: '1'
+    Answer_10:
+        question_id: Question_3
+        title: '!'
+        is_right: '0'
+    Answer_11:
+        question_id: Question_3
+        title: '||'
+        is_right: '0'
+    Answer_12:
+        question_id: Question_3
+        title: '!!'
+        is_right: '0'
+    Answer_13:
+        question_id: Question_4
+        title: '&&'
+        is_right: '0'
+    Answer_14:
+        question_id: Question_4
+        title: '!'
+        is_right: '1'
+    Answer_15:
+        question_id: Question_4
+        title: '||'
+        is_right: '0'
+    Answer_16:
+        question_id: Question_4
+        title: '!!'
+        is_right: '0'
+    Answer_17:
+        question_id: Question_5
+        title: integer
+        is_right: '0'
+    Answer_18:
+        question_id: Question_5
+        title: float
+        is_right: '0'
+    Answer_19:
+        question_id: Question_5
+        title: string
+        is_right: '0'
+    Answer_20:
+        question_id: Question_5
+        title: boolean
+        is_right: '1'
+    Answer_21:
+        question_id: Question_6
+        title: integer
+        is_right: '1'
+    Answer_22:
+        question_id: Question_6
+        title: float
+        is_right: '0'
+    Answer_23:
+        question_id: Question_6
+        title: string
+        is_right: '0'
+    Answer_24:
+        question_id: Question_6
+        title: boolean
+        is_right: '0'
+    Answer_25:
+        question_id: Question_7
+        title: integer
+        is_right: '0'
+    Answer_26:
+        question_id: Question_7
+        title: float
+        is_right: '1'
+    Answer_27:
+        question_id: Question_7
+        title: string
+        is_right: '0'
+    Answer_28:
+        question_id: Question_7
+        title: boolean
+        is_right: '0'
+    Answer_29:
+        question_id: Question_8
+        title: integer
+        is_right: '1'
+    Answer_30:
+        question_id: Question_8
+        title: float
+        is_right: '0'
+    Answer_31:
+        question_id: Question_8
+        title: string
+        is_right: '0'
+    Answer_32:
+        question_id: Question_8
+        title: boolean
+        is_right: '0'
+    Answer_33:
+        question_id: Question_9
+        title: integer
+        is_right: '0'
+    Answer_34:
+        question_id: Question_9
+        title: float
+        is_right: '0'
+    Answer_35:
+        question_id: Question_9
+        title: string
+        is_right: '0'
+    Answer_36:
+        question_id: Question_9
+        title: boolean
+        is_right: '1'
+    Answer_37:
+        question_id: Question_10
+        title: integer
+        is_right: '0'
+    Answer_38:
+        question_id: Question_10
+        title: float
+        is_right: '0'
+    Answer_39:
+        question_id: Question_10
+        title: string
+        is_right: '1'
+    Answer_40:
+        question_id: Question_10
+        title: boolean
+        is_right: '0'
+    Answer_41:
+        question_id: Question_11
+        is_right: '57'
+    Answer_42:
+        question_id: Question_12
+        is_right: '3'
+    Answer_43:
+        question_id: Question_13
+        is_right: 'MAY BE'
+    Answer_44:
+        question_id: Question_14
+        is_right: a>=b
+    Answer_45:
+        question_id: Question_15
+        is_right: 'D=b*b-4*a*c'
+    Answer_46:
+        question_id: Question_16
+        is_right: '100'
+    Answer_47:
+        question_id: Question_17
+        is_right: '99'
+    Answer_48:
+        question_id: Question_18
+        is_right: '0,1,4'
+    Answer_49:
+        question_id: Question_19
+        title: continue
+        is_right: '0'
+    Answer_50:
+        question_id: Question_19
+        title: stop
+        is_right: '0'
+    Answer_51:
+        question_id: Question_19
+        title: exit
+        is_right: '0'
+    Answer_52:
+        question_id: Question_19
+        title: break
+        is_right: '1'
+    Answer_53:
+        question_id: Question_20
+        title: continue
+        is_right: '1'
+    Answer_54:
+        question_id: Question_20
+        title: stop
+        is_right: '0'
+    Answer_55:
+        question_id: Question_20
+        title: exit
+        is_right: '0'
+    Answer_56:
+        question_id: Question_20
+        title: break
+        is_right: '0'
+    Answer_57:
+        question_id: Question_21
+        title: ''
+        file: ''
+        is_right: '0,1,4'
+    Answer_58:
+        question_id: Question_22
+        title: find_all
+        file: ''
+        is_right: '0'
+    Answer_59:
+        question_id: Question_22
+        title: map
+        file: ''
+        is_right: '1'
+    Answer_60:
+        question_id: Question_22
+        title: inject
+        file: ''
+        is_right: '0'
+    Answer_61:
+        question_id: Question_22
+        title: delete
+        file: ''
+        is_right: "0\r\n"
+    Answer_62:
+        question_id: Question_23
+        title: find_all
+        file: ''
+        is_right: '1'
+    Answer_63:
+        question_id: Question_23
+        title: map
+        file: ''
+        is_right: '0'
+    Answer_64:
+        question_id: Question_23
+        title: inject
+        file: ''
+        is_right: '0'
+    Answer_65:
+        question_id: Question_23
+        title: delete
+        file: ''
+        is_right: "0\r\n"
+    Answer_66:
+        question_id: Question_24
+        title: delete_at
+        file: ''
+        is_right: '0'
+    Answer_67:
+        question_id: Question_24
+        title: map
+        file: ''
+        is_right: '1'
+    Answer_68:
+        question_id: Question_24
+        title: inject
+        file: ''
+        is_right: '0'
+    Answer_69:
+        question_id: Question_24
+        title: delete
+        file: ''
+        is_right: "1\r\n"
+    Answer_70:
+        question_id: Question_25
+        title: ''
+        file: ''
+        is_right: '9'
+    Answer_71:
+        question_id: Question_26
+        title: ''
+        file: ''
+        is_right: '0'
+    Answer_72:
+        question_id: Question_27
+        title: ''
+        file: ''
+        is_right: '15'
+    Answer_73:
+        question_id: Question_28
+        title: ''
+        file: ''
+        is_right: '2'
+    Answer_74:
+        question_id: Question_29
+        title: ''
+        file: ''
+        is_right: '2.5'
+    Answer_75:
+        question_id: Question_30
+        title: ''
+        file: ''
+        is_right: '1'
+    Answer_76:
+        question_id: Question_31
+        title: ''
+        file: ''
+        is_right: '2'
+    Answer_77:
+        question_id: Question_32
+        title: ''
+        file: ''
+        is_right: '-6'
+    Answer_78:
+        question_id: Question_33
+        is_right: abcabcabc
+    Answer_79:
+        question_id: Question_34
+        title: ''
+        file: ''
+        is_right: ccbbad
+    Answer_80:
+        question_id: Question_35
+        title: ''
+        file: ''
+        is_right: ccbbdd
+    Answer_81:
+        question_id: Question_36
+        title: ''
+        file: ''
+        is_right: '3'
+    Answer_82:
+        question_id: Question_37
+        title: ''
+        file: ''
+        is_right: '1,3,2'
+    Answer_83:
+        question_id: Question_38
+        title: ''
+        file: ''
+        is_right: 'false'
+    Answer_84:
+        question_id: Question_39
+        title: ''
+        file: ''
+        is_right: 'true'
+    Answer_85:
+        question_id: Question_40
+        title: ''
+        file: ''
+        is_right: 'true'
+Smirik\QuizBundle\Model\QuizQuestion:
+    QuizQuestion_1_1:
+        question_id: Question_1
+        quiz_id: Quiz_1
+    QuizQuestion_1_2:
+        question_id: Question_1
+        quiz_id: Quiz_2
+    QuizQuestion_2_1:
+        question_id: Question_2
+        quiz_id: Quiz_1
+    QuizQuestion_2_2:
+        question_id: Question_2
+        quiz_id: Quiz_2
+    QuizQuestion_3_1:
+        question_id: Question_3
+        quiz_id: Quiz_1
+    QuizQuestion_3_2:
+        question_id: Question_3
+        quiz_id: Quiz_2
+    QuizQuestion_4_1:
+        question_id: Question_4
+        quiz_id: Quiz_1
+    QuizQuestion_4_2:
+        question_id: Question_4
+        quiz_id: Quiz_2
+    QuizQuestion_5_1:
+        question_id: Question_5
+        quiz_id: Quiz_1
+    QuizQuestion_5_2:
+        question_id: Question_5
+        quiz_id: Quiz_2
+    QuizQuestion_5_3:
+        question_id: Question_5
+        quiz_id: Quiz_3
+    QuizQuestion_6_1:
+        question_id: Question_6
+        quiz_id: Quiz_1
+    QuizQuestion_6_2:
+        question_id: Question_6
+        quiz_id: Quiz_2
+    QuizQuestion_6_3:
+        question_id: Question_6
+        quiz_id: Quiz_3
+    QuizQuestion_7_1:
+        question_id: Question_7
+        quiz_id: Quiz_1
+    QuizQuestion_7_2:
+        question_id: Question_7
+        quiz_id: Quiz_2
+    QuizQuestion_7_3:
+        question_id: Question_7
+        quiz_id: Quiz_3
+    QuizQuestion_8_1:
+        question_id: Question_8
+        quiz_id: Quiz_1
+    QuizQuestion_8_2:
+        question_id: Question_8
+        quiz_id: Quiz_2
+    QuizQuestion_8_3:
+        question_id: Question_8
+        quiz_id: Quiz_3
+    QuizQuestion_9_1:
+        question_id: Question_9
+        quiz_id: Quiz_1
+    QuizQuestion_9_2:
+        question_id: Question_9
+        quiz_id: Quiz_2
+    QuizQuestion_9_3:
+        question_id: Question_9
+        quiz_id: Quiz_3
+    QuizQuestion_10_1:
+        question_id: Question_10
+        quiz_id: Quiz_1
+    QuizQuestion_10_2:
+        question_id: Question_10
+        quiz_id: Quiz_2
+    QuizQuestion_10_3:
+        question_id: Question_10
+        quiz_id: Quiz_3
+    QuizQuestion_11_1:
+        question_id: Question_11
+        quiz_id: Quiz_1
+    QuizQuestion_11_2:
+        question_id: Question_11
+        quiz_id: Quiz_2
+    QuizQuestion_11_3:
+        question_id: Question_11
+        quiz_id: Quiz_3
+    QuizQuestion_12_1:
+        question_id: Question_12
+        quiz_id: Quiz_1
+    QuizQuestion_12_2:
+        question_id: Question_12
+        quiz_id: Quiz_2
+    QuizQuestion_12_3:
+        question_id: Question_12
+        quiz_id: Quiz_3
+    QuizQuestion_13_1:
+        question_id: Question_13
+        quiz_id: Quiz_1
+    QuizQuestion_13_2:
+        question_id: Question_13
+        quiz_id: Quiz_2
+    QuizQuestion_14_1:
+        question_id: Question_14
+        quiz_id: Quiz_1
+    QuizQuestion_14_2:
+        question_id: Question_14
+        quiz_id: Quiz_2
+    QuizQuestion_15_1:
+        question_id: Question_15
+        quiz_id: Quiz_1
+    QuizQuestion_15_2:
+        question_id: Question_15
+        quiz_id: Quiz_2
+    QuizQuestion_16_1:
+        question_id: Question_16
+        quiz_id: Quiz_1
+    QuizQuestion_16_2:
+        question_id: Question_16
+        quiz_id: Quiz_2
+    QuizQuestion_17_1:
+        question_id: Question_17
+        quiz_id: Quiz_1
+    QuizQuestion_17_2:
+        question_id: Question_17
+        quiz_id: Quiz_2
+    QuizQuestion_18_1:
+        question_id: Question_18
+        quiz_id: Quiz_1
+    QuizQuestion_18_2:
+        question_id: Question_18
+        quiz_id: Quiz_2
+    QuizQuestion_19_1:
+        question_id: Question_19
+        quiz_id: Quiz_1
+    QuizQuestion_19_2:
+        question_id: Question_19
+        quiz_id: Quiz_2
+    QuizQuestion_20_1:
+        question_id: Question_20
+        quiz_id: Quiz_1
+    QuizQuestion_20_2:
+        question_id: Question_20
+        quiz_id: Quiz_2
+    QuizQuestion_21_1:
+        question_id: Question_21
+        quiz_id: Quiz_1
+    QuizQuestion_22_1:
+        question_id: Question_22
+        quiz_id: Quiz_1
+    QuizQuestion_23_1:
+        question_id: Question_23
+        quiz_id: Quiz_1
+    QuizQuestion_24_1:
+        question_id: Question_24
+        quiz_id: Quiz_1
+    QuizQuestion_25_1:
+        question_id: Question_25
+        quiz_id: Quiz_1
+    QuizQuestion_26_1:
+        question_id: Question_26
+        quiz_id: Quiz_1
+    QuizQuestion_27_1:
+        question_id: Question_27
+        quiz_id: Quiz_1
+    QuizQuestion_28_1:
+        question_id: Question_28
+        quiz_id: Quiz_1
+    QuizQuestion_29_1:
+        question_id: Question_29
+        quiz_id: Quiz_1
+    QuizQuestion_30_1:
+        question_id: Question_30
+        quiz_id: Quiz_1
+    QuizQuestion_31_1:
+        question_id: Question_31
+        quiz_id: Quiz_1
+    QuizQuestion_32_1:
+        question_id: Question_32
+        quiz_id: Quiz_1
+    QuizQuestion_33_1:
+        question_id: Question_33
+        quiz_id: Quiz_1
+    QuizQuestion_33_2:
+        question_id: Question_33
+        quiz_id: Quiz_2
+    QuizQuestion_34_1:
+        question_id: Question_34
+        quiz_id: Quiz_1
+    QuizQuestion_35_1:
+        question_id: Question_35
+        quiz_id: Quiz_1
+    QuizQuestion_36_1:
+        question_id: Question_36
+        quiz_id: Quiz_1
+    QuizQuestion_37_1:
+        question_id: Question_37
+        quiz_id: Quiz_1
+    QuizQuestion_38_1:
+        question_id: Question_38
+        quiz_id: Quiz_1
+    QuizQuestion_39_1:
+        question_id: Question_39
+        quiz_id: Quiz_1
+    QuizQuestion_40_1:
+        question_id: Question_40
+        quiz_id: Quiz_1

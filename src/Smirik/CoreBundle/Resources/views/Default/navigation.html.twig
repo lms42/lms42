@@ -5,7 +5,7 @@
         <div class="navbar-inner">
             <div class="container">
 				<a class="brand" href="{{ path('homepage') }}">
-                    {{ 'LMS42'|config('LMS42') }}
+                    {{ 'lms42.title'|config('LMS42') }}
 				</a>
                 <ul class="nav" role="navigation">
                     {% set menuItem = knp_menu_get('main') %}
@@ -13,7 +13,7 @@
                     {% for item in menuItem %}
                         <li class="{% if item.isCurrent %}active{% endif %}{% if item.hasChildren %}dropdown{% endif %}">
                             {% if item.hasChildren %}
-                                <a data-toggle="dropdown" id="drop{{ loop.index }}" title="{{ item.label|trans|raw }}">
+                                <a data-toggle="dropdown" id="drop{{ loop.index }}" href="#" title="{{ item.label|trans|raw }}">
                                     {{ item.label|trans|raw }}
                                     <b class="caret"></b>
                                 </a>

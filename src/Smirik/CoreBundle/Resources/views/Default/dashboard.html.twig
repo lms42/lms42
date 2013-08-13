@@ -1,5 +1,7 @@
 {% extends 'SmirikCoreBundle::layout.html.twig' %}
 
+{% block title %}{{ 'Dashboard'|trans }} / {{ 'lms42.title'|config('LMS42') }}{% endblock %}
+
 {% block header %}
     {{ 'Dashboard'|trans }}
 {% endblock %}
@@ -59,6 +61,9 @@
                 </div>
             </div>
             <div class="span4">
+                <div class="widget">
+                    {% render(controller('SmirikCourseBundle:Course:progress')) %}
+                </div>
                 {% include 'SmirikCoreBundle:Default/Dashboard:news.html.twig' with {'contents': contents, 'categories': categories } %}
             </div>
         </div>

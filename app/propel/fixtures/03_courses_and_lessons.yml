@@ -1,0 +1,193 @@
+Smirik\CourseBundle\Model\Course:
+    Course_1:
+        title: 'Основы программирования на ruby'
+        description: "<p>Курс посвящён основам программирования на ruby. Основные темы:<br />\r\n&nbsp;</p>\r\n\r\n<ul>\r\n\t<li>Основы ruby.</li>\r\n\t<li>Управляющие структуры.</li>\r\n\t<li>Циклы.</li>\r\n\t<li>Массивы.</li>\r\n\t<li>Работа со строками.</li>\r\n\t<li>Динамическое программирование.</li>\r\n\t<li>Алгоритмы: перебор и рекурсия.</li>\r\n\t<li>Алгоритмы: жадные алгоритмы.</li>\r\n\t<li>Паттерны программирования.</li>\r\n\t<li>Хэши.</li>\r\n</ul>"
+        type: '0'
+        is_public: '1'
+        is_active: '1'
+        created_at: '2012-09-02 22:20:19'
+        updated_at: '2013-08-01 03:42:20'
+    Course_2:
+        title: Информация
+        description: "<p>&nbsp;Курс посвящён трём базовым темам информатики:</p>\r\n\r\n<ul>\r\n\t<li>Информации и информационному обществу.</li>\r\n\t<li>Измерению и&nbsp;кодированию информации (текст, числа, звук, графика, видео).</li>\r\n\t<li>Системам счисления.</li>\r\n</ul>"
+        type: '1'
+        is_public: '1'
+        is_active: '1'
+        created_at: '2013-08-05 12:59:13'
+        updated_at: '2013-08-05 12:59:13'
+Smirik\CourseBundle\Model\Lesson:
+    Lesson_1:
+        course_id: Course_1
+        title: Основы
+        created_at: '2012-09-02 22:21:09'
+        updated_at: '2012-09-02 22:21:09'
+        sortable_rank: '1'
+    Lesson_2:
+        course_id: Course_1
+        title: 'Управляющие структуры'
+        created_at: '2012-09-02 22:29:48'
+        updated_at: '2012-09-02 22:29:48'
+        sortable_rank: '2'
+    Lesson_3:
+        course_id: Course_1
+        title: 'Циклы в ruby'
+        created_at: '2012-09-02 22:30:39'
+        updated_at: '2012-09-02 22:30:39'
+        sortable_rank: '3'
+    Lesson_4:
+        course_id: Course_1
+        title: 'Работа с массивами'
+        created_at: '2012-09-02 22:31:12'
+        updated_at: '2012-09-02 22:31:12'
+        sortable_rank: '4'
+    Lesson_5:
+        course_id: Course_1
+        title: 'Работа со строками и строковыми функциями'
+        created_at: '2012-09-02 22:31:48'
+        updated_at: '2012-09-02 22:31:48'
+        sortable_rank: '5'
+    Lesson_6:
+        course_id: Course_1
+        title: 'Динамическое программирование'
+        created_at: '2012-09-02 22:32:46'
+        updated_at: '2012-09-02 22:32:46'
+        sortable_rank: '6'
+    Lesson_7:
+        course_id: Course_1
+        title: 'Алгоритмы: перебор и рекурсия'
+        created_at: '2012-09-02 22:33:16'
+        updated_at: '2012-09-02 22:33:16'
+        sortable_rank: '7'
+    Lesson_8:
+        course_id: Course_1
+        title: 'Жадные алгоритмы'
+        created_at: '2012-09-02 22:33:48'
+        updated_at: '2012-09-02 22:33:48'
+        sortable_rank: '8'
+    Lesson_9:
+        course_id: Course_1
+        title: 'Паттерны программирования'
+        created_at: '2012-09-02 22:34:17'
+        updated_at: '2012-09-02 22:34:17'
+        sortable_rank: '9'
+    Lesson_10:
+        course_id: Course_1
+        title: Хэши
+        created_at: '2012-09-02 22:34:55'
+        updated_at: '2012-09-02 22:34:55'
+        sortable_rank: '10'
+    Lesson_11:
+        course_id: Course_2
+        title: 'Информационное общество'
+        created_at: '2013-08-05 12:59:38'
+        updated_at: '2013-08-05 12:59:38'
+        sortable_rank: '1'
+Smirik\CourseBundle\Model\UserCourse:
+    UserCourse_1:
+        user_id: User_1
+        course_id: Course_1
+        started_at: '2012-09-02 22:25:13'
+        is_passed: '0'
+        updated_at: '2012-09-02 22:25:13'
+    UserCourse_17:
+        user_id: User_3
+        course_id: Course_1
+        started_at: '2012-09-05 14:06:51'
+        is_passed: '0'
+        updated_at: '2012-09-05 14:06:51'
+Smirik\CourseBundle\Model\UserLesson:
+    UserLesson_1:
+        user_id: User_1
+        course_id: Course_1
+        lesson_id: Lesson_1
+        started_at: '2012-09-02 23:31:46'
+        is_passed: '1'
+        is_closed: '1'
+        updated_at: '2012-09-03 11:21:33'
+    UserLesson_5:
+        user_id: User_1
+        course_id: Course_1
+        lesson_id: Lesson_2
+        started_at: '2012-09-03 11:21:40'
+        is_passed: '1'
+        is_closed: '1'
+        updated_at: '2012-09-03 11:22:32'
+    UserLesson_6:
+        user_id: User_1
+        course_id: Course_1
+        lesson_id: Lesson_3
+        started_at: '2012-09-03 11:22:38'
+        stopped_at: '2013-04-15 11:03:45'
+        is_passed: '1'
+        is_closed: '1'
+        updated_at: '2013-04-15 11:03:45'
+    UserLesson_24:
+        user_id: User_3
+        course_id: Course_1
+        lesson_id: Lesson_1
+        started_at: '2012-09-05 14:13:13'
+        stopped_at: '2012-09-11 09:55:07'
+        is_passed: '1'
+        is_closed: '1'
+        updated_at: '2012-09-11 09:55:07'
+    UserLesson_45:
+        user_id: User_3
+        course_id: Course_1
+        lesson_id: Lesson_2
+        started_at: '2012-09-11 21:29:30'
+        stopped_at: '2012-09-12 14:04:37'
+        is_passed: '1'
+        is_closed: '1'
+        updated_at: '2012-09-12 14:04:37'
+    UserLesson_60:
+        user_id: User_3
+        course_id: Course_1
+        lesson_id: Lesson_3
+        started_at: '2012-09-12 14:09:21'
+        stopped_at: '2012-09-27 22:11:27'
+        is_passed: '1'
+        is_closed: '1'
+        updated_at: '2012-09-27 22:11:27'
+    UserLesson_100:
+        user_id: User_3
+        course_id: Course_1
+        lesson_id: Lesson_4
+        started_at: '2012-09-27 22:11:52'
+        stopped_at: '2012-10-16 09:31:11'
+        is_passed: '1'
+        is_closed: '1'
+        updated_at: '2012-10-16 09:31:11'
+    UserLesson_182:
+        user_id: User_3
+        course_id: Course_1
+        lesson_id: Lesson_5
+        started_at: '2012-10-17 18:53:58'
+        stopped_at: '2012-11-10 01:08:10'
+        is_passed: '1'
+        is_closed: '1'
+        updated_at: '2012-11-10 01:08:10'
+    UserLesson_220:
+        user_id: User_3
+        course_id: Course_1
+        lesson_id: Lesson_6
+        started_at: '2012-11-10 01:08:33'
+        stopped_at: '2012-11-13 09:16:20'
+        is_passed: '1'
+        is_closed: '1'
+        updated_at: '2012-11-13 09:16:20'
+    UserLesson_233:
+        user_id: User_3
+        course_id: Course_1
+        lesson_id: Lesson_7
+        started_at: '2012-11-13 09:16:34'
+        is_passed: '0'
+        is_closed: '0'
+        updated_at: '2012-11-13 09:16:34'
+    UserLesson_505:
+        user_id: User_1
+        course_id: Course_1
+        lesson_id: Lesson_4
+        started_at: '2013-04-15 11:03:57'
+        is_passed: '0'
+        is_closed: '0'
+        updated_at: '2013-04-15 11:03:57'

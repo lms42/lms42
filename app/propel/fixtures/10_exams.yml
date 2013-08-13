@@ -1,0 +1,24 @@
+Smirik\ExamBundle\Model\ExamType:
+    ExamType_1:
+        name: 'Проверочная работа'
+    ExamType_2:
+        name: 'Контрольная работа'
+Smirik\ExamBundle\Model\Exam:
+    Exam_1:
+        quiz_id: Quiz_1
+        type_id: ExamType_2
+        name: 'Тестовая КР'
+        started_at: '2013-08-05 00:00:00'
+        description: '<p>Контрольая работа по материалам курса.</p>'
+        status: '2'
+        created_at: '2013-08-05 11:30:33'
+        updated_at: '2013-08-05 11:34:07'
+Smirik\ExamBundle\Model\ExamUser:
+    ExamUser_1:
+        exam_id: Exam_1
+        user_id: User_2
+        user_quiz_id: UserQuiz_1
+    ExamUser_2:
+        exam_id: Exam_1
+        user_id: User_1
+        user_quiz_id: UserQuiz_2

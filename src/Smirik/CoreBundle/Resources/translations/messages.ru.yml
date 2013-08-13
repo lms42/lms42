@@ -2,12 +2,11 @@ Login to your account: Вход в аккаунт
 Username: Имя
 Password: Пароль
 Stay Signed in: Запомнить
-Login: Войти
 Dashboard: Панель управления
 Current lessons: Ваши уроки
 Current tasks: Ваши задания
 Completed: Завершенные
-Pending: Нерешённые
+Pending: На проверке
 Quizes: Тесты
 Latest Content: Последние новости
 Read More: Подробнее
@@ -18,7 +17,6 @@ You have no tasks to do: У Вас нет завершенных заданий
 You have pending no tasks to do: У Вас нет нерешенных заданий
 Lessons and Tasks: Ваши уроки и задания
 Success: Успешно
-Failed: Отклонено
 Chore: В работе
 Your tasks: Ваши задания
 All lessons are completed: Все уроки выполнены
@@ -30,3 +28,6 @@ Open-source application: Открытое программное обеспеч�
 for e-learning: для онлайн-обучения
 Contribution is welcome: Помощь всегда приветствуется!
 Find us elsewhere: Мы в сети
+
+# Configs
+Name of instance: Название проекта

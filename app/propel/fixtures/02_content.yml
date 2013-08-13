@@ -1,0 +1,87 @@
+Smirik\ContentBundle\Model\Category:
+    Category_1:
+        urlkey: root
+        title: Базовая
+        is_active: '1'
+    Category_2:
+        pid: Category_1
+        urlkey: news
+        title: Новости
+        navigation: '1'
+        is_active: '1'
+    Category_3:
+        pid: Category_1
+        urlkey: keynote
+        title: Презентации
+        navigation: '0'
+        is_active: '0'
+        mode: '1'
+Smirik\ContentBundle\Model\Content:
+    Content_1:
+        user_id: User_1
+        category_id: Category_3
+        title: 'Вирусы и антивирусы'
+        description: 'Презентация посвящена теме вирусов и способам борьбы с ними. В качестве видеолекции используется выступление на TED.'
+        text: "<div id=\"__ss_9447888\" style=\"width:595px\">\r\n\t<strong style=\"display:block;margin:12px 0 4px\"><a href=\"http://www.slideshare.net/smirik/ss-9447888\" target=\"_blank\" title=\"Вирусы и Антивирусы\">Вирусы и Антивирусы</a></strong><iframe frameborder=\"0\" height=\"497\" marginheight=\"0\" marginwidth=\"0\" scrolling=\"no\" src=\"http://www.slideshare.net/slideshow/embed_code/9447888?rel=0\" width=\"595\"></iframe>\r\n\t<div style=\"padding:5px 0 12px\">\r\n\t\tView more <a href=\"http://www.slideshare.net/\" target=\"_blank\">presentations</a> from <a href=\"http://www.slideshare.net/smirik\" target=\"_blank\">Evgeny Smirnov</a></div>\r\n</div>"
+        is_active: '1'
+        file: 'Viruses and the Net Raw.pdf'
+        created_at: '2011-09-27 00:00:00'
+        updated_at: '2011-11-21 00:00:00'
+    Content_2:
+        user_id: User_1
+        category_id: Category_3
+        title: 'Основы программирования на ruby'
+        description: 'Рассказывается об основах программирования на ruby: переменные, типы переменных, операции и пр. В конце приводятся блок-схема решения линейного уравнения.'
+        text: '<div style="width:595px" id="__ss_9448188"> <strong style="display:block;margin:12px 0 4px"><a href="http://www.slideshare.net/smirik/ruby-9448188" title="Основы программирования на ruby" target="_blank">Основы программирования на ruby</a></strong> <iframe src="http://www.slideshare.net/slideshow/embed_code/9448188?rel=0" width="595" height="497" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe> <div style="padding:5px 0 12px"> View more <a href="http://www.slideshare.net/" target="_blank">presentations</a> from <a href="http://www.slideshare.net/smirik" target="_blank">Evgeny Smirnov</a> </div> </div>'
+        is_active: '1'
+        file: 'Ruby Starting.pdf'
+        created_at: '2011-09-27 00:00:00'
+        updated_at: '2011-09-27 00:00:00'
+    Content_3:
+        user_id: User_1
+        category_id: Category_3
+        title: 'Управляющие структуры в ruby: условия'
+        description: 'Презентация описывает различные способы задания'
+        text: '<div style="width:595px" id="__ss_9541023"> <strong style="display:block;margin:12px 0 4px"><a href="http://www.slideshare.net/smirik/ruby-9541023" title="Управляющие структуры в Ruby: условия" target="_blank">Управляющие структуры в Ruby: условия</a></strong> <iframe src="http://www.slideshare.net/slideshow/embed_code/9541023?rel=0" width="595" height="497" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe> <div style="padding:5px 0 12px"> View more <a href="http://www.slideshare.net/" target="_blank">presentations</a> from <a href="http://www.slideshare.net/smirik" target="_blank">Evgeny Smirnov</a> </div> </div>'
+        is_active: '1'
+        file: 'Ruby control structures.pdf'
+        created_at: '2011-10-04 00:00:00'
+        updated_at: '2011-10-04 00:00:00'
+    Content_4:
+        user_id: User_1
+        category_id: Category_2
+        title: 'Презентация по управляющим структурам в ruby'
+        description: 'Добавлена первая презентация по управляющим структурам в ruby, посвящённая условиям и модификаторам.'
+        text: '<a href="http://school.smirik.ru/show/15">Страница с презентацией</a>.'
+        is_active: '1'
+        created_at: '2011-10-04 00:00:00'
+        updated_at: '2011-10-04 00:00:00'
+    Content_5:
+        user_id: User_1
+        category_id: Category_3
+        title: 'Циклы в ruby'
+        description: 'Использование управляющих структур циклов в ruby: явные циклы (for, times), неявные циклы (while). Вычисление чисел Фибоначчи с помощью циклов.'
+        text: '<div style="width:595px" id="__ss_9660389"> <strong style="display:block;margin:12px 0 4px"><a href="http://www.slideshare.net/smirik/ruby-9660389" title="Ruby: управляющие структуры — циклы" target="_blank">Ruby: управляющие структуры — циклы</a></strong> <iframe src="http://www.slideshare.net/slideshow/embed_code/9660389?rel=0" width="595" height="497" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe> <div style="padding:5px 0 12px"> View more <a href="http://www.slideshare.net/" target="_blank">presentations</a> from <a href="http://www.slideshare.net/smirik" target="_blank">Evgeny Smirnov</a> </div> </div>'
+        is_active: '1'
+        file: 'Ruby control structures - cycles.pdf'
+        created_at: '2011-10-12 00:00:00'
+        updated_at: '2011-10-12 00:00:00'
+    Content_6:
+        user_id: User_1
+        category_id: Category_2
+        title: 'Презентация по использованию циклов в ruby'
+        description: 'В одноимённый раздел добавлена презентация по использованию управляющих структур циклов в ruby.'
+        text: "<a href=\"http://school.smirik.ru/show/20\">Посмотреть презентацию</a>\r\n<br /><br />\r\nУдачи"
+        is_active: '1'
+        created_at: '2011-10-12 00:00:00'
+        updated_at: '2011-10-12 00:00:00'
+    Content_7:
+        user_id: User_1
+        category_id: Category_3
+        title: 'Сервисы Google'
+        description: 'Презентация по GMail и Google Docs, 2 кратких скринкаста без голоса'
+        text: "<p>\r\n<div style=\"width:595px\" id=\"__ss_9776103\"> <strong style=\"display:block;margin:12px 0 4px\"><a href=\"http://www.slideshare.net/smirik/google-gmail-google-docs\" title=\"Сервисы Google: GMail и Google Docs\" target=\"_blank\">Сервисы Google: GMail и Google Docs</a></strong> <iframe src=\"http://www.slideshare.net/slideshow/embed_code/9776103?rel=0\" width=\"595\" height=\"497\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\"></iframe> <div style=\"padding:5px 0 12px\"> View more <a href=\"http://www.slideshare.net/\" target=\"_blank\">presentations</a> from <a href=\"http://www.slideshare.net/smirik\" target=\"_blank\">Evgeny Smirnov</a> </div> </div>\r\n</p>\r\n<p>\r\n<iframe width=\"560\" height=\"315\" src=\"http://www.youtube.com/embed/tQOBZ6cL1Mk?rel=0\" frameborder=\"0\" allowfullscreen></iframe>\r\n</p>\r\n<p>\r\n<iframe width=\"560\" height=\"315\" src=\"http://www.youtube.com/embed/mUYY2M2Q3-Y?rel=0\" frameborder=\"0\" allowfullscreen></iframe>\r\n</p>"
+        is_active: '1'
+        file: 'Google - GMail и Docs.pdf'
+        created_at: '2011-10-19 00:00:00'
+        updated_at: '2011-10-19 00:00:00'

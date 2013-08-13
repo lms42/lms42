@@ -12,7 +12,10 @@ framework:
     form:            true
     csrf_protection: true
     validation:      { enable_annotations: true }
-    templating:      { engines: ['twig'] } #assets_version: SomeVersionScheme
+    templating:      
+        engines: 
+            - 'twig'
+            
     translator:      { fallback: ru }
     default_locale:  %locale%
     trusted_proxies: false # Should Request object should trust proxy headers (X_FORWARDED_FOR/HTTP_CLIENT_IP)
@@ -92,6 +95,9 @@ avalanche_imagine:
         carousel_help:
             type:    thumbnail
             options: { size: [1050, 500], mode: outbound }
+        content_show:
+            type:    relative_resize
+            options: { widen: 600 }
         propel_admin_preview:
             type:    relative_resize
             options: { widen: 100 }
@@ -124,3 +130,7 @@ trsteel_ckeditor:
     external_plugins:
         mathedit:
             path: bundles/smirikadmin/js/ckeditor_plugins/mathedit
+        youtube:
+            path: bundles/smirikadmin/js/ckeditor_plugins/youtube
+
+knp_time: ~

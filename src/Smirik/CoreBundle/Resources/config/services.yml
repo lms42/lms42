@@ -22,10 +22,3 @@ services:
     arguments: [@service_container]
     tags:
       - { name: knp_menu.voter }
-
-  ago.twig.extension:
-    class: Smirik\CoreBundle\Twig\Extension\DateTimeAgoExtension
-    tags:
-      - { name: twig.extension }
-    calls:
-        - [ setContainer, [ "@service_container" ]]
