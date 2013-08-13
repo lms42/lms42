@@ -4,6 +4,12 @@
     "autoload": {
         "psr-0": { "": "src/" }
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url":  "git@github.com:smirik/PublishableBehavior.git"
+        }
+    ],
     "require-dev": {
         "phpunit/phpunit": "3.7.*",
         "behat/symfony2-extension": "*",
@@ -47,7 +53,8 @@
         "lms42/course-bundle": "0.4.*",
         "lms42/quiz-bundle": "0.4.*",
         "lms42/exam-bundle": "0.4.*",
-        "knplabs/knp-time-bundle": "1.1.*@dev"
+        "knplabs/knp-time-bundle": "1.1.*@dev",
+        "willdurand/propel-publishable-behavior": "dev-master"
     },
     "scripts": {
         "post-install-cmd": [
