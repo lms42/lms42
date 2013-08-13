@@ -44,7 +44,7 @@
         "knplabs/knp-menu-bundle": "v2.0.0-alpha1",
         "Trsteel/ckeditor-bundle": "1.2.*",
 
-        "smirik/propel-admin-bundle": "1.0.*",
+        "smirik/propel-admin-bundle": "1.1.*",
         "smirik/bootstrap-bundle": "2.3.*",
         "smirik/config-bundle": "dev-master",
 
