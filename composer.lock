@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "b0a8a15cc0e0ce21947625554ecab51a",
+    "hash": "969be781a6fa0d84828408e7494fd603",
     "packages": [
         {
             "name": "avalanche123/imagine-bundle",
@@ -1103,17 +1103,17 @@
         },
         {
             "name": "lms42/admin-bundle",
-            "version": "dev-develop",
+            "version": "v1.0.0",
             "target-dir": "Smirik/AdminBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lms42/SmirikAdminBundle.git",
-                "reference": "9ecce6dfbc7d02a48511dd5021c58b2d4a254b4f"
+                "reference": "v1.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lms42/SmirikAdminBundle/zipball/9ecce6dfbc7d02a48511dd5021c58b2d4a254b4f",
-                "reference": "9ecce6dfbc7d02a48511dd5021c58b2d4a254b4f",
+                "url": "https://api.github.com/repos/lms42/SmirikAdminBundle/zipball/v1.0.0",
+                "reference": "v1.0.0",
                 "shasum": ""
             },
             "type": "symfony-bundle",
@@ -1134,25 +1134,25 @@
                 }
             ],
             "description": "Admin bundle for LMS.",
-            "homepage": "https://4xxi.com",
+            "homepage": "https://lms42.com",
             "keywords": [
                 "admin"
             ],
-            "time": "2013-08-11 07:34:41"
+            "time": "2013-08-13 10:58:51"
         },
         {
             "name": "lms42/content-bundle",
-            "version": "dev-develop",
+            "version": "v1.0.0",
             "target-dir": "Smirik/ContentBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lms42/SmirikContentBundle.git",
-                "reference": "caebff737362c71df83bcd3a4272eef12d929a10"
+                "reference": "v1.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lms42/SmirikContentBundle/zipball/caebff737362c71df83bcd3a4272eef12d929a10",
-                "reference": "caebff737362c71df83bcd3a4272eef12d929a10",
+                "url": "https://api.github.com/repos/lms42/SmirikContentBundle/zipball/v1.0.0",
+                "reference": "v1.0.0",
                 "shasum": ""
             },
             "type": "symfony-bundle",
@@ -1175,23 +1175,25 @@
             "description": "Simple content management: pages and categories.",
             "homepage": "https://4xxi.com",
             "keywords": [
-                "content"
+                "cms",
+                "content",
+                "lms42"
             ],
-            "time": "2013-08-11 07:35:38"
+            "time": "2013-08-13 10:59:27"
         },
         {
             "name": "lms42/course-bundle",
-            "version": "dev-develop",
+            "version": "v1.0.0",
             "target-dir": "Smirik/CourseBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lms42/SmirikCourseBundle.git",
-                "reference": "1ea08476558fd3e8e0436d3d78b9e7e4939b3e0b"
+                "reference": "v1.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lms42/SmirikCourseBundle/zipball/1ea08476558fd3e8e0436d3d78b9e7e4939b3e0b",
-                "reference": "1ea08476558fd3e8e0436d3d78b9e7e4939b3e0b",
+                "url": "https://api.github.com/repos/lms42/SmirikCourseBundle/zipball/v1.0.0",
+                "reference": "v1.0.0",
                 "shasum": ""
             },
             "type": "symfony-bundle",
@@ -1212,27 +1214,27 @@
                 }
             ],
             "description": "Course and lesson management for LMS.",
-            "homepage": "https://4xxi.com",
+            "homepage": "https://lms42.com",
             "keywords": [
                 "course",
                 "lesson",
                 "lms"
             ],
-            "time": "2013-08-11 07:38:34"
+            "time": "2013-08-13 10:59:49"
         },
         {
             "name": "lms42/exam-bundle",
-            "version": "dev-develop",
+            "version": "v1.0.0",
             "target-dir": "Smirik/ExamBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lms42/SmirikExamBundle.git",
-                "reference": "3322af7cca012bea70e6c338a227466e0962d0e8"
+                "reference": "v1.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lms42/SmirikExamBundle/zipball/3322af7cca012bea70e6c338a227466e0962d0e8",
-                "reference": "3322af7cca012bea70e6c338a227466e0962d0e8",
+                "url": "https://api.github.com/repos/lms42/SmirikExamBundle/zipball/v1.0.0",
+                "reference": "v1.0.0",
                 "shasum": ""
             },
             "type": "symfony-bundle",
@@ -1259,21 +1261,21 @@
                 "lms42",
                 "quiz"
             ],
-            "time": "2013-08-11 18:21:44"
+            "time": "2013-08-13 11:00:23"
         },
         {
             "name": "lms42/quiz-bundle",
-            "version": "dev-develop",
+            "version": "v1.0.0",
             "target-dir": "Smirik/QuizBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lms42/SmirikQuizBundle.git",
-                "reference": "13779d6e13b7a0aa4c3ab6f9491b8d2741fbb8e1"
+                "reference": "v1.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lms42/SmirikQuizBundle/zipball/13779d6e13b7a0aa4c3ab6f9491b8d2741fbb8e1",
-                "reference": "13779d6e13b7a0aa4c3ab6f9491b8d2741fbb8e1",
+                "url": "https://api.github.com/repos/lms42/SmirikQuizBundle/zipball/v1.0.0",
+                "reference": "v1.0.0",
                 "shasum": ""
             },
             "type": "symfony-bundle",
@@ -1294,11 +1296,11 @@
                 }
             ],
             "description": "Quiz bundle.",
-            "homepage": "https://4xxi.com",
+            "homepage": "https://lms42.com",
             "keywords": [
                 "quiz"
             ],
-            "time": "2013-08-13 04:43:41"
+            "time": "2013-08-13 11:00:46"
         },
         {
             "name": "monolog/monolog",
@@ -1951,18 +1953,24 @@
         },
         {
             "name": "smirik/config-bundle",
-            "version": "dev-master",
+            "version": "v1.0.0",
             "target-dir": "Smirik/ConfigBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/smirik/SmirikConfigBundle.git",
-                "reference": "cc3a32be67a44ece2cf02c5095ddd96f725bf735"
+                "reference": "v1.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/smirik/SmirikConfigBundle/zipball/cc3a32be67a44ece2cf02c5095ddd96f725bf735",
-                "reference": "cc3a32be67a44ece2cf02c5095ddd96f725bf735",
+                "url": "https://api.github.com/repos/smirik/SmirikConfigBundle/zipball/v1.0.0",
+                "reference": "v1.0.0",
                 "shasum": ""
+            },
+            "require-dev": {
+                "phpspec/phpspec": "2.0.*@dev",
+                "propel/propel-bundle": "1.*",
+                "symfony/symfony": ">=2.3,<2.4-dev",
+                "willdurand/propel-typehintable-behavior": "*"
             },
             "type": "symfony-bundle",
             "autoload": {
@@ -1985,9 +1993,10 @@
             "homepage": "https://4xxi.com",
             "keywords": [
                 "admin",
-                "config"
+                "config",
+                "propel"
             ],
-            "time": "2013-06-26 12:35:27"
+            "time": "2013-08-13 11:02:48"
         },
         {
             "name": "smirik/propel-admin-bundle",
@@ -2641,7 +2650,7 @@
             ],
             "authors": [
                 {
-                    "name": "William DURAND",
+                    "name": "William Durand",
                     "email": "william.durand1@gmail.com",
                     "homepage": "http://www.willdurand.fr"
                 }
@@ -3589,12 +3598,6 @@
         "friendsofsymfony/user-bundle": 20,
         "knplabs/knp-menu": 15,
         "knplabs/knp-menu-bundle": 15,
-        "smirik/config-bundle": 20,
-        "lms42/admin-bundle": 20,
-        "lms42/content-bundle": 20,
-        "lms42/course-bundle": 20,
-        "lms42/quiz-bundle": 20,
-        "lms42/exam-bundle": 20,
         "knplabs/knp-time-bundle": 20,
         "willdurand/propel-publishable-behavior": 20,
         "phpspec/phpspec": 20
