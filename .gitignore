@@ -30,3 +30,6 @@ composer-dev.lock
 /src/Smirik/QuizBundle
 
 src/Smirik/CoreBundle/Resources/public/unify/img
+
+Capfile
+app/config/*.rb
