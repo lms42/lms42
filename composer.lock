@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "969be781a6fa0d84828408e7494fd603",
+    "hash": "f6b6453977f683bc34d23a4b57dee945",
     "packages": [
         {
             "name": "avalanche123/imagine-bundle",
@@ -901,7 +901,7 @@
                     "email": "stof@notk.org"
                 },
                 {
-                    "name": "KnpLabs",
+                    "name": "Knplabs",
                     "homepage": "http://knplabs.com"
                 },
                 {
@@ -1183,17 +1183,17 @@
         },
         {
             "name": "lms42/course-bundle",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "target-dir": "Smirik/CourseBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lms42/SmirikCourseBundle.git",
-                "reference": "v1.0.0"
+                "reference": "v1.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lms42/SmirikCourseBundle/zipball/v1.0.0",
-                "reference": "v1.0.0",
+                "url": "https://api.github.com/repos/lms42/SmirikCourseBundle/zipball/v1.0.1",
+                "reference": "v1.0.1",
                 "shasum": ""
             },
             "type": "symfony-bundle",
@@ -1220,7 +1220,7 @@
                 "lesson",
                 "lms"
             ],
-            "time": "2013-08-13 10:59:49"
+            "time": "2013-08-19 03:54:47"
         },
         {
             "name": "lms42/exam-bundle",
@@ -2000,17 +2000,17 @@
         },
         {
             "name": "smirik/propel-admin-bundle",
-            "version": "v1.1.0.1",
+            "version": "v1.1.0.2",
             "target-dir": "Smirik/PropelAdminBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/smirik/SmirikPropelAdminBundle.git",
-                "reference": "v1.1.0.1"
+                "reference": "v1.1.0.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/smirik/SmirikPropelAdminBundle/zipball/v1.1.0.1",
-                "reference": "v1.1.0.1",
+                "url": "https://api.github.com/repos/smirik/SmirikPropelAdminBundle/zipball/v1.1.0.2",
+                "reference": "v1.1.0.2",
                 "shasum": ""
             },
             "require": {
@@ -2049,7 +2049,7 @@
                 "generator",
                 "propel"
             ],
-            "time": "2013-08-11 09:07:17"
+            "time": "2013-08-16 13:14:40"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -2580,16 +2580,16 @@
         },
         {
             "name": "willdurand/propel-publishable-behavior",
-            "version": "dev-master",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/smirik/PublishableBehavior.git",
-                "reference": "ea1e9c3b83374861c72a90c946b9af27cd843797"
+                "url": "https://github.com/willdurand/PublishableBehavior.git",
+                "reference": "1.1.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/smirik/PublishableBehavior/zipball/ea1e9c3b83374861c72a90c946b9af27cd843797",
-                "reference": "ea1e9c3b83374861c72a90c946b9af27cd843797",
+                "url": "https://api.github.com/repos/willdurand/PublishableBehavior/zipball/1.1.0",
+                "reference": "1.1.0",
                 "shasum": ""
             },
             "require": {
@@ -2597,7 +2597,7 @@
                 "propel/propel1": "1.6.*"
             },
             "require-dev": {
-                "phpunit/phpunit": "dev-master"
+                "phpunit/phpunit": "3.7.*"
             },
             "type": "library",
             "autoload": {
@@ -2605,21 +2605,20 @@
                     "src/"
                 ]
             },
+            "notification-url": "https://packagist.org/downloads/",
             "authors": [
                 {
-                    "name": "William DURAND",
-                    "email": "william.durand1@gmail.com"
+                    "name": "William Durand",
+                    "email": "william.durand1@gmail.com",
+                    "homepage": "http://www.willdurand.fr"
                 }
             ],
             "keywords": [
-                "behavior",
+                "Behavior",
                 "propel",
                 "publishable"
             ],
-            "support": {
-                "source": "https://github.com/smirik/PublishableBehavior/tree/master"
-            },
-            "time": "2013-08-10 14:35:47"
+            "time": "2013-08-17 00:06:33"
         },
         {
             "name": "willdurand/propel-typehintable-behavior",
@@ -2650,7 +2649,7 @@
             ],
             "authors": [
                 {
-                    "name": "William Durand",
+                    "name": "William DURAND",
                     "email": "william.durand1@gmail.com",
                     "homepage": "http://www.willdurand.fr"
                 }
@@ -2696,7 +2695,7 @@
                 {
                     "name": "Alexandre Salomé",
                     "email": "alexandre.salome@gmail.com",
-                    "homepage": "http://alexandre-salome.fr/"
+                    "homepage": "http://alexandre-salome.fr"
                 }
             ],
             "description": "PHP Library for Selenium",
@@ -2707,31 +2706,31 @@
         },
         {
             "name": "behat/behat",
-            "version": "v2.4.6",
+            "version": "v2.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Behat/Behat.git",
-                "reference": "v2.4.6"
+                "reference": "v2.5.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Behat/Behat/zipball/v2.4.6",
-                "reference": "v2.4.6",
+                "url": "https://api.github.com/repos/Behat/Behat/zipball/v2.5.0",
+                "reference": "v2.5.0",
                 "shasum": ""
             },
             "require": {
-                "behat/gherkin": ">=2.2.9,<2.3",
+                "behat/gherkin": "~2.2.9",
                 "php": ">=5.3.1",
-                "symfony/config": ">=2.0,<3.0",
-                "symfony/console": ">=2.0,<3.0",
-                "symfony/dependency-injection": ">=2.0,<3.0",
-                "symfony/event-dispatcher": ">=2.0,<3.0",
-                "symfony/finder": ">=2.0,<3.0",
-                "symfony/translation": ">=2.0,<3.0",
-                "symfony/yaml": ">=2.0,<3.0"
+                "symfony/config": "~2.0",
+                "symfony/console": "~2.0",
+                "symfony/dependency-injection": "~2.0",
+                "symfony/event-dispatcher": "~2.0",
+                "symfony/finder": "~2.0",
+                "symfony/translation": "~2.0",
+                "symfony/yaml": "~2.0"
             },
             "require-dev": {
-                "phpunit/phpunit": ">=3.7.19.0,<3.8"
+                "phpunit/phpunit": "~3.7.19"
             },
             "suggest": {
                 "behat/mink-extension": "for integration with Mink testing framework",
@@ -2770,7 +2769,7 @@
                 "Behat",
                 "Symfony2"
             ],
-            "time": "2013-06-06 10:46:48"
+            "time": "2013-08-11 16:11:33"
         },
         {
             "name": "behat/gherkin",
@@ -2945,25 +2944,25 @@
         },
         {
             "name": "behat/mink-extension",
-            "version": "v1.1.4",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Behat/MinkExtension.git",
-                "reference": "v1.1.4"
+                "reference": "v1.2.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Behat/MinkExtension/zipball/v1.1.4",
-                "reference": "v1.1.4",
+                "url": "https://api.github.com/repos/Behat/MinkExtension/zipball/v1.2.0",
+                "reference": "v1.2.0",
                 "shasum": ""
             },
             "require": {
-                "behat/behat": ">=2.4.5,<2.5",
+                "behat/behat": "~2.5.0",
                 "behat/mink": ">=1.4.3,<1.6-dev",
                 "php": ">=5.3.2"
             },
             "require-dev": {
-                "behat/mink-goutte-driver": ">=1.0,<2.0"
+                "behat/mink-goutte-driver": "~1.0"
             },
             "type": "behat-extension",
             "extra": {
@@ -2995,7 +2994,7 @@
                 "test",
                 "web"
             ],
-            "time": "2013-06-04 12:18:22"
+            "time": "2013-08-17 19:01:06"
         },
         {
             "name": "behat/mink-selenium-driver",
@@ -3110,28 +3109,28 @@
         },
         {
             "name": "behat/symfony2-extension",
-            "version": "v1.0.2",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Behat/Symfony2Extension.git",
-                "reference": "v1.0.2"
+                "reference": "v1.1.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Behat/Symfony2Extension/zipball/v1.0.2",
-                "reference": "v1.0.2",
+                "url": "https://api.github.com/repos/Behat/Symfony2Extension/zipball/v1.1.0",
+                "reference": "v1.1.0",
                 "shasum": ""
             },
             "require": {
-                "behat/behat": ">=2.4.5,<2.5",
+                "behat/behat": "~2.5.0",
                 "php": ">=5.3.2",
-                "symfony/framework-bundle": ">=2.0,<3.0"
+                "symfony/framework-bundle": "~2.0"
             },
             "require-dev": {
-                "behat/mink": ">=1.4.3,<1.5",
-                "behat/mink-browserkit-driver": ">=1.0.4,<1.1",
-                "behat/mink-extension": ">=1.0.1,<1.1",
-                "symfony/symfony": ">=2.1,<3.0"
+                "behat/mink": "~1.4.3",
+                "behat/mink-browserkit-driver": "~1.0.4",
+                "behat/mink-extension": "~1.0.1",
+                "symfony/symfony": "~2.1"
             },
             "type": "behat-extension",
             "extra": {
@@ -3162,7 +3161,7 @@
                 "framework",
                 "symfony"
             ],
-            "time": "2013-06-06 20:36:08"
+            "time": "2013-08-17 19:02:21"
         },
         {
             "name": "instaclick/php-webdriver",
@@ -3209,7 +3208,7 @@
                 {
                     "name": "Anthon Pang",
                     "email": "apang@softwaredevelopment.ca",
-                    "role": "Fork Maintainer"
+                    "role": "developer"
                 }
             ],
             "description": "PHP WebDriver for Selenium 2",
@@ -3599,7 +3598,6 @@
         "knplabs/knp-menu": 15,
         "knplabs/knp-menu-bundle": 15,
         "knplabs/knp-time-bundle": 20,
-        "willdurand/propel-publishable-behavior": 20,
         "phpspec/phpspec": 20
     },
     "platform": {
