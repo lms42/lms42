@@ -50,7 +50,7 @@ class DefaultController extends Controller
     {
         $user = $this->getUser();
 
-        $lessons = $this->get('lesson.manager')->getOpened($user);
+        $lessons = $this->get('lesson.manager')->getOpenLessons($user);
 
         $tm = $this->get('user_task.manager');
         $user_tasks           = $tm->latestUserTodo($user, 10);

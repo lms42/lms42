@@ -7,7 +7,7 @@
 #
 # Адрес: localhost (MySQL 5.5.29)
 # Схема: lms42
-# Время создания: 2013-08-11 09:31:24 +0000
+# Время создания: 2013-08-19 03:51:55 +0000
 # ************************************************************
 
 
@@ -247,9 +247,9 @@ CREATE TABLE `courses` (
   `type` int(11) DEFAULT '1',
   `file` varchar(100) DEFAULT NULL,
   `is_public` tinyint(1) DEFAULT NULL,
-  `is_active` tinyint(1) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
+  `is_active` tinyint(1) DEFAULT '0',
   PRIMARY KEY (`id`),
   KEY `courses_I_1` (`pid`),
   KEY `courses_I_2` (`user_id`)
@@ -258,10 +258,10 @@ CREATE TABLE `courses` (
 LOCK TABLES `courses` WRITE;
 /*!40000 ALTER TABLE `courses` DISABLE KEYS */;
 
-INSERT INTO `courses` (`id`, `user_id`, `pid`, `title`, `description`, `type`, `file`, `is_public`, `is_active`, `created_at`, `updated_at`)
+INSERT INTO `courses` (`id`, `user_id`, `pid`, `title`, `description`, `type`, `file`, `is_public`, `created_at`, `updated_at`, `is_active`)
 VALUES
-	(1,NULL,NULL,'Основы программирования на ruby','<p>Курс посвящён основам программирования на ruby. Основные темы:<br />\r\n&nbsp;</p>\r\n\r\n<ul>\r\n	<li>Основы ruby.</li>\r\n	<li>Управляющие структуры.</li>\r\n	<li>Циклы.</li>\r\n	<li>Массивы.</li>\r\n	<li>Работа со строками.</li>\r\n	<li>Динамическое программирование.</li>\r\n	<li>Алгоритмы: перебор и рекурсия.</li>\r\n	<li>Алгоритмы: жадные алгоритмы.</li>\r\n	<li>Паттерны программирования.</li>\r\n	<li>Хэши.</li>\r\n</ul>',0,'1375314140_1_ruby_logo.png',1,1,'2012-09-02 22:20:19','2013-08-01 03:42:20'),
-	(2,NULL,NULL,'Информация','<p>&nbsp;Курс посвящён трём базовым темам информатики:</p>\r\n\r\n<ul>\r\n	<li>Информации и информационному обществу.</li>\r\n	<li>Измерению и&nbsp;кодированию информации (текст, числа, звук, графика, видео).</li>\r\n	<li>Системам счисления.</li>\r\n</ul>',1,NULL,1,1,'2013-08-05 12:59:13','2013-08-05 12:59:13');
+	(1,NULL,NULL,'Основы программирования на ruby','<p>Курс посвящён основам программирования на ruby. Основные темы:<br />\r\n&nbsp;</p>\r\n\r\n<ul>\r\n	<li>Основы ruby.</li>\r\n	<li>Управляющие структуры.</li>\r\n	<li>Циклы.</li>\r\n	<li>Массивы.</li>\r\n	<li>Работа со строками.</li>\r\n	<li>Динамическое программирование.</li>\r\n	<li>Алгоритмы: перебор и рекурсия.</li>\r\n	<li>Алгоритмы: жадные алгоритмы.</li>\r\n	<li>Паттерны программирования.</li>\r\n	<li>Хэши.</li>\r\n</ul>',0,NULL,1,'2012-09-02 22:20:19','2013-08-01 03:42:20',1),
+	(2,NULL,NULL,'Информация','<p>&nbsp;Курс посвящён трём базовым темам информатики:</p>\r\n\r\n<ul>\r\n	<li>Информации и информационному обществу.</li>\r\n	<li>Измерению и&nbsp;кодированию информации (текст, числа, звук, графика, видео).</li>\r\n	<li>Системам счисления.</li>\r\n</ul>',1,NULL,1,'2013-08-05 12:59:13','2013-08-05 12:59:13',1);
 
 /*!40000 ALTER TABLE `courses` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -451,6 +451,7 @@ CREATE TABLE `lessons` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   `sortable_rank` int(11) DEFAULT NULL,
+  `is_active` tinyint(1) DEFAULT '1',
   PRIMARY KEY (`id`),
   KEY `lessons_I_1` (`course_id`),
   KEY `lessons_I_2` (`user_id`)
@@ -459,19 +460,19 @@ CREATE TABLE `lessons` (
 LOCK TABLES `lessons` WRITE;
 /*!40000 ALTER TABLE `lessons` DISABLE KEYS */;
 
-INSERT INTO `lessons` (`id`, `user_id`, `course_id`, `title`, `created_at`, `updated_at`, `sortable_rank`)
+INSERT INTO `lessons` (`id`, `user_id`, `course_id`, `title`, `created_at`, `updated_at`, `sortable_rank`, `is_active`)
 VALUES
-	(1,NULL,1,'Основы','2012-09-02 22:21:09','2012-09-02 22:21:09',1),
-	(2,NULL,1,'Управляющие структуры','2012-09-02 22:29:48','2012-09-02 22:29:48',2),
-	(3,NULL,1,'Циклы в ruby','2012-09-02 22:30:39','2012-09-02 22:30:39',3),
-	(4,NULL,1,'Работа с массивами','2012-09-02 22:31:12','2012-09-02 22:31:12',4),
-	(5,NULL,1,'Работа со строками и строковыми функциями','2012-09-02 22:31:48','2012-09-02 22:31:48',5),
-	(6,NULL,1,'Динамическое программирование','2012-09-02 22:32:46','2012-09-02 22:32:46',6),
-	(7,NULL,1,'Алгоритмы: перебор и рекурсия','2012-09-02 22:33:16','2012-09-02 22:33:16',7),
-	(8,NULL,1,'Жадные алгоритмы','2012-09-02 22:33:48','2012-09-02 22:33:48',8),
-	(9,NULL,1,'Паттерны программирования','2012-09-02 22:34:17','2012-09-02 22:34:17',9),
-	(10,NULL,1,'Хэши','2012-09-02 22:34:55','2012-09-02 22:34:55',10),
-	(11,NULL,2,'Информационное общество','2013-08-05 12:59:38','2013-08-05 12:59:38',1);
+	(1,NULL,1,'Основы','2012-09-02 22:21:09','2012-09-02 22:21:09',1,1),
+	(2,NULL,1,'Управляющие структуры','2012-09-02 22:29:48','2012-09-02 22:29:48',2,1),
+	(3,NULL,1,'Циклы в ruby','2012-09-02 22:30:39','2012-09-02 22:30:39',3,1),
+	(4,NULL,1,'Работа с массивами','2012-09-02 22:31:12','2012-09-02 22:31:12',4,1),
+	(5,NULL,1,'Работа со строками и строковыми функциями','2012-09-02 22:31:48','2012-09-02 22:31:48',5,1),
+	(6,NULL,1,'Динамическое программирование','2012-09-02 22:32:46','2012-09-02 22:32:46',6,1),
+	(7,NULL,1,'Алгоритмы: перебор и рекурсия','2012-09-02 22:33:16','2012-09-02 22:33:16',7,1),
+	(8,NULL,1,'Жадные алгоритмы','2012-09-02 22:33:48','2012-09-02 22:33:48',8,1),
+	(9,NULL,1,'Паттерны программирования','2012-09-02 22:34:17','2012-09-02 22:34:17',9,1),
+	(10,NULL,1,'Хэши','2012-09-02 22:34:55','2012-09-02 22:34:55',10,1),
+	(11,NULL,2,'Информационное общество','2013-08-05 12:59:38','2013-08-05 12:59:38',1,1);
 
 /*!40000 ALTER TABLE `lessons` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -786,6 +787,26 @@ VALUES
 	(3,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2013-03-18 21:43:58','2013-03-18 21:43:58');
 
 /*!40000 ALTER TABLE `profiles` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Дамп таблицы propel_migration
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `propel_migration`;
+
+CREATE TABLE `propel_migration` (
+  `version` int(11) DEFAULT '0'
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+LOCK TABLES `propel_migration` WRITE;
+/*!40000 ALTER TABLE `propel_migration` DISABLE KEYS */;
+
+INSERT INTO `propel_migration` (`version`)
+VALUES
+	(1376883679);
+
+/*!40000 ALTER TABLE `propel_migration` ENABLE KEYS */;
 UNLOCK TABLES;
 
 
