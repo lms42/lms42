@@ -90,7 +90,7 @@ avalanche_imagine:
             type:    thumbnail
             options: { size: [250, 400], mode: outbound }
         course_preview:
-            type:    relative_resize
+            type:    thumbnail
             options: { size: [128, 128], mode: outbound }
         carousel_help:
             type:    thumbnail
