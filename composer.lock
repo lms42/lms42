@@ -1265,17 +1265,17 @@
         },
         {
             "name": "lms42/quiz-bundle",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "target-dir": "Smirik/QuizBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lms42/SmirikQuizBundle.git",
-                "reference": "v1.0.0"
+                "reference": "9de1888656e60956ea5dd1fb01ba89cea37d7127"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lms42/SmirikQuizBundle/zipball/v1.0.0",
-                "reference": "v1.0.0",
+                "url": "https://api.github.com/repos/lms42/SmirikQuizBundle/zipball/9de1888656e60956ea5dd1fb01ba89cea37d7127",
+                "reference": "9de1888656e60956ea5dd1fb01ba89cea37d7127",
                 "shasum": ""
             },
             "type": "symfony-bundle",
@@ -1300,7 +1300,7 @@
             "keywords": [
                 "quiz"
             ],
-            "time": "2013-08-13 11:00:46"
+            "time": "2013-10-01 03:53:18"
         },
         {
             "name": "monolog/monolog",
