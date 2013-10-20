@@ -9,10 +9,15 @@
 
     <title>{% block title %}{{ 'lms42.title'|config('LMS42') }}{% endblock %}</title>
 
-    {{ bootstrap_js() }}
-    {{ bootstrap_css() }}
+    {% javascripts '@SmirikBootstrapBundle/Resources/public/js/jquery-1.9.1.min.js'
+                   '@SmirikBootstrapBundle/Resources/public/js/bootstrap.min.js'
+     %}
+        <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
 
     {% stylesheets
+        '@SmirikBootstrapBundle/Resources/public/css/bootstrap.min.css'
+        '@SmirikBootstrapBundle/Resources/public/css/bootstrap-responsive.min.css'
         '@SmirikAdminBundle/Resources/public/css/*'
         '@SmirikCoreBundle/Resources/public/css/plain/bootstrap-override.css'
         '@SmirikCoreBundle/Resources/public/css/plain/style.css'
@@ -21,10 +26,8 @@
     %}
         <link rel="stylesheet" href="{{ asset_url }}"/>
     {% endstylesheets %}
-
+    
     {% block stylesheets %}{% endblock %}
-    {% block javascripts %}{% endblock %}
-
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}"/>
 </head>
 <body>
@@ -124,6 +127,9 @@
     	</footer>
     {% endblock %}
 
+    {% block javascripts %}
+    {% endblock %}
+    
 {% endblock %}
 
 </body>
