@@ -34,6 +34,7 @@ class AppKernel extends Kernel
             new Trsteel\CkeditorBundle\TrsteelCkeditorBundle(),
             new Smirik\CoreBundle\SmirikCoreBundle(),
             new Knp\Bundle\TimeBundle\KnpTimeBundle(),
+//            new Bazinga\Bundle\PropelEventDispatcherBundle\BazingaPropelEventDispatcherBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
