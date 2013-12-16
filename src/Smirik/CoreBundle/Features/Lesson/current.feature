@@ -1,5 +1,5 @@
 Feature: dashboard
-    In order to check lesson's interface
+    In order to check lesson interface
     As logged user
     I need to see all the content of lesson
 
