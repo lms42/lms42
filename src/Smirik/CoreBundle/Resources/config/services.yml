@@ -1,24 +1,35 @@
 services:
-  lms42_main_menu_builder:
-    class: Smirik\CoreBundle\Menu\MainMenuBuilder
-    arguments: [@knp_menu.factory, @service_container, @lms42_main_menu_voter_request]
+    lms42_main_menu_builder:
+        class: Smirik\CoreBundle\Menu\MainMenuBuilder
+        arguments: [@knp_menu.factory, @service_container, @lms42_main_menu_voter_request]
 
-  lms42_main_menu:
-    class: Knp\Menu\MenuItem
-    factory_service: lms42_main_menu_builder
-    factory_method: build
-    tags:
-      - { name: knp_menu.menu, alias: main }
+    lms42_main_menu:
+        class: Knp\Menu\MenuItem
+        factory_service: lms42_main_menu_builder
+        factory_method: build
+        tags:
+            - { name: knp_menu.menu, alias: main }
 
-  lms42_main_menu_breadcrumbs:
-    class: Knp\Menu\MenuItem
-    factory_service: lms42_main_menu_builder
-    factory_method: buildBreadcrumbs
-    tags:
-      - { name: knp_menu.menu, alias: main_breadcrumbs }
+    lms42_main_menu_breadcrumbs:
+        class: Knp\Menu\MenuItem
+        factory_service: lms42_main_menu_builder
+        factory_method: buildBreadcrumbs
+        tags:
+            - { name: knp_menu.menu, alias: main_breadcrumbs }
 
-  lms42_main_menu_voter_request:
-    class: Smirik\CoreBundle\Menu\Voter\RequestVoter
-    arguments: [@service_container]
-    tags:
-      - { name: knp_menu.voter }
+    lms42_main_menu_voter_request:
+        class: Smirik\CoreBundle\Menu\Voter\RequestVoter
+        arguments: [@service_container]
+        tags:
+            - { name: knp_menu.voter }
+    
+    lms42.user_log.listener:
+        class: Smirik\CoreBundle\EventListener\UserLogListener
+        tags:
+            - { name: kernel.event_listener, event: kernel.request, method: onKernelRequest }
+        
+    lms42.log.builder:
+        class: Smirik\CoreBundle\Log\Builder
+    
+    lms42.log.manager:
+        class: Smirik\CoreBundle\Log\LogManager

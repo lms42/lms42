@@ -12,7 +12,7 @@
         <tr class="{% if user_task.mark < 3 %}error{% elseif user_task.mark == 5%}success{% endif %}">
             <td>{{ user_task.taskId }}</td>
             <td>
-                <a href="{{ path('lesson_index', { id: user_task.lessonId }) }}#task{{ user_task.taskId }}">
+                <a href="{{ path('lesson_task', {'id': user_task.lessonId, 'task_id': user_task.taskId}) }}">
                     {{ user_task.task.title }}
                 </a>
             </td>

@@ -20,6 +20,9 @@ composer-dev.lock
 /web/css
 /web/js
 
+/src/Smirik/CoreBundle/Model/om
+/src/Smirik/CoreBundle/Model/map
+
 /src/Smirik/AdminBundle
 /src/Smirik/BootstrapBundle
 /src/Smirik/ConfigBundle
