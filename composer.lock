@@ -1442,12 +1442,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/lms42/SmirikAdminBundle.git",
-                "reference": "9ecce6dfbc7d02a48511dd5021c58b2d4a254b4f"
+                "reference": "5a4683a3f5c6ca8c364f7975bab338a4aa07a287"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lms42/SmirikAdminBundle/zipball/9ecce6dfbc7d02a48511dd5021c58b2d4a254b4f",
-                "reference": "9ecce6dfbc7d02a48511dd5021c58b2d4a254b4f",
+                "url": "https://api.github.com/repos/lms42/SmirikAdminBundle/zipball/5a4683a3f5c6ca8c364f7975bab338a4aa07a287",
+                "reference": "5a4683a3f5c6ca8c364f7975bab338a4aa07a287",
                 "shasum": ""
             },
             "type": "symfony-bundle",
@@ -1472,7 +1472,7 @@
             "keywords": [
                 "admin"
             ],
-            "time": "2013-08-11 07:34:41"
+            "time": "2013-12-17 04:28:41"
         },
         {
             "name": "lms42/content-bundle",
