@@ -37,7 +37,7 @@ class Builder
                 if (isset($parameters['id'])) {
                     $log->setData(json_encode(array(
                         'task_id' => $parameters['task_id'],
-                        'lesson_id' => $parameters['lesson_id'],
+                        'lesson_id' => $parameters['id'],
                     )));
                 }
                 break;

@@ -12,7 +12,7 @@ class UserLogListener
     {
         $route = $event->getRequest()->get('_route');
         
-        if ( ($event->getRequestType() != HttpKernel::MASTER_REQUEST) || (strpos($route, '_wdt') !== false) || (strpos($route, '_asset') !== false) ) {
+        if ( ($event->getRequestType() != HttpKernel::MASTER_REQUEST) || (strpos($route, '_wdt') !== false) || (strpos($route, '_asset') !== false) || (strpos($route, '_imagine') !== false) ) {
             return;
         }
         
