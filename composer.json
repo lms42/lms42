@@ -42,11 +42,11 @@
         "smirik/bootstrap-bundle": "2.3.*",
         "smirik/config-bundle": "1.0.*",
 
-        "lms42/admin-bundle": "1.0.*",
-        "lms42/content-bundle": "1.0.*",
-        "lms42/course-bundle": "1.0.*",
-        "lms42/quiz-bundle": "1.0.*",
-        "lms42/exam-bundle": "1.0.*",
+        "lms42/admin-bundle": "dev-develop",
+        "lms42/content-bundle": "dev-develop",
+        "lms42/course-bundle": "dev-develop",
+        "lms42/quiz-bundle": "dev-develop",
+        "lms42/exam-bundle": "dev-develop",
         "knplabs/knp-time-bundle": "1.1.*@dev",
         "willdurand/propel-publishable-behavior": "1.1.*"
     },
