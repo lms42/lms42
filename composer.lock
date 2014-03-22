@@ -1527,12 +1527,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/lms42/SmirikCourseBundle.git",
-                "reference": "bd289510199d81f6e3b301229bc1a624019c4e24"
+                "reference": "94c8d5eefb4561a52313a27a395a226b2b3599e4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lms42/SmirikCourseBundle/zipball/bd289510199d81f6e3b301229bc1a624019c4e24",
-                "reference": "bd289510199d81f6e3b301229bc1a624019c4e24",
+                "url": "https://api.github.com/repos/lms42/SmirikCourseBundle/zipball/94c8d5eefb4561a52313a27a395a226b2b3599e4",
+                "reference": "94c8d5eefb4561a52313a27a395a226b2b3599e4",
                 "shasum": ""
             },
             "type": "symfony-bundle",
@@ -1559,7 +1559,7 @@
                 "lesson",
                 "lms"
             ],
-            "time": "2013-12-17 04:28:15"
+            "time": "2014-03-22 13:09:14"
         },
         {
             "name": "lms42/exam-bundle",
